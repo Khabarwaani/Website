@@ -1188,3 +1188,111 @@
 .time-val.khab {
   color: #2c7a4b;
 }
+
+/* Reporter Interrogation & Positive Emotion Styles */
+.hero-reporter-card {
+  background: #14110E;
+  border: 1px solid rgba(224, 105, 42, 0.35);
+  border-radius: 14px;
+  padding: 22px 20px;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.4);
+}
+
+.reporter-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(241,238,231,0.12);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.reporter-card-tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.reporter-live-pill {
+  font-size: 11px;
+  font-weight: 600;
+  color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.15);
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+.qa-bubble-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.qa-bubble-q {
+  background: rgba(241,238,231,0.07);
+  border: 1px solid rgba(241,238,231,0.14);
+  border-radius: 8px 8px 8px 2px;
+  padding: 9px 13px;
+  font-size: 13px;
+  color: #F1EEE7;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.qa-bubble-q b {
+  color: var(--gold);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.qa-bubble-a {
+  background: rgba(224, 105, 42, 0.12);
+  border-left: 3px solid var(--gold);
+  border-radius: 4px;
+  padding: 11px 13px;
+  font-size: 12.5px;
+  color: rgba(241,238,231,0.9);
+  line-height: 1.45;
+}
+
+.qa-bubble-a b {
+  color: #fff;
+}
+
+/* Bullet Points for Why, How, What */
+.pillar-points-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pillar-points-list li {
+  font-size: 13.5px;
+  color: #4b5160;
+  line-height: 1.5;
+  padding-left: 18px;
+  position: relative;
+}
+
+.pillar-points-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+.pillar-points-list li b {
+  color: var(--navy);
+}
+
