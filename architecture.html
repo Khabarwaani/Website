@@ -17,38 +17,20 @@
 <body>
 
 <nav>
-  <div class="nav-top">
+  <div class="nav-inner">
     <a class="brand" href="index.html"><img class="mark" src="assets/mark.png" alt="Khabarwaani"><span class="word">Khabarwaani</span></a>
-    <a class="nav-cta" href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer"><svg class="insta-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg><span>Instagram</span></a>
-  </div>
-  <div class="nav-sub">
-    <div class="nav-groups">
-      <div class="nav-group">
-        <ul class="navlinks">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="thesis.html">Market Thesis</a></li>
-        </ul>
-      </div>
-      <div class="nav-divider"></div>
-      <div class="nav-group">
-        <ul class="navlinks">
-          <li><a href="architecture.html">Architecture</a></li>
-          <li><a href="pipeline.html">Pipeline</a></li>
-          <li><a href="editorial.html">Editorial Desk</a></li>
-          <li><a href="studio.html">AI Studio</a></li>
-        </ul>
-      </div>
-      <div class="nav-divider"></div>
-      <div class="nav-group">
-        <ul class="navlinks">
-          <li><a href="distribution.html">Distribution</a></li>
-          <li><a href="leadership.html">Leadership</a></li>
-        </ul>
-      </div>
-    </div>
+    <ul class="navlinks">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="thesis.html">Market Thesis</a></li>
+      <li><a href="architecture.html" class="active">Architecture</a></li>
+      <li><a href="pipeline.html">Pipeline</a></li>
+      <li><a href="editorial.html">Editorial Desk</a></li>
+      <li><a href="studio.html">AI Studio</a></li>
+      <li><a href="distribution.html">Distribution</a></li>
+      <li><a href="leadership.html">Leadership</a></li>
+    </ul>
   </div>
 </nav>
-<div class="progress-bar" id="progressBar"></div>
 
 <!-- HERO SECTION -->
 <section class="hero" style="padding: 76px 0 58px;">
@@ -380,7 +362,7 @@
     </div>
 
     <div class="callout" style="border-left-color:#2c7a4b;">
-      <strong style="color:var(--navy); font-size:16px;">The Granular Regeneration Advantage:</strong>
+      <strong style="color:var(--navy); font-size:16px;">Targeted Sub-Clip Regeneration:</strong>
       <p style="margin:4px 0 0; font-size:14.5px; color:#3a3f4a;">
         When Shot 4 fails a gaze check, the system <b>does not re-render the entire 60-second video</b>. The orchestrator re-submits only the 4-second sub-clip with tighter constraints, saving ~80% of generation compute and delivering final sign-off in minutes.
       </p>
@@ -489,32 +471,32 @@
   </div>
 </section>
 
-<!-- SECTION 13 & 14: THE OPERATIONAL ADVANTAGE -->
+<!-- SECTION 13 & 14: SYSTEM EVOLUTION & MODULAR ARCHITECTURE -->
 <section class="reveal">
   <div class="wrap col">
-    <span class="kicker">Defensibility &amp; Future Outlook</span>
-    <h2>13 &amp; 14. The Workflow Is the Moat</h2>
+    <span class="kicker">Systems Evolution &amp; Future Architecture</span>
+    <h2>13 &amp; 14. Model-Agnostic Abstraction &amp; The Production OS</h2>
     <p style="font-size:16px; color:#4b5160; margin-bottom:20px;">
-      Individual AI models will commoditize. Today's state-of-the-art video model will be surpassed within six months. But the orchestration layer that governs those models becomes increasingly valuable with every story published.
+      In an environment where foundation models evolve rapidly, hard-coding a production pipeline to specific model APIs introduces severe technical fragility. The Khabarwaani architecture decouples high-level creative and factual directives from low-level generation backends through model-agnostic abstraction layers.
     </p>
     <p style="font-size:15px; color:#4b5160; margin-bottom:24px;">
-      A mature production operating layer accumulates deep, proprietary workflow intelligence:
+      By standardizing communication across the entire pipeline via structured JSON specifications, generation models, voice synthesizers, and LLMs operate as interchangeable microservices. Over repeated operational cycles, this architecture refines essential systems capabilities:
     </p>
 
     <ul class="pill-list">
-      <li>Empirical knowledge of which model performs best for specific scene and motion types</li>
-      <li>Unit-cost profiles and predictive compute budgeting for every story category</li>
-      <li>Prompt compilation libraries that reliably suppress known model hallucinations</li>
-      <li>Automated evaluation classifiers trained on thousands of broadcast failure modes</li>
-      <li>Persistent identity and character seed banks for recurring anchor personas</li>
-      <li>End-to-end factual traceability graphs that protect newsroom credibility at scale</li>
+      <li><b>Dynamic Model Adapters:</b> Normalizing differing provider APIs and parameter spaces behind a single unified Shot Specification schema.</li>
+      <li><b>Runtime Latency &amp; Compute Profiling:</b> Benchmarking inference time, rendering throughput, and GPU memory consumption across scene classes.</li>
+      <li><b>Automated Prompt Compilers:</b> Programmatic translation layers converting spatial blocking, lens parameters, and negative constraints into target model syntaxes.</li>
+      <li><b>Automated Telemetry Classifiers:</b> Multi-stage visual and audio validation suites isolating artifact classes prior to final encoding.</li>
+      <li><b>Deterministic Seed Registries:</b> Version-controlled anchor embeddings, vocal timbre weights, and visual reference frames ensuring continuity across generation passes.</li>
+      <li><b>Bi-Directional Verification Graphs:</b> Direct linkages tying primary source citations to timeline keyframes for zero-latency auditing and surgical updates.</li>
     </ul>
 
     <div class="callout" style="margin-top:28px; background:var(--navy); color:#fff; border-left:4px solid var(--gold);">
-      <p style="color:var(--gold); font-weight:600; text-transform:uppercase; font-size:12px; margin:0 0 8px; letter-spacing:.05em;">The Ultimate Shift</p>
-      <h3 style="color:#fff; font-size:20px; margin:0 0 10px;">From Individual Models to Systems of Models</h3>
+      <p style="color:var(--gold); font-weight:600; text-transform:uppercase; font-size:12px; margin:0 0 8px; letter-spacing:.05em;">Architectural Synthesis</p>
+      <h3 style="color:#fff; font-size:20px; margin:0 0 10px;">The Transition from Standalone Models to an Integrated Production OS</h3>
       <p style="color:rgba(241,238,231,0.85); font-size:15px; margin:0; line-height:1.6;">
-        The first phase of generative AI was about individual models. The next phase is about systems of models. Khabarwaani is building that orchestration layer: connecting research, reasoning, prompting, generation, evaluation, editing, and distribution into one cost-aware, verifiable production engine.
+        Generating isolated clips requires only model prompting, but building an automated, high-frequency broadcast pipeline requires an integrated operating system: uniting research ingestion, multi-agent reasoning, dynamic model dispatch, closed-loop QA evaluation, and programmatic timeline assembly into a resilient, fault-tolerant software system.
       </p>
     </div>
   </div>
@@ -571,11 +553,11 @@
   <div class="wrap col">
     <span class="kicker" style="color:var(--gold);">Collaboration &amp; Partnerships</span>
     <h2>Partner with the architects of AI-native media</h2>
-    <p style="font-size:16.5px; margin-bottom:26px;">Whether you are an investor in AI infrastructure, a media technologist, or a newsroom partner exploring agentic pipelines — let's connect.</p>
+    <p style="font-size:16.5px; margin-bottom:26px;">Whether you are an AI researcher, a media technologist, or a newsroom partner exploring agentic pipelines — let's connect.</p>
     <div style="display:flex; gap:12px; flex-wrap:wrap;">
       <a class="btn primary" href="https://www.linkedin.com/in/abhi266raj/" target="_blank" rel="noopener noreferrer">Abhiraj on LinkedIn</a>
       <a class="btn primary" href="https://www.linkedin.com/in/parthkumar-panchal/" target="_blank" rel="noopener noreferrer" style="background:#0A66C2; border-color:#0A66C2;">Parth on LinkedIn</a>
-      <a class="btn ghost" href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer">Watch the Live Pilot</a>
+      <a class="btn ghost" href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer">Watch Short Video Pilot</a>
     </div>
   </div>
 </section>
