@@ -52,10 +52,111 @@
   </div>
 </section>
 
+<!-- ARCHITECTURAL BLUEPRINT: SIMON SINEK'S GOLDEN CIRCLE & CYBERNETIC CLOSED-LOOP -->
+<section class="reveal" id="framework" style="padding: 48px 0; background: #F1ECE1; border-bottom: 1px solid var(--rule);">
+  <div class="wrap">
+    <div class="golden-circle-card">
+      <div class="golden-circle-meta">
+        <div>
+          <span class="golden-circle-author">Engineering Methodology · Simon Sinek's Golden Circle</span>
+          <h3 class="golden-circle-title" style="margin-top:6px;">Architecture From The Inside Out: Why, How, What &amp; The Closed QA Loop</h3>
+        </div>
+        <div style="font-size:13px; color:rgba(241,238,231,0.7); max-width:340px;">
+          Applying Simon Sinek's <i>Golden Circle</i> to systems engineering: The Systems Problem (Why) demands Orchestrated Coordination (How), producing the 8-Layer Stack (What), governed by Closed-Loop QA (The Loop).
+        </div>
+      </div>
+
+      <div class="golden-circle-layout">
+        <!-- SVG Graphic -->
+        <div class="golden-circle-svg-wrap">
+          <svg viewBox="0 0 440 440" width="400" height="400" xmlns="http://www.w3.org/2000/svg" style="display:block; max-width:100%; height:auto;">
+            <defs>
+              <marker id="arrow-arch-loop" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1 L 10 5 L 0 9 z" fill="#4cd682" />
+              </marker>
+              <radialGradient id="why-arch-grad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ff8442" />
+                <stop offset="100%" stop-color="#c9541a" />
+              </radialGradient>
+            </defs>
+
+            <!-- Outer Orbit: Closed-Loop QA & Traceability -->
+            <circle cx="220" cy="220" r="198" fill="none" stroke="rgba(76, 214, 130, 0.25)" stroke-width="1.5" stroke-dasharray="4,4" />
+            <path d="M 390 310 A 198 198 0 1 0 50 150" fill="none" stroke="#4cd682" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrow-arch-loop)" />
+
+            <!-- WHAT Circle: 8-Layer AI Media Stack -->
+            <circle cx="220" cy="220" r="165" fill="rgba(241, 238, 231, 0.04)" stroke="rgba(224, 105, 42, 0.45)" stroke-width="1.5" />
+            <text x="220" y="78" text-anchor="middle" fill="#E8E4DA" font-family="'Inter', sans-serif" font-size="12" font-weight="700" letter-spacing="1.5px">WHAT</text>
+            <text x="220" y="94" text-anchor="middle" fill="rgba(241, 238, 231, 0.65)" font-family="'Inter', sans-serif" font-size="10">8-Layer Media Stack &amp; Published Cuts</text>
+
+            <!-- HOW Circle: Orchestration & Multi-Agent Mesh -->
+            <circle cx="220" cy="220" r="112" fill="rgba(241, 238, 231, 0.07)" stroke="rgba(224, 105, 42, 0.8)" stroke-width="1.8" />
+            <text x="220" y="132" text-anchor="middle" fill="#E0692A" font-family="'Inter', sans-serif" font-size="12" font-weight="700" letter-spacing="1.5px">HOW</text>
+            <text x="220" y="146" text-anchor="middle" fill="rgba(241, 238, 231, 0.75)" font-family="'Inter', sans-serif" font-size="9.5">Prompt Compilers · 7-Agent Mesh · Dynamic Routing</text>
+
+            <!-- WHY Circle: The Systems Problem -->
+            <circle cx="220" cy="220" r="58" fill="url(#why-arch-grad)" stroke="#fff" stroke-width="1.5" />
+            <text x="220" y="216" text-anchor="middle" fill="#fff" font-family="'Fraunces', serif" font-size="15" font-weight="700" letter-spacing="1.2px">WHY</text>
+            <text x="220" y="233" text-anchor="middle" fill="#fff" font-family="'Inter', sans-serif" font-size="9" font-weight="600">The Systems</text>
+            <text x="220" y="245" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-family="'Inter', sans-serif" font-size="8">Problem</text>
+
+            <!-- Loop Pill -->
+            <rect x="50" y="385" width="340" height="28" rx="14" fill="#112117" stroke="#2c7a4b" stroke-width="1.2" />
+            <text x="220" y="403" text-anchor="middle" fill="#4cd682" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.6px">↻ CLOSED-LOOP QA &amp; FACTUAL TRACEABILITY</text>
+          </svg>
+        </div>
+
+        <!-- 4 Engineering Steps Breakdown -->
+        <div class="golden-steps-list">
+          <div class="golden-step-item">
+            <div class="golden-step-head">
+              <span class="golden-step-title">The Engineering Why (§ 1)</span>
+              <span class="badge badge-why">Why</span>
+            </div>
+            <p class="golden-step-desc">
+              <b>The Systems Problem.</b> Single video models suffer 9 structural failure modes (identity drift, broken gaze, pacing collapse). News video requires orchestrating an interconnected chain of verification, scripting, and rendering backends.
+            </p>
+          </div>
+
+          <div class="golden-step-item">
+            <div class="golden-step-head">
+              <span class="golden-step-title">The Engineering How (§ 2–8)</span>
+              <span class="badge badge-how">How</span>
+            </div>
+            <p class="golden-step-desc">
+              <b>Prompt Compilers, 7-Agent Mesh &amp; Dynamic Routing.</b> Transforming creative intent into machine-readable JSON scene parameters, coordinating specialized agents, and routing shots dynamically based on unit-compute envelopes.
+            </p>
+          </div>
+
+          <div class="golden-step-item">
+            <div class="golden-step-head">
+              <span class="golden-step-title">The Engineering What (§ 12–14)</span>
+              <span class="badge badge-what">What</span>
+            </div>
+            <p class="golden-step-desc">
+              <b>The 8-Layer Media Stack &amp; Model-Agnostic OS.</b> Decoupling editorial reasoning from volatile model APIs to deliver deterministic, verified, multi-language published reels without vendor lock-in.
+            </p>
+          </div>
+
+          <div class="golden-step-item loop-step">
+            <div class="golden-step-head">
+              <span class="golden-step-title">The Cybernetic Closed Loop (§ 9–11)</span>
+              <span class="badge badge-loop">The Loop</span>
+            </div>
+            <p class="golden-step-desc">
+              <b>Automated QA Telemetry &amp; Traceability Graphs.</b> Evaluating generations against quantitative criteria, isolating failed 4-second sub-clips for rapid repair, and maintaining direct graph edges between primary sources and exported video frames.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SECTION 1: THE SYSTEMS PROBLEM -->
 <section class="reveal" id="systems-problem">
   <div class="wrap col">
-    <span class="kicker">Core Thesis</span>
+    <span class="kicker">Core Thesis · The Engineering Why</span>
     <h2>1. AI Video Generation Has a Systems Problem</h2>
     <p style="font-size:16px; color:#4b5160; margin-bottom:20px;">
       Producing a reliable, fast, and scalable news video is far more difficult than generating a visually impressive 5-second clip. The reason is simple: <b>news production is not a single AI task. It is a chain of interconnected AI tasks.</b>
@@ -97,7 +198,7 @@
 <!-- SECTION 2 & 3: PROMPT ENGINEERING AS PRODUCTION ENGINEERING -->
 <section class="reveal" id="prompt-engineering">
   <div class="wrap">
-    <span class="kicker">Execution Layer</span>
+    <span class="kicker">Execution Layer · The Engineering How (Prompt Engineering)</span>
     <h2>2. Prompt Engineering Is the First Engineering Layer</h2>
     <p style="color:#4b5160; font-size:15.5px; max-width:720px; margin-bottom:28px;">
       Prompt engineering is frequently trivialized as “writing better instructions.” In professional, automated news video production, it functions as machine-readable production engineering:
@@ -144,7 +245,7 @@
 <!-- SECTION 4: FROM PROMPTS TO AI AGENTS -->
 <section class="reveal" id="agentic-mesh">
   <div class="wrap">
-    <span class="kicker">Multi-Agent Coordination</span>
+    <span class="kicker">Multi-Agent Coordination · The Engineering How (Agentic Mesh)</span>
     <h2>4. From Prompts to Autonomous Production Agents</h2>
     <p style="color:#4b5160; font-size:15.5px; max-width:720px; margin-bottom:28px;">
       Rather than asking a single model to comprehend research, verify legal records, format spoken prose, storyboard shots, synthesize video, and audio-mix, Khabarwaani distributes the workflow across seven specialized agents:
@@ -193,7 +294,7 @@
 <!-- SECTION 5 & 6: KHABARWAANI ORCHESTRATION LAYER -->
 <section class="reveal" id="orchestration-layer">
   <div class="wrap">
-    <span class="kicker">Systems Integration</span>
+    <span class="kicker">Systems Integration · The Engineering How (Orchestration Bus)</span>
     <h2>5 &amp; 6. Khabarwaani: The AI News Production Operating Layer</h2>
     <p style="color:#4b5160; font-size:15.5px; max-width:740px; margin-bottom:24px;">
       Different AI models do not share memory or standardized data formats. If connected ad-hoc, the system breaks under high-volume publishing. Khabarwaani creates a unified orchestration bus providing standardized interchange for text, prompts, video clips, audio stems, and QA telemetry:
@@ -238,7 +339,7 @@
 <!-- SECTION 7 & 8: DYNAMIC MODEL ROUTING & COST-AWARE ORCHESTRATION -->
 <section class="reveal" id="routing">
   <div class="wrap">
-    <span class="kicker">Operational Leverage</span>
+    <span class="kicker">Operational Leverage · The Engineering How (Dynamic Routing)</span>
     <h2>7 &amp; 8. Dynamic Model Routing &amp; Cost as an Engineering Variable</h2>
     <p style="color:#4b5160; font-size:15.5px; max-width:720px; margin-bottom:24px;">
       The best AI model is not the same for every shot. One model excels at photorealistic human dialogue; another renders rapid 3D motion; another is 10x faster and cheaper. A production studio generating dozens of reels daily cannot select the costliest model for every second:
@@ -309,7 +410,7 @@
 <!-- SECTION 9 & 10: AUTOMATED CLOSED-LOOP QA -->
 <section class="reveal" id="closed-loop-qa">
   <div class="wrap">
-    <span class="kicker">Software-Grade Reliability</span>
+    <span class="kicker">Software-Grade Reliability · The Closed QA Loop</span>
     <h2>9 &amp; 10. Automated Quality Control &amp; Iterative Regeneration Loops</h2>
     <p style="color:#4b5160; font-size:15.5px; max-width:720px; margin-bottom:24px;">
       Just as a software compiler tests code and flags compilation errors, Khabarwaani treats video production as an iterative test-and-repair loop: <code>Specification → Generation → Evaluation → Correction → Regeneration → Final Cut</code>.
@@ -373,7 +474,7 @@
 <!-- SECTION 11: NEWS-SPECIFIC TRACEABILITY -->
 <section class="reveal" id="traceability">
   <div class="wrap col">
-    <span class="kicker">Journalistic Rigor</span>
+    <span class="kicker">Journalistic Rigor · The Closed Traceability Loop</span>
     <h2>11. News Makes This Harder: The Factual Traceability Graph</h2>
     <p style="font-size:16px; color:#4b5160; margin-bottom:20px;">
       News is strictly more demanding than entertainment. A fiction video can afford creative liberties; a news explainer must defend every syllable against libel, factual hallucination, and rapidly developing breaking evidence.
@@ -420,7 +521,7 @@
 <!-- SECTION 12: THE 8-LAYER AI MEDIA STACK -->
 <section class="reveal" id="stack">
   <div class="wrap">
-    <span class="kicker">System Architecture</span>
+    <span class="kicker">System Architecture · The Engineering What (8-Layer Media Stack)</span>
     <h2>12. The 8-Layer AI Media Stack</h2>
     <p style="color:#4b5160; font-size:15.5px; max-width:720px; margin-bottom:28px;">
       Khabarwaani is built on an end-to-end media engineering stack that abstracts away raw generative models in favor of reliable, repeatable production pipelines:
@@ -474,7 +575,7 @@
 <!-- SECTION 13 & 14: SYSTEM EVOLUTION & MODULAR ARCHITECTURE -->
 <section class="reveal">
   <div class="wrap col">
-    <span class="kicker">Systems Evolution &amp; Future Architecture</span>
+    <span class="kicker">Systems Evolution · The Engineering What (Model-Agnostic Production OS)</span>
     <h2>13 &amp; 14. Model-Agnostic Abstraction &amp; The Production OS</h2>
     <p style="font-size:16px; color:#4b5160; margin-bottom:20px;">
       In an environment where foundation models evolve rapidly, hard-coding a production pipeline to specific model APIs introduces severe technical fragility. The Khabarwaani architecture decouples high-level creative and factual directives from low-level generation backends through model-agnostic abstraction layers.
