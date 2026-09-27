@@ -18,7 +18,7 @@
 
   /* NAV */
   nav{position:fixed; top:0; left:0; right:0; height:60px; background:var(--paper); z-index:50;
-      padding-top:env(safe-area-inset-top,0px); border-bottom:1px solid var(--rule);}
+      padding-top:env(safe-area-inset-top,0px); border-bottom:1px solid var(--rule); transition:height .2s ease;}
   .nav-inner{max-width:980px; margin:0 auto; padding:0 28px; height:60px; display:flex; align-items:center; justify-content:space-between; gap:20px;}
   .brand{display:flex; align-items:center; gap:9px; text-decoration:none; flex-shrink:0;}
   .brand .mark{width:28px; height:28px; border-radius:7px; display:block; object-fit:cover;}
@@ -29,7 +29,39 @@
   .navlinks a:hover{color:var(--navy); border-bottom-color:var(--gold);}
   .navlinks a.active{color:var(--navy); font-weight:600; border-bottom-color:var(--gold);}
   @media(min-width:880px){.navlinks{gap:20px;} .navlinks a{font-size:13.5px;}}
-  @media(max-width:640px){.nav-inner{padding:0 16px;} .navlinks{gap:12px;} .navlinks a{font-size:12.5px;}}
+
+  /* MOBILE LAYOUT: Logo static at top, header links clearly visible below with breathing space */
+  @media(max-width:768px){
+    body{padding-top:calc(100px + env(safe-area-inset-top,0px));}
+    html{scroll-padding-top:104px;}
+    nav{height:auto; padding-bottom:8px;}
+    .nav-inner{
+      height:auto;
+      padding:10px 18px 2px;
+      flex-direction:column;
+      align-items:flex-start;
+      gap:8px;
+    }
+    .brand{gap:8px;}
+    .brand .mark{width:26px; height:26px;}
+    .brand .word{font-size:17px;}
+    .navlinks{
+      width:100%;
+      gap:10px;
+      padding:2px 0 4px;
+    }
+    .navlinks a{
+      font-size:12.5px;
+      padding:5px 11px;
+      background:rgba(28,23,18,0.04);
+      border-radius:14px;
+      border-bottom:none;
+    }
+    .navlinks a.active{
+      background:var(--navy);
+      color:var(--paper);
+    }
+  }
   .insta-icon{display:inline-block; vertical-align:middle; flex-shrink:0;}
 
   /* HERO */
