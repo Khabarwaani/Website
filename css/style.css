@@ -126,3 +126,25 @@
   .cost-table .bad{color:#9a3b2c;}
   .cost-table .good{color:#2c7a4b; font-weight:600;}
   @media(max-width:680px){ .cost-table{font-size:13px;} .cost-table th,.cost-table td{padding:10px 8px;} }
+
+  /* TEAM & FOUNDER CARD */
+  .team-grid{display:grid; grid-template-columns:1fr; max-width:680px; margin-top:24px;}
+  .team-card{background:var(--paper); border:1px solid var(--rule); border-radius:8px; padding:32px 28px;
+    box-shadow:0 6px 20px rgba(28,23,18,0.06); transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;}
+  .team-card:hover{transform:translateY(-3px); box-shadow:0 12px 30px rgba(28,23,18,0.1); border-color:var(--gold);}
+  .team-card-head{display:flex; align-items:center; gap:22px;}
+  .team-avatar{width:82px; height:82px; border-radius:50%; object-fit:cover; border:2.5px solid var(--gold); box-shadow:0 4px 14px rgba(28,23,18,0.18); flex-shrink:0;}
+  .team-meta .team-name{font-family:'Fraunces',serif; font-size:22px; font-weight:600; color:var(--navy); margin:0 0 4px 0;}
+  .team-meta .team-role{font-size:13px; font-weight:600; color:var(--gold); text-transform:uppercase; letter-spacing:.05em; display:inline-block; margin-right:10px;}
+  .team-meta .team-badge{font-size:12px; background:#F1ECE1; color:#4b5160; padding:3px 9px; border-radius:3px; font-weight:500; display:inline-block;}
+  .team-bio{font-size:15px; color:#4b5160; line-height:1.65; margin:20px 0 24px;}
+  .team-actions{display:flex; gap:12px; flex-wrap:wrap; border-top:1px solid var(--rule); padding-top:20px;}
+  .team-btn{display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:3px; font-size:13.5px; font-weight:500; text-decoration:none; cursor:pointer; transition:transform .14s ease, opacity .14s ease;}
+  .team-btn:hover{transform:translateY(-2px); opacity:.9;}
+  .team-btn.linkedin{background:#0A66C2; color:#fff; border:1px solid #0A66C2;}
+  .team-btn.email{background:var(--navy); color:#fff; border:1px solid var(--navy);}
+  .team-arrow{font-size:13px; margin-left:2px;}
+  @media(max-width:540px){
+    .team-card-head{flex-direction:column; align-items:flex-start; gap:14px;}
+    .team-card{padding:24px 20px;}
+  }

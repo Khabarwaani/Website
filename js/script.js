@@ -28,7 +28,7 @@
   }
 
   // Scroll-spy active nav link
-  var sections = ['top','how','story-desk','reel-factory','audience','ask']
+  var sections = ['top','how','story-desk','reel-factory','audience','team','ask']
     .map(function(id){ return document.getElementById(id); })
     .filter(Boolean);
   var navLinks = document.querySelectorAll('.navlinks a');
