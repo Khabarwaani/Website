@@ -64,4 +64,29 @@
     range.addEventListener('input', renderCalc);
     renderCalc();
   }
+
+  // Interactive Output Simulator (Why Future page)
+  var simStories = document.getElementById('simStories');
+  var simStoriesVal = document.getElementById('simStoriesVal');
+  var simLangs = document.getElementById('simLangs');
+  var simLangsVal = document.getElementById('simLangsVal');
+  var simDailyReels = document.getElementById('simDailyReels');
+  var simMonthlyReels = document.getElementById('simMonthlyReels');
+
+  function renderSimulator(){
+    if(!simStories || !simLangs) return;
+    var s = parseInt(simStories.value, 10);
+    var l = parseInt(simLangs.value, 10);
+    if(simStoriesVal) simStoriesVal.textContent = s;
+    if(simLangsVal) simLangsVal.textContent = l;
+    var daily = s * l;
+    var monthly = daily * 30;
+    if(simDailyReels) simDailyReels.textContent = daily;
+    if(simMonthlyReels) simMonthlyReels.textContent = monthly.toLocaleString();
+  }
+  if(simStories && simLangs){
+    simStories.addEventListener('input', renderSimulator);
+    simLangs.addEventListener('input', renderSimulator);
+    renderSimulator();
+  }
 })();
