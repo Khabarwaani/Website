@@ -132,9 +132,9 @@
   .team-card{background:var(--paper); border:1px solid var(--rule); border-radius:8px; padding:32px 28px;
     box-shadow:0 6px 20px rgba(28,23,18,0.06); transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;}
   .team-card:hover{transform:translateY(-3px); box-shadow:0 12px 30px rgba(28,23,18,0.1); border-color:var(--gold);}
-  .team-card-head{display:flex; align-items:center; gap:22px;}
-  .team-avatar{width:82px; height:82px; border-radius:50%; object-fit:cover; border:2.5px solid var(--gold); box-shadow:0 4px 14px rgba(28,23,18,0.18); flex-shrink:0;}
-  .team-avatar.avatar-monogram{display:flex; align-items:center; justify-content:center; background:var(--navy); color:var(--paper); font-family:'Fraunces',serif; font-size:26px; font-weight:600;}
+  .team-card-head{display:flex; align-items:center; gap:16px;}
+  .team-avatar{width:60px; height:60px; border-radius:50%; object-fit:cover; border:none; box-shadow:0 2px 10px rgba(28,23,18,0.12); flex-shrink:0;}
+  .team-avatar.avatar-monogram{display:flex; align-items:center; justify-content:center; background:var(--navy); color:var(--paper); font-family:'Fraunces',serif; font-size:20px; font-weight:600;}
   .team-meta .team-name{font-family:'Fraunces',serif; font-size:22px; font-weight:600; color:var(--navy); margin:0 0 4px 0;}
   .team-meta .team-role{font-size:13px; font-weight:600; color:var(--gold); text-transform:uppercase; letter-spacing:.05em; display:inline-block; margin-right:10px;}
   .team-meta .team-badge{font-size:12px; background:#F1ECE1; color:#4b5160; padding:3px 9px; border-radius:3px; font-weight:500; display:inline-block;}
