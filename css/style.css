@@ -19,16 +19,16 @@
   /* NAV */
   nav{position:fixed; top:0; left:0; right:0; height:60px; background:var(--paper); z-index:50;
       padding-top:env(safe-area-inset-top,0px); border-bottom:1px solid var(--rule);}
-  .nav-inner{max-width:980px; margin:0 auto; padding:0 28px; height:60px; display:flex; align-items:center; justify-content:space-between;}
-  .brand{display:flex; align-items:center; gap:9px; text-decoration:none;}
+  .nav-inner{max-width:980px; margin:0 auto; padding:0 28px; height:60px; display:flex; align-items:center; justify-content:space-between; gap:20px;}
+  .brand{display:flex; align-items:center; gap:9px; text-decoration:none; flex-shrink:0;}
   .brand .mark{width:28px; height:28px; border-radius:7px; display:block; object-fit:cover;}
   .brand .word{font-family:'Fraunces',serif; font-weight:600; font-size:18px; color:var(--navy); letter-spacing:0.2px;}
-  .navlinks{display:none; gap:26px; list-style:none; margin:0; padding:0;}
-  .navlinks a{color:#4b5160; text-decoration:none; font-size:14px; font-weight:500; padding:6px 0; border-bottom:2px solid transparent; transition:color .15s, border-color .15s;}
+  .navlinks{display:flex; gap:16px; list-style:none; margin:0; padding:0; align-items:center; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none;}
+  .navlinks::-webkit-scrollbar{display:none;}
+  .navlinks a{color:#4b5160; text-decoration:none; font-size:13.5px; font-weight:500; padding:6px 0; border-bottom:2px solid transparent; transition:color .15s, border-color .15s; white-space:nowrap;}
   .navlinks a:hover{color:var(--navy); border-bottom-color:var(--gold);}
-  @media(min-width:720px){.navlinks{display:flex;}}
-  .nav-cta{display:inline-flex; align-items:center; gap:6px; background:var(--navy); color:var(--paper); padding:8px 15px; border-radius:2px; text-decoration:none; font-size:13.5px; font-weight:500; cursor:pointer; transition:opacity .15s;}
-  .nav-cta:hover{opacity:.85;}
+  @media(min-width:880px){.navlinks{gap:22px;} .navlinks a{font-size:14px;}}
+  @media(max-width:640px){.nav-inner{padding:0 16px;} .navlinks{gap:12px;} .navlinks a{font-size:12.5px;}}
   .insta-icon{display:inline-block; vertical-align:middle; flex-shrink:0;}
 
   /* HERO */
@@ -97,8 +97,7 @@
   footer .fnav a{color:#6a6f78; text-decoration:none; font-size:13px; cursor:pointer; transition:color .15s;}
   footer .fnav a:hover{color:var(--gold);}
 
-  .progress-bar{position:fixed; top:60px; left:0; height:3px; background:var(--gold); width:0%; z-index:60; transition:width .1s linear;}
-  @supports (top: env(safe-area-inset-top)){ .progress-bar{top:calc(60px + env(safe-area-inset-top,0px));} }
+
 
   .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
   .reveal.in{opacity:1; transform:translateY(0);}

@@ -1,16 +1,4 @@
 (function(){
-  // Scroll progress bar
-  var bar = document.getElementById('progressBar');
-  function updateProgress(){
-    var h = document.documentElement;
-    var scrolled = h.scrollTop;
-    var height = h.scrollHeight - h.clientHeight;
-    var pct = height > 0 ? (scrolled / height) * 100 : 0;
-    if(bar) bar.style.width = pct + '%';
-  }
-  document.addEventListener('scroll', updateProgress, {passive:true});
-  updateProgress();
-
   // Reveal on scroll
   var revealEls = document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window){
