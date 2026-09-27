@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Systems Architecture &amp; Engineering — Khabarwaani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/future-modules.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon_32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon_16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon_180.png">
+</head>
+<body>
+
+<nav>
+  <div class="nav-top">
+    <a class="brand" href="index.html"><img class="mark" src="assets/mark.png" alt="Khabarwaani"><span class="word">Khabarwaani</span></a>
+    <a class="nav-cta" href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer"><svg class="insta-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg><span>Instagram</span></a>
+  </div>
+  <div class="nav-sub">
+    <div class="nav-groups">
+      <div class="nav-group">
+        <ul class="navlinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="thesis.html">Market Thesis</a></li>
+        </ul>
+      </div>
+      <div class="nav-divider"></div>
+      <div class="nav-group">
+        <ul class="navlinks">
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="pipeline.html">Pipeline</a></li>
+          <li><a href="editorial.html">Editorial Desk</a></li>
+          <li><a href="studio.html">AI Studio</a></li>
+        </ul>
+      </div>
+      <div class="nav-divider"></div>
+      <div class="nav-group">
+        <ul class="navlinks">
+          <li><a href="distribution.html">Distribution</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- HERO SECTION -->
+<section class="hero" style="padding: 76px 0 58px;">
+  <div class="wrap">
+    <div class="eyebrow">Systems Engineering &amp; Architecture Whitepaper</div>
+    <h1>The AI News Production Problem: Why the Next Layer Is Not Another Video Model</h1>
+    <p class="lede">AI video generation has moved rapidly from experimentation toward practical production. Yet producing reliable, fast, and scalable news video is an orchestration and systems-integration challenge — not a single model problem.</p>
+    <div class="hero-links">
+      <a class="btn primary" href="#systems-problem">Read Engineering Thesis</a>
+      <a class="btn ghost" href="#stack">Explore 8-Layer Stack</a>
+      <a class="btn ghost" href="#routing">Model Routing Layer</a>
+    </div>
+    <div class="stat-strip">
+      <div class="stat"><b>8-Layer Stack</b><span>From source retrieval to multi-platform delivery</span></div>
+      <div class="stat"><b>7-Agent Mesh</b><span>Specialized coordinators replacing monolithic generation</span></div>
+      <div class="stat"><b>Shot-Level QA</b><span>Isolating regenerations to single scenes in seconds</span></div>
+      <div class="stat"><b>100% Traceability</b><span>Source → Claim → Sentence → Scene graph</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1: THE SYSTEMS PROBLEM -->
+<section class="reveal" id="systems-problem">
+  <div class="wrap col">
+    <span class="kicker">Core Thesis</span>
+    <h2>1. AI Video Generation Has a Systems Problem</h2>
+    <p style="font-size:16px; color:#4b5160; margin-bottom:20px;">
+      Producing a reliable, fast, and scalable news video is far more difficult than generating a visually impressive 5-second clip. The reason is simple: <b>news production is not a single AI task. It is a chain of interconnected AI tasks.</b>
+    </p>
+    <p style="font-size:15px; color:#4b5160; margin-bottom:24px;">
+      Research requires one system. Fact-checking requires another. Script generation requires another. Voice generation, image synthesis, video rendering, subtitles, and quality control all require different models or specialized tools. The industry challenge is therefore shifting from:
+    </p>
+
+    <div class="callout" style="margin-bottom:28px;">
+      <p style="font-size:15px; margin:0 0 10px; color:#8a8177; text-transform:uppercase; font-weight:600; letter-spacing:.05em;">The Paradigm Shift</p>
+      <div style="font-size:16px; color:#9a3b2c; text-decoration:line-through; margin-bottom:6px;">“Can AI generate a video?”</div>
+      <div style="font-family:'Fraunces',serif; font-size:20px; color:var(--navy); font-weight:600;">
+        “Can multiple AI systems work together to reliably produce a publishable news video?”
+      </div>
+    </div>
+
+    <p style="font-size:15px; color:#4b5160; margin-bottom:18px;">
+      A conventional video workflow is relatively deterministic: a researcher gathers information, a writer scripts, a director blocks, actors perform, editors assemble, and a producer audits. AI can perform parts of these tasks, but standalone video models do not understand the requirements of the entire pipeline. Left alone, a video model will:
+    </p>
+
+    <ul class="pill-list">
+      <li>Arbitrarily alter a recurring character's facial structure or wardrobe between shots</li>
+      <li>Misunderstand speaker assignments and assign speech to the wrong character</li>
+      <li>Produce unnatural gesture mechanics, broken hands, or uncanny eye-lines</li>
+      <li>Lose spatial and lighting continuity between adjacent cuts</li>
+      <li>Create awkward dialogue pauses or drift out of lip-sync alignment</li>
+      <li>Silently drop critical clauses or constraints specified in the prompt</li>
+      <li>Hallucinate inconsistent backgrounds, artifacts, and temporal jitter</li>
+      <li>Struggle with multi-character turn-taking and conversational reaction shots</li>
+      <li>Generate scenes that technically render but completely collapse story pacing</li>
+    </ul>
+
+    <p style="font-family:'Fraunces',serif; font-size:18px; color:var(--navy); margin-top:24px;">
+      The problem is not the absence of a sufficiently powerful video model. The problem is orchestration.
+    </p>
+  </div>
+</section>
+
+<!-- SECTION 2 & 3: PROMPT ENGINEERING AS PRODUCTION ENGINEERING -->
+<section class="reveal" id="prompt-engineering">
+  <div class="wrap">
+    <span class="kicker">Execution Layer</span>
+    <h2>2. Prompt Engineering Is the First Engineering Layer</h2>
+    <p style="color:#4b5160; font-size:15.5px; max-width:720px; margin-bottom:28px;">
+      Prompt engineering is frequently trivialized as “writing better instructions.” In professional, automated news video production, it functions as machine-readable production engineering:
+    </p>
+
+    <div class="spec-compare">
+      <div class="spec-box vague">
+        <h3 style="font-size:16px; color:#9a3b2c; margin-bottom:6px;">Amateur Vague Prompt</h3>
+        <p style="font-size:13.5px; color:#6a6f78; margin:0 0 12px;">Leaves spatial blocking, timing, and continuity to stochastic model drift.</p>
+        <pre>"Two people discuss the news in an office."</pre>
+        <p style="font-size:12.5px; color:#9a3b2c; margin-top:12px; font-weight:600;">Result: Identity swaps, random desk angles, overlapping voices, broken continuity.</p>
+      </div>
+
+      <div class="spec-box engineered">
+        <h3 style="font-size:16px; color:#2c7a4b; margin-bottom:6px;">Khabarwaani Production Spec</h3>
+        <p style="font-size:13.5px; color:#6a6f78; margin:0 0 12px;">Structured parameterization encoding characters, blocking, and timing constraints.</p>
+        <pre>{
+  "scene_id": "shot_03_discussion",
+  "characters": [
+    {"id": "char_A", "role": "lead_anchor", "pose": "seated_behind_desk", "face_seed": "ak_4021"},
+    {"id": "char_B", "role": "analyst", "pose": "standing_1.5m_offset_profile"}
+  ],
+  "camera": {"angle": "medium_two_shot", "lens_mm": 50, "focal_lock": "char_A"},
+  "dialogue_timeline": [
+    {"speaker": "char_A", "start_s": 0.0, "end_s": 3.8, "gaze": "char_B", "listener_action": "subtle_nod"},
+    {"pause_ms": 350, "pacing": "natural_breath"},
+    {"speaker": "char_B", "start_s": 4.15, "end_s": 8.5, "gaze": "char_A"}
+  ],
+  "constraints": ["no_camera_facing_speech", "strict_continuity_bg_02"]
+}</pre>
+        <p style="font-size:12.5px; color:#2c7a4b; margin-top:12px; font-weight:600;">Result: Deterministic blocking, exact speech pauses, and seamless inter-shot alignment.</p>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:28px;">
+      <strong style="color:var(--navy); font-size:16px;">3. But Prompting Alone Is Not Enough:</strong>
+      <p style="margin:6px 0 0; font-size:14.5px; color:#4b5160; line-height:1.6;">
+        Even the most rigorous prompt cannot guarantee deterministic video model output. When a production pipeline renders ten scenes, an autonomous system must inspect each generation against quantitative criteria: <i>Did the character face drift? Is the dialogue cadence natural? Is the lip-sync aligned? Does it cut seamlessly with the previous shot?</i> This is where autonomous AI agents step in.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: FROM PROMPTS TO AI AGENTS -->
+<section class="reveal" id="agentic-mesh">
+  <div class="wrap">
+    <span class="kicker">Multi-Agent Coordination</span>
+    <h2>4. From Prompts to Autonomous Production Agents</h2>
+    <p style="color:#4b5160; font-size:15.5px; max-width:720px; margin-bottom:28px;">
+      Rather than asking a single model to comprehend research, verify legal records, format spoken prose, storyboard shots, synthesize video, and audio-mix, Khabarwaani distributes the workflow across seven specialized agents:
+    </p>
+
+    <div class="agent-chain">
+      <div class="agent-step">
+        <span class="agent-badge">Agent 01</span>
+        <h4>Research Agent</h4>
+        <p>Monitors official wires, court filings, and verified data signals to extract factual core entities.</p>
+      </div>
+      <div class="agent-step">
+        <span class="agent-badge">Agent 02</span>
+        <h4>Fact-Checking Agent</h4>
+        <p>Audits extracted claims against primary source records and calculates claim-confidence scores.</p>
+      </div>
+      <div class="agent-step">
+        <span class="agent-badge">Agent 03</span>
+        <h4>Script Agent</h4>
+        <p>Shapes verified claims into high-retention 10s–60s spoken vertical arcs in native Hindustani and regional vernaculars.</p>
+      </div>
+      <div class="agent-step">
+        <span class="agent-badge">Agent 04</span>
+        <h4>Director Agent</h4>
+        <p>Converts narrative script lines into machine-readable shot lists, focal lengths, camera moves, and character blocking.</p>
+      </div>
+      <div class="agent-step">
+        <span class="agent-badge">Agent 05</span>
+        <h4>Video Agent</h4>
+        <p>Dispatches individual shot specifications to the optimal video generator using dynamic model adapters.</p>
+      </div>
+      <div class="agent-step">
+        <span class="agent-badge">Agent 06</span>
+        <h4>Evaluation QA Agent</h4>
+        <p>Audits rendered video against required spatial, timing, lip-sync, and continuity specifications.</p>
+      </div>
+      <div class="agent-step">
+        <span class="agent-badge">Agent 07</span>
+        <h4>Editor Agent</h4>
+        <p>Assembles validated clips, burns animated typography, syncs regional audio stems, and composites final vertical exports.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 & 6: KHABARWAANI ORCHESTRATION LAYER -->
+<section class="reveal" id="orchestration-layer">
+  <div class="wrap">
+    <span class="kicker">Systems Integration</span>
+    <h2>5 &amp; 6. Khabarwaani: The AI News Production Operating Layer</h2>
+    <p style="color:#4b5160; font-size:15.5px; max-width:740px; margin-bottom:24px;">
+      Different AI models do not share memory or standardized data formats. If connected ad-hoc, the system breaks under high-volume publishing. Khabarwaani creates a unified orchestration bus providing standardized interchange for text, prompts, video clips, audio stems, and QA telemetry:
+    </p>
+
+    <!-- ARCHITECTURE ASCII / SCHEMATIC CARD -->
+    <div class="arch-diagram-card">
+      <pre>
+                                  <span class="highlight">KHABARWAANI ORCHESTRATION LAYER</span>
+                                                 │
+            ┌────────────────────────────────────┼────────────────────────────────────┐
+            │                                    │                                    │
+   <span class="highlight">1. Research &amp; Ingestion</span>              <span class="highlight">2. Creative Reasoning</span>                <span class="highlight">3. Generation Mesh</span>
+            │                                    │                                    │
+   ┌────────┴────────┐                  ┌────────┴────────┐                  ┌────────┴────────┐
+   │ Primary Sources │                  │ Script Drafting │                  │ Model Routing   │
+   │ Wire Signals    │                  │ Prompt Compiler │                  │ Video &amp; Voice   │
+   │ Fact-Check Mesh │                  │ Shot Blocking   │                  │ Image Synthesis │
+   └─────────────────┘                  └─────────────────┘                  └─────────────────┘
+            │                                    │                                    │
+            └────────────────────────────────────┼────────────────────────────────────┘
+                                                 │
+                                 ┌───────────────┴───────────────┐
+                                 │                               │
+                       <span class="highlight">Closed-Loop QA Agent</span>            <span class="highlight">Automated Video Editor</span>
+                       Criteria Evaluation             Compositing &amp; Subtitles
+                       Isolate Failed Shots            Multi-Language Export
+                                 │                               │
+                                 └───────────────┬───────────────┘
+                                                 │
+                                         <span class="highlight">PUBLISHED NEWS REEL</span>
+                                   (Instagram, YouTube Shorts, Web)
+      </pre>
+    </div>
+
+    <p style="font-family:'Fraunces',serif; font-size:18px; color:var(--navy); margin-top:20px;">
+      Khabarwaani does not depend on any single AI provider. We build the intelligent coordinator that governs them all.
+    </p>
+  </div>
+</section>
+
+<!-- SECTION 7 & 8: DYNAMIC MODEL ROUTING & COST-AWARE ORCHESTRATION -->
+<section class="reveal" id="routing">
+  <div class="wrap">
+    <span class="kicker">Operational Leverage</span>
+    <h2>7 &amp; 8. Dynamic Model Routing &amp; Cost as an Engineering Variable</h2>
+    <p style="color:#4b5160; font-size:15.5px; max-width:720px; margin-bottom:24px;">
+      The best AI model is not the same for every shot. One model excels at photorealistic human dialogue; another renders rapid 3D motion; another is 10x faster and cheaper. A production studio generating dozens of reels daily cannot select the costliest model for every second:
+    </p>
+
+    <div style="overflow-x:auto;">
+      <table class="cost-table" style="min-width:640px;">
+        <tr>
+          <th>Scene Type</th>
+          <th>Routing Decision</th>
+          <th>Engineering Rationale</th>
+          <th>Relative Cost</th>
+        </tr>
+        <tr>
+          <td><b>Simple Talking Head</b></td>
+          <td>High-speed, low-cost model adapter</td>
+          <td>Minimal spatial complexity; prioritizes lip-sync velocity and low latency.</td>
+          <td class="good">Low (1x)</td>
+        </tr>
+        <tr>
+          <td><b>Complex 2-Person Interaction</b></td>
+          <td>Tier-1 cinematic generative model</td>
+          <td>Demands strict multi-character continuity, precise eye-lines, and natural turn-taking.</td>
+          <td class="bad">High (4x)</td>
+        </tr>
+        <tr>
+          <td><b>Data / Infographic Explainer</b></td>
+          <td>Deterministic motion engine</td>
+          <td>Zero hallucination risk; programmatic SVG and numeric visual rendering.</td>
+          <td class="good">Minimal (0.2x)</td>
+        </tr>
+        <tr>
+          <td><b>Vernacular Speech Synthesis</b></td>
+          <td>Dialect-specialized neural TTS</td>
+          <td>High-cadence Hindustani and regional accents with colloquial pause modulation.</td>
+          <td class="good">Low (0.5x)</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- COST BUDGET CARD -->
+    <div class="benchmark-block" style="margin-top:28px;">
+      <h3 style="font-size:18px; margin-bottom:8px; color:var(--navy);">Cost-Aware AI Orchestration</h3>
+      <p style="font-size:14px; color:#4b5160; margin-bottom:18px;">
+        Every story unit is governed by a programmatic cost envelope. The orchestrator balances <b>Quality + Speed + Reliability + Unit Cost</b>. A simple 3-second establishing shot uses a lightweight model; a climactic dialogue scene utilizes high-precision generation. Failed shots are re-rendered only when expected marginal quality justifies the compute cost.
+      </p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:10px; font-size:13px;">
+        <div style="background:var(--paper); padding:10px; border-radius:4px; border:1px solid var(--rule); text-align:center;">
+          <b style="color:var(--navy);">Research &amp; Wire</b><div style="color:var(--gold); font-weight:600;">₹5</div>
+        </div>
+        <div style="background:var(--paper); padding:10px; border-radius:4px; border:1px solid var(--rule); text-align:center;">
+          <b style="color:var(--navy);">Script Synthesis</b><div style="color:var(--gold); font-weight:600;">₹8</div>
+        </div>
+        <div style="background:var(--paper); padding:10px; border-radius:4px; border:1px solid var(--rule); text-align:center;">
+          <b style="color:var(--navy);">Neural Voice</b><div style="color:var(--gold); font-weight:600;">₹12</div>
+        </div>
+        <div style="background:var(--paper); padding:10px; border-radius:4px; border:1px solid var(--rule); text-align:center;">
+          <b style="color:var(--navy);">Routed Video</b><div style="color:var(--gold); font-weight:600;">₹65</div>
+        </div>
+        <div style="background:var(--paper); padding:10px; border-radius:4px; border:1px solid var(--rule); text-align:center;">
+          <b style="color:var(--navy);">QA &amp; Compositing</b><div style="color:var(--gold); font-weight:600;">₹10</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 9 & 10: AUTOMATED CLOSED-LOOP QA -->
+<section class="reveal" id="closed-loop-qa">
+  <div class="wrap">
+    <span class="kicker">Software-Grade Reliability</span>
+    <h2>9 &amp; 10. Automated Quality Control &amp; Iterative Regeneration Loops</h2>
+    <p style="color:#4b5160; font-size:15.5px; max-width:720px; margin-bottom:24px;">
+      Just as a software compiler tests code and flags compilation errors, Khabarwaani treats video production as an iterative test-and-repair loop: <code>Specification → Generation → Evaluation → Correction → Regeneration → Final Cut</code>.
+    </p>
+
+    <!-- QA TABLE -->
+    <div class="qa-card">
+      <div class="qa-card-header">
+        <span>Shot 04 Evaluation Log — Real-Time Telemetry</span>
+        <span style="font-family:monospace; font-size:12px; color:#6a6f78;">Target: 30s Explainer</span>
+      </div>
+      <table class="qa-table">
+        <tr>
+          <th>Required Specification</th>
+          <th>Observed Generation</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>Character A speaks first looking at Character B</td>
+          <td>Character A opens turn; eye-line aligned at 35°</td>
+          <td><span class="qa-badge qa-pass">Pass</span></td>
+          <td>Retain clip segment</td>
+        </tr>
+        <tr>
+          <td>Character B silent, natural listening reaction</td>
+          <td>Character B nods naturally at 2.4s without speaking</td>
+          <td><span class="qa-badge qa-pass">Pass</span></td>
+          <td>Retain clip segment</td>
+        </tr>
+        <tr>
+          <td>Character facial consistency vs. Anchor Seed</td>
+          <td>Facial landmark delta &lt; 2.1% against reference model</td>
+          <td><span class="qa-badge qa-pass">Pass</span></td>
+          <td>Retain clip segment</td>
+        </tr>
+        <tr>
+          <td>Pacing: Punchline delivery at exactly 07.2s</td>
+          <td>Audio pause lagged; punchline dropped at 09.4s</td>
+          <td><span class="qa-badge qa-fail">Fail</span></td>
+          <td>Adjust temporal constraint</td>
+        </tr>
+        <tr>
+          <td>Camera direction: 3/4 profile, zero direct gaze</td>
+          <td>Character B briefly broke 4th wall at 08.1s</td>
+          <td><span class="qa-badge qa-fail">Fail</span></td>
+          <td>Isolate &amp; regenerate Shot 04 only</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="callout" style="border-left-color:#2c7a4b;">
+      <strong style="color:var(--navy); font-size:16px;">The Granular Regeneration Advantage:</strong>
+      <p style="margin:4px 0 0; font-size:14.5px; color:#3a3f4a;">
+        When Shot 4 fails a gaze check, the system <b>does not re-render the entire 60-second video</b>. The orchestrator re-submits only the 4-second sub-clip with tighter constraints, saving ~80% of generation compute and delivering final sign-off in minutes.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 11: NEWS-SPECIFIC TRACEABILITY -->
+<section class="reveal" id="traceability">
+  <div class="wrap col">
+    <span class="kicker">Journalistic Rigor</span>
+    <h2>11. News Makes This Harder: The Factual Traceability Graph</h2>
+    <p style="font-size:16px; color:#4b5160; margin-bottom:20px;">
+      News is strictly more demanding than entertainment. A fiction video can afford creative liberties; a news explainer must defend every syllable against libel, factual hallucination, and rapidly developing breaking evidence.
+    </p>
+
+    <!-- TRACEABILITY FLOW -->
+    <div class="trace-flow">
+      <div class="trace-node">
+        <div class="node-step">Node 1</div>
+        <div class="node-title">Primary Source</div>
+        <div class="node-desc">Official Supreme Court Order / ISRO Telemetry Wire</div>
+      </div>
+      <div class="trace-node">
+        <div class="node-step">Node 2</div>
+        <div class="node-title">Atomic Claim</div>
+        <div class="node-desc">"Orbital velocity reached 28,000 km/h"</div>
+      </div>
+      <div class="trace-node">
+        <div class="node-step">Node 3</div>
+        <div class="node-title">Script Sentence</div>
+        <div class="node-desc">Sentence 2 in 45-second explainer voiceover</div>
+      </div>
+      <div class="trace-node">
+        <div class="node-step">Node 4</div>
+        <div class="node-title">Target Shot</div>
+        <div class="node-desc">Shot 03 (3.2s – 6.8s vertical visual scene)</div>
+      </div>
+      <div class="trace-node">
+        <div class="node-step">Node 5</div>
+        <div class="node-title">Exported Cut</div>
+        <div class="node-desc">Final published video on mobile feeds</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong style="color:var(--navy); font-size:16px;">Real-World Scenario: Breaking News Corrections</strong>
+      <p style="margin:6px 0 0; font-size:14.5px; color:#3a3f4a; line-height:1.6;">
+        When an official statistic or court ruling updates 3 hours post-publishing, legacy studios either delete the entire video or post clumsy text errata. Khabarwaani's traceability graph traces: <i>Which claim changed? → Which sentence relied on it? → Which 3-second shot renders that sentence?</i> The system re-renders and re-splices that single shot in 90 seconds, republishing a corrected version across all regional editions effortlessly.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 12: THE 8-LAYER AI MEDIA STACK -->
+<section class="reveal" id="stack">
+  <div class="wrap">
+    <span class="kicker">System Architecture</span>
+    <h2>12. The 8-Layer AI Media Stack</h2>
+    <p style="color:#4b5160; font-size:15.5px; max-width:720px; margin-bottom:28px;">
+      Khabarwaani is built on an end-to-end media engineering stack that abstracts away raw generative models in favor of reliable, repeatable production pipelines:
+    </p>
+
+    <div class="layers-grid">
+      <div class="layer-card">
+        <span class="layer-num">Layer 01</span>
+        <h4>Intelligence &amp; Retrieval</h4>
+        <p>Wire ingestion, structured entity extraction, primary source RAG, and factual cross-referencing.</p>
+      </div>
+      <div class="layer-card">
+        <span class="layer-num">Layer 02</span>
+        <h4>Creative Reasoning</h4>
+        <p>Story arc design, spoken cadence optimization, vernacular translation, and hook engineering.</p>
+      </div>
+      <div class="layer-card">
+        <span class="layer-num">Layer 03</span>
+        <h4>Production Prompting</h4>
+        <p>Compiling creative intention into machine-readable spatial, temporal, and camera instructions.</p>
+      </div>
+      <div class="layer-card">
+        <span class="layer-num">Layer 04</span>
+        <h4>Model Orchestration</h4>
+        <p>Dynamic model routing across specialized video, speech, and motion engines based on cost and fidelity.</p>
+      </div>
+      <div class="layer-card">
+        <span class="layer-num">Layer 05</span>
+        <h4>AI-to-AI Interoperability</h4>
+        <p>Standardized JSON-schema bus coordinating metadata, prompt fragments, media assets, and state machines.</p>
+      </div>
+      <div class="layer-card">
+        <span class="layer-num">Layer 06</span>
+        <h4>Evaluation &amp; QA</h4>
+        <p>Automated criteria checks (lip-sync, gesture, continuity, eye-line) with isolated shot re-generation.</p>
+      </div>
+      <div class="layer-card">
+        <span class="layer-num">Layer 07</span>
+        <h4>Automated Post-Production</h4>
+        <p>Dynamic 9:16 layout composition, kinetic subtitles, lower-thirds, sound cues, and multi-format stitching.</p>
+      </div>
+      <div class="layer-card">
+        <span class="layer-num">Layer 08</span>
+        <h4>Algorithmic Distribution</h4>
+        <p>Cross-platform dispatching (Instagram, YouTube Shorts, Regional apps) and real-time audience learning loops.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 13 & 14: THE OPERATIONAL ADVANTAGE -->
+<section class="reveal">
+  <div class="wrap col">
+    <span class="kicker">Defensibility &amp; Future Outlook</span>
+    <h2>13 &amp; 14. The Workflow Is the Moat</h2>
+    <p style="font-size:16px; color:#4b5160; margin-bottom:20px;">
+      Individual AI models will commoditize. Today's state-of-the-art video model will be surpassed within six months. But the orchestration layer that governs those models becomes increasingly valuable with every story published.
+    </p>
+    <p style="font-size:15px; color:#4b5160; margin-bottom:24px;">
+      A mature production operating layer accumulates deep, proprietary workflow intelligence:
+    </p>
+
+    <ul class="pill-list">
+      <li>Empirical knowledge of which model performs best for specific scene and motion types</li>
+      <li>Unit-cost profiles and predictive compute budgeting for every story category</li>
+      <li>Prompt compilation libraries that reliably suppress known model hallucinations</li>
+      <li>Automated evaluation classifiers trained on thousands of broadcast failure modes</li>
+      <li>Persistent identity and character seed banks for recurring anchor personas</li>
+      <li>End-to-end factual traceability graphs that protect newsroom credibility at scale</li>
+    </ul>
+
+    <div class="callout" style="margin-top:28px; background:var(--navy); color:#fff; border-left:4px solid var(--gold);">
+      <p style="color:var(--gold); font-weight:600; text-transform:uppercase; font-size:12px; margin:0 0 8px; letter-spacing:.05em;">The Ultimate Shift</p>
+      <h3 style="color:#fff; font-size:20px; margin:0 0 10px;">From Individual Models to Systems of Models</h3>
+      <p style="color:rgba(241,238,231,0.85); font-size:15px; margin:0; line-height:1.6;">
+        The first phase of generative AI was about individual models. The next phase is about systems of models. Khabarwaani is building that orchestration layer: connecting research, reasoning, prompting, generation, evaluation, editing, and distribution into one cost-aware, verifiable production engine.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE GRID -->
+<section class="divider-nav reveal">
+  <div class="wrap">
+    <span class="kicker">Explore the Platform</span>
+    <h2 style="margin-bottom:0;">Explore deep-dive sections</h2>
+    <div class="explore-grid">
+      <a class="explore-tile" href="thesis.html">
+        <span class="num">01</span>
+        <h3>Market Thesis</h3>
+        <p>The data-backed case: discovery-to-trust deficit, retention benchmarks, and scalability economics.</p>
+        <span class="arrow">Explore</span>
+      </a>
+      <a class="explore-tile" href="pipeline.html">
+        <span class="num">02</span>
+        <h3>Operating Pipeline</h3>
+        <p>The six-stage system from verified signal to final cut.</p>
+        <span class="arrow">Explore</span>
+      </a>
+      <a class="explore-tile" href="editorial.html">
+        <span class="num">03</span>
+        <h3>Editorial Desk</h3>
+        <p>Where high-value stories and editorial beats enter the newsroom.</p>
+        <span class="arrow">Explore</span>
+      </a>
+      <a class="explore-tile" href="studio.html">
+        <span class="num">04</span>
+        <h3>AI Studio</h3>
+        <p>The creative engine, SPADEX case study, and 9:16 vertical pipeline.</p>
+        <span class="arrow">Explore</span>
+      </a>
+      <a class="explore-tile" href="distribution.html">
+        <span class="num">05</span>
+        <h3>Distribution</h3>
+        <p>Publishing slots, recurring formats, and 12-month goals.</p>
+        <span class="arrow">Explore</span>
+      </a>
+      <a class="explore-tile" href="leadership.html">
+        <span class="num">06</span>
+        <h3>Leadership</h3>
+        <p>Executive vision, core principles, and leadership contact cards.</p>
+        <span class="arrow">Explore</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta reveal" id="ask">
+  <div class="wrap col">
+    <span class="kicker" style="color:var(--gold);">Collaboration &amp; Partnerships</span>
+    <h2>Partner with the architects of AI-native media</h2>
+    <p style="font-size:16.5px; margin-bottom:26px;">Whether you are an investor in AI infrastructure, a media technologist, or a newsroom partner exploring agentic pipelines — let's connect.</p>
+    <div style="display:flex; gap:12px; flex-wrap:wrap;">
+      <a class="btn primary" href="https://www.linkedin.com/in/abhi266raj/" target="_blank" rel="noopener noreferrer">Abhiraj on LinkedIn</a>
+      <a class="btn primary" href="https://www.linkedin.com/in/parthkumar-panchal/" target="_blank" rel="noopener noreferrer" style="background:#0A66C2; border-color:#0A66C2;">Parth on LinkedIn</a>
+      <a class="btn ghost" href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer">Watch the Live Pilot</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © 2026 Khabarwaani · Agentic AI News-Reels Studio · Digital Media / News &amp; Info
+        <div class="fnav">
+      <a href="index.html">Home</a>
+      <a href="thesis.html">Market Thesis</a>
+      <a href="architecture.html">Architecture</a>
+      <a href="pipeline.html">Pipeline</a>
+      <a href="editorial.html">Editorial Desk</a>
+      <a href="studio.html">AI Studio</a>
+      <a href="distribution.html">Distribution</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="https://www.linkedin.com/in/abhi266raj/" target="_blank" rel="noopener noreferrer">Abhiraj Kumar</a>
+      <a href="https://www.linkedin.com/in/parthkumar-panchal/" target="_blank" rel="noopener noreferrer">Parthkumar Panchal</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
