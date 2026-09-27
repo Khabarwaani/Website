@@ -1296,60 +1296,80 @@
   color: var(--navy);
 }
 
-/* Editorial Comic & Satirical Tension Card Styles */
-.comic-canvas-wrap {
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-  border: 1px solid rgba(241, 238, 231, 0.12);
-  margin-bottom: 12px;
-  background: #111923;
-}
-
-.comic-canvas-wrap svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.comic-dialog-pills {
+/* The News Experience Shift Card Styles */
+.shift-comparison-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin-bottom: 12px;
+  gap: 12px;
+  margin-top: 14px;
 }
-
 @media (max-width: 520px) {
-  .comic-dialog-pills {
+  .shift-comparison-grid {
     grid-template-columns: 1fr;
   }
 }
-
-.comic-pill {
-  padding: 8px 10px;
+.shift-box {
+  padding: 14px 14px;
   border-radius: 6px;
-  font-size: 11.5px;
-  line-height: 1.35;
+  font-size: 13px;
 }
-
-.comic-pill.citizen-pill {
-  background: rgba(56, 189, 248, 0.08);
-  border: 1px solid rgba(56, 189, 248, 0.22);
-  color: #e2e8f0;
+.shift-box.old {
+  background: rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.22);
 }
-
-.comic-pill.citizen-pill b {
-  color: #38bdf8;
+.shift-box.old .shift-box-title {
+  color: #f87171;
+  font-weight: 700;
+  font-size: 12.5px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
 }
-
-.comic-pill.anchor-pill {
-  background: rgba(239, 68, 68, 0.08);
-  border: 1px solid rgba(239, 68, 68, 0.22);
-  color: #fecdd3;
+.shift-box.new {
+  background: rgba(44, 122, 75, 0.12);
+  border: 1px solid rgba(76, 214, 130, 0.28);
 }
-
-.comic-pill.anchor-pill b {
+.shift-box.new .shift-box-title {
+  color: #4cd682;
+  font-weight: 700;
+  font-size: 12.5px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.shift-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 7px;
+}
+.shift-box.old .shift-list li {
+  color: rgba(241, 238, 231, 0.78);
+  font-size: 12px;
+  line-height: 1.4;
+  padding-left: 15px;
+  position: relative;
+}
+.shift-box.old .shift-list li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
   color: #ef4444;
+  font-size: 11px;
+}
+.shift-box.new .shift-list li {
+  color: rgba(241, 238, 231, 0.92);
+  font-size: 12px;
+  line-height: 1.4;
+  padding-left: 15px;
+  position: relative;
+}
+.shift-box.new .shift-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4cd682;
+  font-size: 11px;
 }
 

@@ -7,16 +7,50 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/future-modules.css">
+<link rel="stylesheet" href="css/style.css?v=20260927_3">
+<link rel="stylesheet" href="css/future-modules.css?v=20260927_3">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon_32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon_16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon_180.png">
+<style>
+  /* Guaranteed Header, Goal Bar & Visibility (immune to local browser cache) */
+  .site-header { position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; z-index: 1000 !important; background: #FAF7F0 !important; border-bottom: 1px solid rgba(21,24,29,0.12) !important; padding-top: env(safe-area-inset-top, 0px) !important; display: block !important; }
+  .header-goal-bar { display: block !important; background: #1F1A14 !important; color: #F1EEE7 !important; padding: 7px 0 !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; font-size: 12px !important; line-height: 1.4 !important; text-align: center !important; }
+  .header-goal-wrap { display: flex !important; align-items: center !important; justify-content: center !important; gap: 8px !important; flex-wrap: wrap !important; text-align: center !important; margin: 0 auto !important; max-width: 980px !important; padding: 0 20px !important; }
+  .header-goal-main { display: inline-flex !important; align-items: center !important; gap: 6px !important; }
+  .header-goal-badge { background: #E0692A !important; color: #fff !important; font-size: 9.5px !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.07em !important; padding: 2px 7px !important; border-radius: 3px !important; display: inline-block !important; }
+  .header-goal-brand { font-family: 'Fraunces', serif !important; font-weight: 700 !important; font-size: 13px !important; letter-spacing: 0.06em !important; color: #fff !important; }
+  .header-goal-tagline { color: #E0692A !important; font-weight: 600 !important; }
+  .header-goal-shift { color: rgba(241,238,231,0.92) !important; font-size: 12px !important; }
+  .site-header nav { position: relative !important; top: auto !important; height: 56px !important; background: #FAF7F0 !important; border-bottom: none !important; display: block !important; }
+  body { padding-top: calc(96px + env(safe-area-inset-top, 0px)) !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  @media(max-width:768px){
+    body { padding-top: calc(134px + env(safe-area-inset-top,0px)) !important; }
+    .header-goal-bar { padding: 5px 0 !important; }
+    .header-goal-wrap { flex-direction: column !important; gap: 2px !important; padding: 0 12px !important; }
+    .header-goal-sep { display: none !important; }
+    .site-header nav { height: auto !important; padding-bottom: 8px !important; }
+  }
+</style>
 </head>
 <body>
 
-<nav>
+<header class="site-header">
+  <div class="header-goal-bar">
+    <div class="wrap header-goal-wrap">
+      <div class="header-goal-main">
+        <span class="header-goal-badge">Project Goal</span>
+        <span class="header-goal-brand">KHABARWAANI</span>
+        <span class="header-goal-divider">·</span>
+        <span class="header-goal-tagline">News, Reimagined</span>
+      </div>
+      <span class="header-goal-sep">—</span>
+      <div class="header-goal-shift">From Humiliation, Shouting to Curiosity, Conversation &amp; Fun.</div>
+    </div>
+  </div>
+  <nav>
   <div class="nav-inner">
     <a class="brand" href="index.html"><img class="mark" src="assets/mark.png" alt="Khabarwaani"><span class="word">Khabarwaani</span></a>
     <ul class="navlinks">
@@ -31,6 +65,7 @@
     </ul>
   </div>
 </nav>
+</header>
 
 <!-- TOP HEADER: THE CENTRAL QUESTION & REPORTER INTERROGATION -->
 <section class="hero" id="top" style="padding: 72px 0 54px;">
@@ -57,235 +92,50 @@
 
         <div class="hero-kpis-mini">
           <div class="hero-kpi-pill"><b>⚡ 15s–60s</b> Vertical Reels</div>
-          <div class="hero-kpi-pill"><b>✓ 100%</b> Fact-Checked</div>
+          <div class="hero-kpi-pill"><b>✓ Verified</b> Primary Sources</div>
           <div class="hero-kpi-pill"><b>😂 Positive Emotion</b> &amp; Fun</div>
           <div class="hero-kpi-pill"><b>🇮🇳 Regional</b> Languages</div>
         </div>
       </div>
 
-      <!-- Right Column: Editorial Comic — The TRP Hostage & Citizen Confrontation -->
+      <!-- Right Column: The News Experience Shift -->
       <div>
         <div class="hero-reporter-card">
           <div class="reporter-card-header">
-            <span class="reporter-card-tag">🎤 Editorial Comic · The TRP Hostage</span>
-            <span class="reporter-live-pill">⚡ The Outrage Trap</span>
+            <span class="reporter-card-tag">⚡ The Format Shift</span>
+            <span class="reporter-live-pill">Curiosity &amp; Fun</span>
           </div>
 
-          <!-- Editorial Comic Strip SVG -->
-          <div class="comic-canvas-wrap">
-            <svg viewBox="0 0 520 320" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="display:block; border-radius:8px; overflow:hidden; font-family:'Inter', system-ui, -apple-system, sans-serif;">
-              <defs>
-                <linearGradient id="bg-split" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#111923"/>
-                  <stop offset="48%" stop-color="#141E2B"/>
-                  <stop offset="50%" stop-color="#221312"/>
-                  <stop offset="100%" stop-color="#1A0D0C"/>
-                </linearGradient>
-                <radialGradient id="red-spotlight" cx="78%" cy="30%" r="55%">
-                  <stop offset="0%" stop-color="#ff3b30" stop-opacity="0.32"/>
-                  <stop offset="60%" stop-color="#9a3b2c" stop-opacity="0.12"/>
-                  <stop offset="100%" stop-color="#1A0D0C" stop-opacity="0"/>
-                </radialGradient>
-                <radialGradient id="citizen-glow" cx="22%" cy="40%" r="50%">
-                  <stop offset="0%" stop-color="#2a6496" stop-opacity="0.25"/>
-                  <stop offset="100%" stop-color="#111923" stop-opacity="0"/>
-                </radialGradient>
-                <linearGradient id="gauge-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#2c7a4b"/>
-                  <stop offset="50%" stop-color="#f59e0b"/>
-                  <stop offset="100%" stop-color="#ef4444"/>
-                </linearGradient>
-                <linearGradient id="gold-lock" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#ffd56b"/>
-                  <stop offset="50%" stop-color="#d97706"/>
-                  <stop offset="100%" stop-color="#78350f"/>
-                </linearGradient>
-                <filter id="comic-drop" x="-10%" y="-10%" width="120%" height="120%">
-                  <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.45"/>
-                </filter>
-              </defs>
-
-              <!-- Base Canvas -->
-              <rect width="520" height="320" fill="url(#bg-split)"/>
-              <rect width="520" height="320" fill="url(#citizen-glow)"/>
-              <rect width="520" height="320" fill="url(#red-spotlight)"/>
-
-              <!-- Subtle Grid on Studio Side -->
-              <line x1="260" y1="40" x2="520" y2="40" stroke="rgba(255,59,48,0.06)" stroke-width="1"/>
-              <line x1="260" y1="80" x2="520" y2="80" stroke="rgba(255,59,48,0.06)" stroke-width="1"/>
-
-              <!-- LEFT PANEL: QUESTIONING CITIZENS -->
-              <rect x="18" y="16" width="112" height="20" rx="4" fill="rgba(42, 100, 150, 0.25)" stroke="#38bdf8" stroke-width="0.8"/>
-              <text x="74" y="30" font-size="9.5" font-weight="700" fill="#7dd3fc" text-anchor="middle" letter-spacing="0.5px">🙋‍♂️ PUBLIC INQUIRY</text>
-
-              <g filter="url(#comic-drop)">
-                <path d="M 20 44 L 235 44 A 8 8 0 0 1 243 52 L 243 118 A 8 8 0 0 1 235 126 L 85 126 L 68 144 L 72 126 L 20 126 A 8 8 0 0 1 12 118 L 12 52 A 8 8 0 0 1 20 44 Z" fill="#F8FAFC" stroke="#38bdf8" stroke-width="1.8"/>
-                <text x="24" y="64" font-size="11" font-weight="800" fill="#0f172a">"Why 40 minutes of screaming</text>
-                <text x="24" y="80" font-size="11" font-weight="800" fill="#0f172a">for 30 seconds of facts?!"</text>
-                <line x1="24" y1="88" x2="225" y2="88" stroke="#e2e8f0" stroke-width="1"/>
-                <text x="24" y="103" font-size="9.5" font-weight="600" fill="#0284c7">"Why did you turn news into toxic noise?</text>
-                <text x="24" y="117" font-size="9.5" font-weight="600" fill="#0284c7">Why can't it be funny, short &amp; real?"</text>
-              </g>
-
-              <!-- Citizen Vector Characters -->
-              <g transform="translate(18, 148)">
-                <!-- Citizen 1: Young Gen Z with smartphone -->
-                <circle cx="50" cy="38" r="18" fill="#e0a97a"/>
-                <path d="M 32 34 C 32 18 68 18 68 34 C 65 24 40 24 32 34 Z" fill="#1e293b"/>
-                <rect x="38" y="34" width="10" height="7" rx="2" fill="none" stroke="#0f172a" stroke-width="1.5"/>
-                <rect x="52" y="34" width="10" height="7" rx="2" fill="none" stroke="#0f172a" stroke-width="1.5"/>
-                <line x1="48" y1="37" x2="52" y2="37" stroke="#0f172a" stroke-width="1.5"/>
-                <path d="M 22 110 C 22 72 35 60 50 60 C 65 60 78 72 78 110 Z" fill="#2563eb"/>
-                <path d="M 44 60 L 50 78 L 56 60 Z" fill="#f8fafc"/>
-                <path d="M 68 76 L 88 92" stroke="#e0a97a" stroke-width="6" stroke-linecap="round"/>
-                <rect x="85" y="80" width="18" height="32" rx="3" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2"/>
-                <polygon points="91,91 91,101 99,96" fill="#38bdf8"/>
-
-                <!-- Citizen 2: Everyday Citizen Raising Hand -->
-                <circle cx="118" cy="48" r="16" fill="#d49360"/>
-                <path d="M 104 46 C 104 32 132 32 132 46 C 128 36 110 36 104 46 Z" fill="#64748b"/>
-                <path d="M 94 110 C 94 78 105 68 118 68 C 131 68 142 78 142 110 Z" fill="#f1f5f9"/>
-                <path d="M 136 82 L 158 64 L 164 68" stroke="#d49360" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <text x="172" y="65" font-size="16" font-weight="900" fill="#f59e0b">?</text>
-
-                <!-- Citizen 3: Student Silhouette -->
-                <circle cx="178" cy="62" r="13" fill="#475569" opacity="0.6"/>
-                <path d="M 160 110 C 160 86 168 80 178 80 C 188 80 196 86 196 110 Z" fill="#334155" opacity="0.6"/>
-                <rect x="182" y="88" width="14" height="22" rx="2" fill="#d97706" opacity="0.7"/>
-              </g>
-
-              <!-- CENTER DIVIDER: SOUNDPROOF STUDIO GLASS & TRP LOCK -->
-              <line x1="254" y1="10" x2="254" y2="310" stroke="rgba(255,255,255,0.15)" stroke-width="2" stroke-dasharray="6,4"/>
-              <line x1="258" y1="10" x2="258" y2="310" stroke="rgba(56, 189, 248, 0.25)" stroke-width="1.5"/>
-
-              <g transform="translate(228, 126)" filter="url(#comic-drop)">
-                <rect x="0" y="0" width="56" height="52" rx="6" fill="#1e1b18" stroke="#E0692A" stroke-width="1.5"/>
-                <path d="M 20 18 L 20 11 C 20 6.5 36 6.5 36 11 L 36 18" fill="none" stroke="url(#gold-lock)" stroke-width="3" stroke-linecap="round"/>
-                <rect x="15" y="18" width="26" height="20" rx="3" fill="url(#gold-lock)"/>
-                <circle cx="28" cy="27" r="2.5" fill="#1e1b18"/>
-                <line x1="28" y1="28" x2="28" y2="33" stroke="#1e1b18" stroke-width="1.5"/>
-                <text x="28" y="46" font-size="7.5" font-weight="800" fill="#f8fafc" text-anchor="middle" letter-spacing="0.4px">TRP LOCK</text>
-              </g>
-
-              <!-- RIGHT PANEL: THE ANCHOR TRAPPED IN THE TRP MATRIX -->
-              <g transform="translate(268, 16)">
-                <rect x="0" y="0" width="52" height="18" rx="3" fill="#dc2626"/>
-                <circle cx="8" cy="9" r="3" fill="#fef08a"/>
-                <text x="28" y="13" font-size="8.5" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1px">ON AIR</text>
-              </g>
-
-              <!-- TRP Panic Meter -->
-              <g transform="translate(390, 14)">
-                <rect x="0" y="0" width="114" height="32" rx="4" fill="rgba(0,0,0,0.55)" stroke="#ef4444" stroke-width="1"/>
-                <text x="8" y="12" font-size="8" font-weight="700" fill="#fca5a5">TRP PANIC METER</text>
-                <rect x="8" y="17" width="98" height="6" rx="3" fill="#334155"/>
-                <rect x="8" y="17" width="92" height="6" rx="3" fill="url(#gauge-grad)"/>
-                <polygon points="100,15 97,25 103,25" fill="#ffffff"/>
-                <text x="68" y="12" font-size="8" font-weight="800" fill="#ef4444">98% PEAK</text>
-                <text x="8" y="29" font-size="6.5" font-weight="600" fill="#cbd5e1">Sponsors dictate screaming</text>
-              </g>
-
-              <!-- Overhead Studio Camera -->
-              <g transform="translate(470, 52)">
-                <rect x="0" y="8" width="28" height="16" rx="2" fill="#334155"/>
-                <polygon points="28,12 38,7 38,25 28,20" fill="#475569"/>
-                <circle cx="4" cy="12" r="2" fill="#ef4444"/>
-                <line x1="14" y1="24" x2="6" y2="44" stroke="#475569" stroke-width="2"/>
-                <line x1="14" y1="24" x2="22" y2="44" stroke="#475569" stroke-width="2"/>
-              </g>
-
-              <!-- Anchor's Spiky Panic Speech Bubble -->
-              <g filter="url(#comic-drop)">
-                <path d="M 276 56 L 315 52 L 340 56 L 375 50 L 410 56 L 460 52 L 495 56 A 6 6 0 0 1 504 64 L 500 95 L 504 125 A 6 6 0 0 1 495 132 L 440 132 L 420 148 L 424 132 L 285 132 A 6 6 0 0 1 276 125 L 280 95 L 276 64 A 6 6 0 0 1 276 56 Z" fill="#FFF1F2" stroke="#dc2626" stroke-width="2"/>
-                <text x="286" y="74" font-size="11" font-weight="900" fill="#991b1b">"I NEED VIRALITY FOR TRP</text>
-                <text x="286" y="89" font-size="11" font-weight="900" fill="#991b1b">&amp; ADVERTISER MONEY!"</text>
-                <line x1="286" y1="96" x2="490" y2="96" stroke="#fecdd3" stroke-width="1"/>
-                <text x="286" y="110" font-size="9.5" font-weight="700" fill="#b91c1c">"Quiet news doesn't pay salaries!</text>
-                <text x="286" y="124" font-size="9.5" font-weight="800" fill="#b91c1c">I am LOCKED in this shouting desk!"</text>
-              </g>
-
-              <!-- Sweating News Anchor Chained to Desk -->
-              <g transform="translate(340, 142)">
-                <!-- Sweat Beads -->
-                <path d="M 62 10 Q 64 6 66 10 Q 68 14 64 16 Q 60 14 62 10 Z" fill="#38bdf8"/>
-                <path d="M 12 18 Q 14 14 16 18 Q 18 22 14 24 Q 10 22 12 18 Z" fill="#38bdf8"/>
-                <path d="M 68 28 Q 70 24 72 28 Q 74 32 70 34 Q 66 32 68 28 Z" fill="#38bdf8"/>
-
-                <!-- Head & Hair -->
-                <circle cx="38" cy="28" r="18" fill="#fbcfe8"/>
-                <path d="M 20 24 C 20 8 40 4 56 12 C 58 18 56 26 56 26 C 50 18 35 16 20 24 Z" fill="#1e1b18"/>
-                <line x1="26" y1="20" x2="33" y2="24" stroke="#1e1b18" stroke-width="1.8"/>
-                <line x1="43" y1="24" x2="50" y2="20" stroke="#1e1b18" stroke-width="1.8"/>
-                <circle cx="30" cy="26" r="2.5" fill="#1e1b18"/>
-                <circle cx="46" cy="26" r="2.5" fill="#1e1b18"/>
-                <!-- Screaming Mouth -->
-                <ellipse cx="38" cy="37" rx="8" ry="6" fill="#991b1b"/>
-                <rect x="33" y="33" width="10" height="3" fill="#ffffff" rx="1"/>
-
-                <!-- Suit & Loose Tie -->
-                <path d="M 8 95 C 8 55 24 46 38 46 C 52 46 68 55 68 95 Z" fill="#1e293b"/>
-                <polygon points="32,46 38,68 44,46" fill="#ffffff"/>
-                <polygon points="36,54 40,54 43,84 38,90 33,84" fill="#dc2626"/>
-
-                <!-- Chained Hands -->
-                <circle cx="10" cy="80" r="7" fill="#fbcfe8"/>
-                <rect x="4" y="74" width="12" height="6" rx="2" fill="url(#gold-lock)" stroke="#78350f" stroke-width="0.8"/>
-                <line x1="6" y1="80" x2="-10" y2="100" stroke="url(#gold-lock)" stroke-width="2" stroke-dasharray="2,2"/>
-
-                <circle cx="66" cy="68" r="7" fill="#fbcfe8"/>
-                <rect x="60" y="62" width="12" height="6" rx="2" fill="url(#gold-lock)" stroke="#78350f" stroke-width="0.8"/>
-                <line x1="70" y1="68" x2="90" y2="100" stroke="url(#gold-lock)" stroke-width="2" stroke-dasharray="2,2"/>
-              </g>
-
-              <!-- Studio Microphone -->
-              <g transform="translate(370, 196)">
-                <rect x="0" y="0" width="12" height="22" rx="6" fill="#475569" stroke="#94a3b8" stroke-width="1.2"/>
-                <line x1="6" y1="22" x2="6" y2="38" stroke="#1e293b" stroke-width="3"/>
-                <ellipse cx="6" cy="38" rx="12" ry="4" fill="#0f172a"/>
-              </g>
-
-              <!-- Prime Time News Desk -->
-              <g transform="translate(254, 238)">
-                <polygon points="10,0 260,0 266,54 0,54" fill="#1c1613" stroke="#dc2626" stroke-width="1.5"/>
-                <rect x="18" y="10" width="234" height="22" rx="3" fill="#090504" stroke="#ff3b30" stroke-width="0.8"/>
-                <text x="135" y="24" font-size="8.5" font-weight="900" fill="#f87171" text-anchor="middle" letter-spacing="1px">
-                  🔴 9 PM PRIMETIME DEBATE: 6 SCREAMING GUESTS
-                </text>
-                <text x="135" y="44" font-size="7.5" font-weight="700" fill="#fbbf24" text-anchor="middle" letter-spacing="0.5px">
-                  CHAINED TO ADVERTISER SPONSORSHIPS &amp; TRP SLAVERY
-                </text>
-              </g>
-
-              <!-- BOTTOM STRIP: TENSION STATEMENT -->
-              <rect x="0" y="294" width="520" height="26" fill="#0A0807"/>
-              <line x1="0" y1="294" x2="520" y2="294" stroke="#E0692A" stroke-width="1"/>
-              <text x="260" y="311" font-size="10" font-weight="700" fill="#fde047" text-anchor="middle" letter-spacing="0.4px">
-                ⚡ THE TENSION: The public wants truth — but TV economics only pays for hysteria.
-              </text>
-            </svg>
-          </div>
-
-          <!-- Dialog Pills: Confrontation vs Confession -->
-          <div class="comic-dialog-pills">
-            <div class="comic-pill citizen-pill">
-              <b>🙋‍♂️ Public:</b> <span>"Why 40 mins of yelling for 30s of facts? Give us short, real news."</span>
+          <div class="shift-comparison-grid">
+            <div class="shift-box old">
+              <div class="shift-box-title">Legacy Cable &amp; TV News</div>
+              <ul class="shift-list">
+                <li>40 minutes of shouting for 30s of facts</li>
+                <li>Manufactured outrage, fear &amp; humiliation</li>
+                <li>Dense, repetitive jargon &amp; teleprompters</li>
+                <li>Sensational clickbait to protect TRP</li>
+              </ul>
             </div>
-            <div class="comic-pill anchor-pill">
-              <b>🔒 Anchor:</b> <span>"I'm trapped. If I don't scream, TRP drops and advertisers pull money."</span>
+            <div class="shift-box new">
+              <div class="shift-box-title">Khabarwaani Reels</div>
+              <ul class="shift-list">
+                <li>15s–60s crisp, fact-checked vertical reels</li>
+                <li>Curiosity, humor, wit &amp; positive emotion</li>
+                <li>Clear real-world impact &amp; relatable analogies</li>
+                <li>Native to mobile feeds across Indian languages</li>
+              </ul>
             </div>
           </div>
 
-          <!-- Bottom Resolution: The Khabarwaani Reset -->
-          <div class="qa-bubble-a">
+          <div class="qa-bubble-a" style="margin-top:16px;">
             <div style="font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--gold); font-weight:700; margin-bottom:4px;">
               The Khabarwaani Reset
             </div>
-            <span style="font-size:12.5px; color:#F1EEE7; line-height:1.45;">
-              <b>Virality without toxicity:</b> Traditional TV sells negative outrage because screaming is cheap to stage. Khabarwaani proves virality works better with humor, wit, and 100% verified truth in 15s–60s reels.
+            <span style="font-size:13px; color:#F1EEE7; line-height:1.45;">
+              <b>Virality without toxicity:</b> News does not need screaming panels or fear. Khabarwaani proves virality works better with humor, wit, and verified facts in 15s–60s reels.
             </span>
           </div>
-        </div>
-      </div>
+        </div></div>
     </div>
   </div>
 </section>
@@ -405,82 +255,33 @@
         </div>
       </div>
     </div>
-
-    <!-- 3 DETAILED PILLAR CARDS (SHORT BULLET POINTS ONLY) -->
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
-      
-      <!-- WHY CARD -->
-      <div style="background:var(--paper); border:1px solid var(--rule); border-top:4px solid var(--gold); border-radius:8px; padding:24px 20px; box-shadow:0 4px 14px rgba(28,23,18,0.04);">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-          <span style="font-family:'Fraunces',serif; font-size:19px; font-weight:700; color:var(--navy);">01 · Why</span>
-          <span class="badge badge-why">Why</span>
-        </div>
-        <h3 style="font-size:17px; margin-bottom:4px; color:var(--navy);">Why News Must Be Short, Funny &amp; Positive</h3>
-        <ul class="pillar-points-list">
-          <li><b>Boring by design:</b> Monotonous anchors reading dry, repetitive teleprompters.</li>
-          <li><b>Excessive verbosity:</b> Simple policy updates buried under 1,000-word walls of jargon.</li>
-          <li><b>Gen Z disconnect:</b> Young audiences refuse 40-minute shouting debates for 30 seconds of facts.</li>
-          <li><b>Loss of trust:</b> Sensationalized clickbait and biased panel drama ruined public credibility.</li>
-          <li><b>Positive virality:</b> News needs virality, but virality works better with humor, wit, and optimism than toxic anger.</li>
-          <li><b>Native to the feed:</b> Over 350M+ Indians consume information via vertical reels; news must meet them there.</li>
-          <li><b>Regional Bharat:</b> 90%+ of new mobile users consume vernacular languages, not elite English.</li>
-        </ul>
-      </div>
-
-      <!-- HOW CARD -->
-      <div style="background:var(--paper); border:1px solid var(--rule); border-top:4px solid var(--gold); border-radius:8px; padding:24px 20px; box-shadow:0 4px 14px rgba(28,23,18,0.04);">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-          <span style="font-family:'Fraunces',serif; font-size:19px; font-weight:700; color:var(--navy);">02 · How</span>
-          <span class="badge badge-how">How</span>
-        </div>
-        <h3 style="font-size:17px; margin-bottom:4px; color:var(--navy);">How Agentic AI Powers Positive News</h3>
-        <ul class="pillar-points-list">
-          <li><b>Primary source auditing:</b> Cross-referencing official gazettes, court filings, and wires to kill rumors.</li>
-          <li><b>Hook-first scripting:</b> Crafting 15s–60s narrative arcs with zero padding and tight pacing.</li>
-          <li><b>Humor &amp; relatable analogies:</b> Turning complex science and economics into witty, enjoyable explainers.</li>
-          <li><b>Positive emotional framing:</b> Highlighting solutions, wonder, and tech breakthroughs over doom-scrolling.</li>
-          <li><b>Programmatic 9:16 vertical staging:</b> Automated vertical scene composition and motion graphics.</li>
-          <li><b>Authentic regional voices:</b> Natural speech synthesis in Hindi, Tamil, Telugu, Bengali, and English.</li>
-          <li><b>Rapid turnaround:</b> Compressing days of manual shoot-and-edit cycles into automated hours.</li>
-        </ul>
-      </div>
-
-      <!-- WHAT CARD -->
-      <div style="background:var(--paper); border:1px solid var(--rule); border-top:4px solid var(--navy); border-radius:8px; padding:24px 20px; box-shadow:0 4px 14px rgba(28,23,18,0.04);">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-          <span style="font-family:'Fraunces',serif; font-size:19px; font-weight:700; color:var(--navy);">03 · What</span>
-          <span class="badge badge-what" style="color:var(--navy); background:rgba(31,26,20,0.1);">What</span>
-        </div>
-        <h3 style="font-size:17px; margin-bottom:4px; color:var(--navy);">What We Deliver: Khabarwaani Reels</h3>
-        <ul class="pillar-points-list">
-          <li><b>10s–60s vertical reels:</b> Full-screen 9:16 explainers built natively for Instagram and YouTube Shorts.</li>
-          <li><b>High-signal + fun:</b> 1 core verified fact + clear takeaway + engaging comedy.</li>
-          <li><b>Zero yelling anchors:</b> Calm, witty, and engaging narration with zero manufactured hysteria.</li>
-          <li><b>Multilingual releases:</b> One verified story published across Indian regional languages.</li>
-          <li><b>Instant clarity:</b> Answers "What happened?" and "Why does it matter to me?" in under a minute.</li>
-          <li><b>Active Instagram pilot:</b> Testing retention, formats, and humor live on <b><a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer">@khabarwaani</a></b>.</li>
-          <li><b>Owned platform vision:</b> Expanding into an autonomous, trusted vertical newsroom app for Bharat.</li>
-        </ul>
-      </div>
-
-    </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    © 2026 Khabarwaani · Agentic AI News-Reels Studio · Digital Media / News &amp; Info
-    <div class="fnav">
-      <a href="index.html">Home</a>
-      <a href="thesis.html">Market Thesis</a>
-      <a href="architecture.html">Architecture</a>
-      <a href="pipeline.html">Pipeline</a>
-      <a href="editorial.html">Editorial Desk</a>
-      <a href="studio.html">AI Studio</a>
-      <a href="distribution.html">Distribution</a>
-      <a href="leadership.html">Leadership</a>
-      <a href="https://www.linkedin.com/in/abhi266raj/" target="_blank" rel="noopener noreferrer">Abhiraj Kumar</a>
-      <a href="https://www.linkedin.com/in/parthkumar-panchal/" target="_blank" rel="noopener noreferrer">Parthkumar Panchal</a>
+    <div class="footer-goal">
+      <div class="footer-goal-tag">Project Goal</div>
+      <h3 class="footer-goal-title">KHABARWAANI</h3>
+      <div class="footer-goal-tagline">News, Reimagined</div>
+      <p class="footer-goal-statement">From Humiliation, Shouting to Curiosity, Conversation &amp; Fun.</p>
+    </div>
+    <div class="footer-meta">
+      <div class="footer-copy">
+        © 2026 Khabarwaani · Agentic AI News-Reels Studio · Digital Media / News &amp; Info
+      </div>
+      <div class="fnav">
+        <a href="index.html">Home</a>
+        <a href="thesis.html">Market Thesis</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="pipeline.html">Pipeline</a>
+        <a href="editorial.html">Editorial Desk</a>
+        <a href="studio.html">AI Studio</a>
+        <a href="distribution.html">Distribution</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="https://www.linkedin.com/in/abhi266raj/" target="_blank" rel="noopener noreferrer">Abhiraj Kumar</a>
+        <a href="https://www.linkedin.com/in/parthkumar-panchal/" target="_blank" rel="noopener noreferrer">Parthkumar Panchal</a>
+      </div>
     </div>
   </div>
 </footer>

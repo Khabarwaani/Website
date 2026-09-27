@@ -7,16 +7,50 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/future-modules.css">
+<link rel="stylesheet" href="css/style.css?v=20260927_3">
+<link rel="stylesheet" href="css/future-modules.css?v=20260927_3">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon_32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon_16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon_180.png">
+<style>
+  /* Guaranteed Header, Goal Bar & Visibility (immune to local browser cache) */
+  .site-header { position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; z-index: 1000 !important; background: #FAF7F0 !important; border-bottom: 1px solid rgba(21,24,29,0.12) !important; padding-top: env(safe-area-inset-top, 0px) !important; display: block !important; }
+  .header-goal-bar { display: block !important; background: #1F1A14 !important; color: #F1EEE7 !important; padding: 7px 0 !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; font-size: 12px !important; line-height: 1.4 !important; text-align: center !important; }
+  .header-goal-wrap { display: flex !important; align-items: center !important; justify-content: center !important; gap: 8px !important; flex-wrap: wrap !important; text-align: center !important; margin: 0 auto !important; max-width: 980px !important; padding: 0 20px !important; }
+  .header-goal-main { display: inline-flex !important; align-items: center !important; gap: 6px !important; }
+  .header-goal-badge { background: #E0692A !important; color: #fff !important; font-size: 9.5px !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.07em !important; padding: 2px 7px !important; border-radius: 3px !important; display: inline-block !important; }
+  .header-goal-brand { font-family: 'Fraunces', serif !important; font-weight: 700 !important; font-size: 13px !important; letter-spacing: 0.06em !important; color: #fff !important; }
+  .header-goal-tagline { color: #E0692A !important; font-weight: 600 !important; }
+  .header-goal-shift { color: rgba(241,238,231,0.92) !important; font-size: 12px !important; }
+  .site-header nav { position: relative !important; top: auto !important; height: 56px !important; background: #FAF7F0 !important; border-bottom: none !important; display: block !important; }
+  body { padding-top: calc(96px + env(safe-area-inset-top, 0px)) !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  @media(max-width:768px){
+    body { padding-top: calc(134px + env(safe-area-inset-top,0px)) !important; }
+    .header-goal-bar { padding: 5px 0 !important; }
+    .header-goal-wrap { flex-direction: column !important; gap: 2px !important; padding: 0 12px !important; }
+    .header-goal-sep { display: none !important; }
+    .site-header nav { height: auto !important; padding-bottom: 8px !important; }
+  }
+</style>
 </head>
 <body>
 
-<nav>
+<header class="site-header">
+  <div class="header-goal-bar">
+    <div class="wrap header-goal-wrap">
+      <div class="header-goal-main">
+        <span class="header-goal-badge">Project Goal</span>
+        <span class="header-goal-brand">KHABARWAANI</span>
+        <span class="header-goal-divider">·</span>
+        <span class="header-goal-tagline">News, Reimagined</span>
+      </div>
+      <span class="header-goal-sep">—</span>
+      <div class="header-goal-shift">From Humiliation, Shouting to Curiosity, Conversation &amp; Fun.</div>
+    </div>
+  </div>
+  <nav>
   <div class="nav-inner">
     <a class="brand" href="index.html"><img class="mark" src="assets/mark.png" alt="Khabarwaani"><span class="word">Khabarwaani</span></a>
     <ul class="navlinks">
@@ -31,65 +65,64 @@
     </ul>
   </div>
 </nav>
+</header>
 
 <section class="hero" style="padding: 72px 0 54px;">
   <div class="wrap">
-    <div class="eyebrow">Data-Backed Thesis &amp; Economics</div>
+    <div class="eyebrow">Audience &amp; Market Thesis</div>
     <h1>Why vertical, agentic news is the inevitable future.</h1>
-    <p class="lede">The next 500 million Indian information consumers will never sit in front of a 9 PM cable bulletin. Khabarwaani bridges the discovery-to-trust deficit with high-retention vertical explainers, 3x engagement quality, and 85% lower multi-language scaling costs.</p>
+    <p class="lede">The next 500 million Indian information consumers will never sit in front of a 9 PM cable bulletin. Khabarwaani bridges the discovery-to-trust deficit with high-retention vertical explainers, grounded facts, and scalable regional language adaptation.</p>
     <div class="hero-links">
-      <a class="btn primary" href="#deficit">Explore the Data</a>
+      <a class="btn primary" href="#deficit">Explore the Thesis</a>
       <a class="btn ghost" href="pipeline.html">Operating Pipeline</a>
       <a class="btn ghost" href="leadership.html">Meet Leadership</a>
     </div>
     <div class="stat-strip">
-      <div class="stat"><b>350M+</b><span>Daily short-form video consumers in India</span></div>
-      <div class="stat"><b>65%–80%+</b><span>Completion rates on 15s–45s vertical explainers</span></div>
-      <div class="stat"><b>2–4 hrs</b><span>Signal-to-publish turnaround (vs. 24–48 hrs)</span></div>
-      <div class="stat"><b>~85%</b><span>Lower incremental spend across 5 regional languages</span></div>
+      <div class="stat"><b>350M+</b><span>Short-form mobile video audience in India</span></div>
+      <div class="stat"><b>15s–60s</b><span>Bite-sized vertical format built to finish</span></div>
+      <div class="stat"><b>Verified</b><span>Grounded in primary sources &amp; records</span></div>
+      <div class="stat"><b>Multilingual</b><span>Shared reporting adapted across regional languages</span></div>
     </div>
   </div>
 </section>
 
-<!-- KPI OVERVIEW CARDS -->
 <section class="reveal" id="data">
   <div class="wrap">
-    <span class="kicker">Market Benchmarks</span>
-    <h2>The empirical metrics driving our studio thesis</h2>
-    <p style="color:#4b5160; font-size:15.5px; max-width:680px;">Media consumption in India has irrevocably shifted to vertical mobile feeds, yet news production remains trapped in legacy studio cost structures. Khabarwaani is built on hard audience and economic fundamentals:</p>
+    <span class="kicker">Market Reality</span>
+    <h2>The audience shift driving our studio thesis</h2>
+    <p style="color:#4b5160; font-size:15.5px; max-width:680px;">Media consumption in India has irrevocably shifted to vertical mobile feeds, yet television news remains trapped in outdated formats and shouting debates. Khabarwaani is built on hard audience realities:</p>
 
     <div class="kpi-strip">
       <div class="kpi-card">
         <div class="kpi-num">350M+</div>
         <div class="kpi-label">Active Video Consumers</div>
-        <p class="kpi-desc">Daily short-form video consumers in India, driving over 70% of incremental mobile internet time.</p>
+        <p class="kpi-desc">Daily mobile video consumers in India, driving the vast majority of incremental mobile screen time.</p>
       </div>
       <div class="kpi-card">
-        <div class="kpi-num">72%+</div>
-        <div class="kpi-label">Mobile Feed News Intake</div>
-        <p class="kpi-desc">Gen Z &amp; younger Millennials who consume news primarily on Instagram, YouTube Shorts, and regional apps.</p>
+        <div class="kpi-num">Feed-First</div>
+        <div class="kpi-label">Mobile News Intake</div>
+        <p class="kpi-desc">Gen Z and younger Millennials consume daily updates primarily on Instagram, YouTube Shorts, and regional apps.</p>
       </div>
       <div class="kpi-card">
-        <div class="kpi-num">&lt;20%</div>
-        <div class="kpi-label">Trust in Social Commentary</div>
-        <p class="kpi-desc">Only a fraction of young viewers trust unverified opinion reels despite 65%+ watching short news clips.</p>
+        <div class="kpi-num">Trust Deficit</div>
+        <div class="kpi-label">Fatigue with Hysteria</div>
+        <p class="kpi-desc">Sensationalized shouting panels and clickbait have alienated young viewers who crave verified, calm facts.</p>
       </div>
       <div class="kpi-card">
-        <div class="kpi-num">2.5x–3x</div>
-        <div class="kpi-label">Higher Saves &amp; Shares</div>
-        <p class="kpi-desc">Data-backed educational news explainers generate 2.5x to 3x higher saves and shares than reaction reels.</p>
+        <div class="kpi-num">High Utility</div>
+        <div class="kpi-label">Saves &amp; Shares</div>
+        <p class="kpi-desc">Clear, educational explainers on tax, tech, and public policy earn genuine bookmarks and peer sharing.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 1: THE DISCOVERY-TO-TRUST DEFICIT -->
 <section class="reveal" id="deficit">
   <div class="wrap">
     <span class="kicker">Audience Reality</span>
     <h2>The Discovery-to-Trust Deficit</h2>
     <p style="color:#4b5160; font-size:15.5px; max-width:700px; margin-bottom:28px;">
-      India has <b>350M+ daily short-form video consumers</b>, with over <b>72% of Gen Z and younger Millennials</b> consuming news primarily on mobile feeds (Instagram, YouTube Shorts, regional video apps). Yet, the ecosystem is plagued by an acute credibility crisis.
+      Over 350M+ Indians consume information primarily through mobile feeds. Yet the short-video ecosystem is plagued by unverified rumors and opinion clips, while traditional TV news has lost public credibility through toxic screaming.
     </p>
 
     <div class="deficit-grid">
@@ -99,7 +132,7 @@
           <span class="deficit-tag tag-warning">Mass Attention</span>
         </h3>
         <p style="font-size:14.5px; color:#4b5160; margin:0 0 12px;">
-          Over <b>65% of young audiences</b> consume short news clips on mobile feeds daily. Legacy text newspapers and 40-minute cable broadcasts fail to reach them at their point of discovery.
+          Young audiences consume short video clips on mobile feeds daily. Legacy 40-minute cable broadcasts fail to reach them at their point of discovery.
         </p>
         <div class="benchmark-note" style="color:#9a3b2c; font-weight:600;">
           Attention has permanently migrated to the vertical feed.
@@ -109,13 +142,13 @@
       <div class="deficit-card deficit-warning">
         <h3>
           <span>The Trust Gap</span>
-          <span class="deficit-tag tag-warning">Fewer than 20% Trust</span>
+          <span class="deficit-tag tag-warning">Credibility Vacuum</span>
         </h3>
         <p style="font-size:14.5px; color:#4b5160; margin:0 0 12px;">
-          Studies indicate that while over 65% consume short news clips, <b>fewer than 20% trust unverified social commentary</b>, sensationalized talking heads, or clickbait influencers.
+          Audiences reject sensationalized talking heads, biased drama, and clickbait influencers. They crave brevity, but demand verifiable truth.
         </p>
         <div class="benchmark-note" style="color:#9a3b2c; font-weight:600;">
-          Audiences crave brevity, but reject unsubstantiated opinion.
+          Audiences crave brevity, but reject unsubstantiated hysteria.
         </div>
       </div>
     </div>
@@ -123,233 +156,108 @@
     <div class="callout" style="margin-top:20px;">
       <strong style="color:var(--navy); font-size:16px;">The Khabarwaani Arbitrage:</strong>
       <p style="margin:6px 0 0; font-size:15px; color:#3a3f4a; line-height:1.6;">
-        Khabarwaani captures this vast, unmet demand by <b>pairing vertical video velocity with verifiable sourcing</b>. Viewers get the rapid, engaging 9:16 mobile format they love, backed by an autonomous fact-auditing mesh and primary source trail they can trust.
+        Khabarwaani captures this vast, unmet demand by <b>pairing vertical video velocity with verifiable sourcing</b>. Viewers get the rapid, engaging 9:16 mobile format they love, backed by fact-checked primary sources they can trust.
       </p>
     </div>
   </div>
 </section>
 
-<!-- SECTION 2: FORMAT RETENTION & COMPLETION BENCHMARKS -->
 <section class="reveal" id="benchmarks">
   <div class="wrap">
-    <span class="kicker">Format Retention &amp; Benchmarks</span>
-    <h2>Completion rates and engagement quality that beat legacy media</h2>
+    <span class="kicker">Retention &amp; Quality</span>
+    <h2>Storytelling engineered for mobile completion</h2>
     <p style="color:#4b5160; font-size:15.5px; max-width:680px; margin-bottom:28px;">
-      Information is only valuable if it is finished and retained. Mobile users drop off rapidly when presented with television clips retrofitted into square crops or bloated talking-head segments.
+      Information is only valuable if it is watched and understood. Mobile users drop off rapidly when presented with television clips retrofitted into vertical crops or bloated talking-head segments.
     </p>
 
-    <div class="benchmark-block">
-      <h3 style="font-size:18px; margin-bottom:20px; color:var(--navy);">Completion Rate Benchmark on Mobile Screens</h3>
-
-      <div class="benchmark-row">
-        <div class="benchmark-meta">
-          <span class="benchmark-title">Traditional Long-Form Video &amp; TV Clips on Mobile</span>
-          <span class="benchmark-val val-bad">18% – 25%</span>
-        </div>
-        <div class="benchmark-track">
-          <div class="benchmark-bar bar-bad" style="width: 22%;"></div>
-        </div>
-        <div class="benchmark-note">High drop-off within the first 15 seconds; poor mobile pacing and irrelevant preamble.</div>
+    <div class="twocol">
+      <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-radius:6px; padding:22px;">
+        <h3 style="color:var(--gold); font-size:18px; margin-bottom:8px;">High Utility = Saves (Bookmarks)</h3>
+        <p style="font-size:14.5px; color:#4b5160;">
+          When viewers learn how a new policy affects their taxes, how a tech breakthrough works, or what a court ruling means, they bookmark it to refer back to and use in everyday life.
+        </p>
       </div>
-
-      <div class="benchmark-row" style="margin-top:28px;">
-        <div class="benchmark-meta">
-          <span class="benchmark-title">Khabarwaani Concise, Structured 15s–45s Vertical Explainers</span>
-          <span class="benchmark-val val-good">65% – 80%+</span>
-        </div>
-        <div class="benchmark-track">
-          <div class="benchmark-bar bar-good" style="width: 78%;"></div>
-        </div>
-        <div class="benchmark-note">Built specifically to be completed: zero fluff, tight narrative arc, and immediate cognitive payoff.</div>
-      </div>
-    </div>
-
-    <!-- Engagement Quality Cards -->
-    <div style="margin-top:34px;">
-      <span class="kicker">Engagement Quality</span>
-      <h3 style="font-size:20px; color:var(--navy); margin-bottom:12px;">2.5x to 3x higher saves and shares</h3>
-      <p style="color:#4b5160; font-size:15px; max-width:700px; margin-bottom:20px;">
-        Not all views are equal. Reaction reels and breaking-opinion shorts trigger ephemeral, low-intent clicks. In contrast, <b>data-backed, educational news explainers generate 2.5x to 3x higher saves and shares</b>:
-      </p>
-      
-      <div class="twocol">
-        <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-radius:6px; padding:22px;">
-          <h3 style="color:var(--gold); font-size:18px; margin-bottom:8px;">High Utility = Saves (Bookmarks)</h3>
-          <p style="font-size:14.5px; color:#4b5160;">
-            When viewers learn how a new policy affects their taxes, how a tech breakthrough works, or what an ISRO mission means, they bookmark it to refer back to and implement in real life.
-          </p>
-        </div>
-        <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-radius:6px; padding:22px;">
-          <h3 style="color:var(--gold); font-size:18px; margin-bottom:8px;">Peer Distribution = Organic Shares</h3>
-          <p style="font-size:14.5px; color:#4b5160;">
-            Verified, concise explainers become currency in WhatsApp family groups and direct messages. Viewers share them as authoritative explanations that settle questions and inform peers.
-          </p>
-        </div>
+      <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-radius:6px; padding:22px;">
+        <h3 style="color:var(--gold); font-size:18px; margin-bottom:8px;">Peer Distribution = Organic Shares</h3>
+        <p style="font-size:14.5px; color:#4b5160;">
+          Verified, concise explainers become currency in WhatsApp family groups and messaging threads. Viewers share them as authoritative summaries that settle questions and inform peers.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 3: PRODUCTION VELOCITY & SCALABILITY ECONOMICS -->
 <section class="reveal" id="economics">
   <div class="wrap">
-    <span class="kicker">Scalability Economics</span>
-    <h2>Production velocity and unit economics that scale</h2>
+    <span class="kicker">Studio Model</span>
+    <h2>Agile, agentic production built for scale</h2>
     <p style="color:#4b5160; font-size:15.5px; max-width:680px; margin-bottom:28px;">
-      Traditional broadcast newsrooms operate with massive studio overhead, rigid linear schedules, and siloed regional bureaus. Khabarwaani's agentic AI pipeline re-engineers every stage of news creation.
+      Traditional broadcast newsrooms operate with massive studio overhead, rigid linear schedules, and siloed regional bureaus. Khabarwaani re-engineers news production with specialized AI workflows:
     </p>
 
-    <div class="eco-grid">
+    <div class="eco-grid" style="grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));">
       <div class="eco-card">
         <span class="eco-badge">Turnaround Velocity</span>
-        <h3>2–4 Hours from Signal to Publish</h3>
-        <p>From a verified wire, court ruling, or scientific signal to a broadcast-ready 9:16 vertical reel in hours.</p>
-        <div class="eco-compare">
-          <div class="eco-compare-item">
-            <span class="label">Traditional studio shoot:</span>
-            <span class="stat-bad">24–48 hours</span>
-          </div>
-          <div class="eco-compare-item">
-            <span class="label">Khabarwaani agentic pipeline:</span>
-            <span class="stat-good">2–4 hours (10x faster)</span>
-          </div>
-        </div>
+        <h3>Direct Signal to Publish</h3>
+        <p>From verified primary documents, court filings, or wire reports to a broadcast-ready 9:16 vertical reel without multi-day shoot delays.</p>
       </div>
 
       <div class="eco-card">
         <span class="eco-badge">Language Economics</span>
-        <h3>~85% Less Incremental Spend</h3>
-        <p>Adapting verified core reporting across 5 regional languages without spinning up separate regional camera crews.</p>
-        <div class="eco-compare">
-          <div class="eco-compare-item">
-            <span class="label">Traditional regional bureau:</span>
-            <span class="stat-bad">Full duplicate cost</span>
-          </div>
-          <div class="eco-compare-item">
-            <span class="label">Khabarwaani adaptation:</span>
-            <span class="stat-good">~85% cost reduction</span>
-          </div>
-        </div>
+        <h3>Scalable Vernacular Reach</h3>
+        <p>Adapting verified core reporting across Indian regional languages with natural speech synthesis, avoiding duplicate physical studio costs.</p>
       </div>
 
       <div class="eco-card">
-        <span class="eco-badge">Daily Output Target</span>
-        <h3>15–30 Reels / Day</h3>
-        <p>An agentic workflow enables 3–5 core stories adapted into 4–6 languages daily, governed by a lean editorial desk.</p>
-        <div class="eco-compare">
-          <div class="eco-compare-item">
-            <span class="label">Core stories researched:</span>
-            <span class="stat-good">3–5 verified stories</span>
-          </div>
-          <div class="eco-compare-item">
-            <span class="label">Multi-language daily reels:</span>
-            <span class="stat-good">15–30 published reels</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Interactive Output Simulator -->
-    <div class="future-calc">
-      <span class="kicker">Interactive Model</span>
-      <h3 style="font-size:18px; margin-bottom:6px; color:var(--navy);">Agentic Multi-Language Output Simulator</h3>
-      <p style="color:#4b5160; font-size:13.5px; margin-bottom:20px;">
-        Adjust the daily story intake and regional language targets to see the operational leverage enabled by Khabarwaani's agentic desk:
-      </p>
-
-      <div class="future-calc-grid">
-        <div class="future-calc-box">
-          <label for="simStories">Core Verified Stories / Day: <b id="simStoriesVal" style="color:var(--gold); font-size:16px;">4</b></label>
-          <input type="range" id="simStories" min="1" max="8" value="4">
-          <div style="display:flex; justify-content:space-between; font-size:12px; color:#8a8177; margin-top:6px;">
-            <span>1 story</span><span>4 target</span><span>8 max</span>
-          </div>
-        </div>
-
-        <div class="future-calc-box">
-          <label for="simLangs">Regional Language Editions: <b id="simLangsVal" style="color:var(--gold); font-size:16px;">5</b></label>
-          <input type="range" id="simLangs" min="1" max="8" value="5">
-          <div style="display:flex; justify-content:space-between; font-size:12px; color:#8a8177; margin-top:6px;">
-            <span>1 edition</span><span>5 languages</span><span>8 languages</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="future-calc-output">
-        <div class="output-stat">
-          <span class="output-num" id="simDailyReels">20</span>
-          <span class="output-label">Daily Reels Published</span>
-        </div>
-        <div class="output-stat">
-          <span class="output-num" id="simMonthlyReels">600</span>
-          <span class="output-label">Monthly Reels Output</span>
-        </div>
-        <div class="output-stat">
-          <span class="output-num">2–4h</span>
-          <span class="output-label">Turnaround Time</span>
-        </div>
-        <div class="output-stat">
-          <span class="output-num">~85%</span>
-          <span class="output-label">Language Cost Savings</span>
-        </div>
+        <span class="eco-badge">Human + AI Focus</span>
+        <h3>Editorial Governance</h3>
+        <p>Specialized agents automate layout, subtitles, and audio mixing; human editors concentrate fully on journalistic accuracy, ethics, and tone.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COMPARISON MATRIX -->
 <section class="reveal">
   <div class="wrap">
     <span class="kicker">Head-to-Head Comparison</span>
-    <h2>Conventional Newsroom vs. Khabarwaani Agentic Studio</h2>
+    <h2>Conventional Newsroom vs. Khabarwaani Studio</h2>
     <div style="overflow-x:auto;">
       <table class="cost-table" style="min-width:640px;">
         <tr>
           <th>Operating Dimension</th>
-          <th>Conventional Newsroom / Studio</th>
-          <th>Khabarwaani Agentic Studio</th>
+          <th>Conventional TV Newsroom</th>
+          <th>Khabarwaani Studio</th>
         </tr>
         <tr>
-          <td>Daily Audience Target</td>
-          <td class="bad">Aging cable TV viewers &amp; print readers</td>
-          <td class="good">350M+ short-form mobile video consumers (Gen Z/Millennials)</td>
+          <td><b>Audience Focus</b></td>
+          <td class="bad">Aging cable TV viewers &amp; print subscribers</td>
+          <td class="good">350M+ short-form mobile video consumers</td>
         </tr>
         <tr>
-          <td>Turnaround Time</td>
-          <td class="bad">24–48 hours (field crew, editing, studio booking)</td>
-          <td class="good">2–4 hours from verified signal to published reel</td>
+          <td><b>Format &amp; Pacing</b></td>
+          <td class="bad">40-minute bloated shouting panels</td>
+          <td class="good">15s–60s concise, high-signal vertical reels</td>
         </tr>
         <tr>
-          <td>Mobile Completion Rate</td>
-          <td class="bad">18%–25% (bloated segments, poor mobile retention)</td>
-          <td class="good">65%–80%+ (structured 15s–45s explainers)</td>
+          <td><b>Editorial Tone</b></td>
+          <td class="bad">Manufactured outrage, fear &amp; humiliation</td>
+          <td class="good">Curiosity, wit, conversation &amp; positive emotion</td>
         </tr>
         <tr>
-          <td>Engagement Quality</td>
-          <td class="bad">Low bookmarking; polarizing reactions</td>
-          <td class="good">2.5x–3x higher saves and peer shares</td>
+          <td><b>Verification Trail</b></td>
+          <td class="bad">Unchecked talking heads &amp; sensational clickbait</td>
+          <td class="good">Primary source documents, court orders &amp; gazettes</td>
         </tr>
         <tr>
-          <td>Multi-Language Expansion</td>
-          <td class="bad">Expensive regional bureaus, studio dubbing, duplicate desks</td>
-          <td class="good">~85% less incremental spend across 5+ languages</td>
-        </tr>
-        <tr>
-          <td>Daily Production Volume</td>
-          <td class="bad">1–2 polished packages per team/day</td>
-          <td class="good">15–30 multi-language reels/day via lean editorial desk</td>
-        </tr>
-        <tr>
-          <td>Fact Verification</td>
-          <td class="bad">Manual, bottlenecked, prone to deadline pressure</td>
-          <td class="good">Autonomous Fact-Auditing Mesh + human editorial governance</td>
+          <td><b>Regional Scale</b></td>
+          <td class="bad">Cost-prohibitive duplicate bureaus &amp; studios</td>
+          <td class="good">Multi-language regional synthesis from one core desk</td>
         </tr>
       </table>
     </div>
   </div>
 </section>
 
-<!-- EXPLORE GRID -->
 <section class="divider-nav reveal">
   <div class="wrap">
     <span class="kicker">Explore the Platform</span>
@@ -413,18 +321,28 @@
 
 <footer>
   <div class="wrap">
-    © 2026 Khabarwaani · Agentic AI News-Reels Studio · Digital Media / News &amp; Info
-        <div class="fnav">
-      <a href="index.html">Home</a>
-      <a href="thesis.html">Market Thesis</a>
-      <a href="architecture.html">Architecture</a>
-      <a href="pipeline.html">Pipeline</a>
-      <a href="editorial.html">Editorial Desk</a>
-      <a href="studio.html">AI Studio</a>
-      <a href="distribution.html">Distribution</a>
-      <a href="leadership.html">Leadership</a>
-      <a href="https://www.linkedin.com/in/abhi266raj/" target="_blank" rel="noopener noreferrer">Abhiraj Kumar</a>
-      <a href="https://www.linkedin.com/in/parthkumar-panchal/" target="_blank" rel="noopener noreferrer">Parthkumar Panchal</a>
+    <div class="footer-goal">
+      <div class="footer-goal-tag">Project Goal</div>
+      <h3 class="footer-goal-title">KHABARWAANI</h3>
+      <div class="footer-goal-tagline">News, Reimagined</div>
+      <p class="footer-goal-statement">From Humiliation, Shouting to Curiosity, Conversation &amp; Fun.</p>
+    </div>
+    <div class="footer-meta">
+      <div class="footer-copy">
+        © 2026 Khabarwaani · Agentic AI News-Reels Studio · Digital Media / News &amp; Info
+      </div>
+      <div class="fnav">
+        <a href="index.html">Home</a>
+        <a href="thesis.html">Market Thesis</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="pipeline.html">Pipeline</a>
+        <a href="editorial.html">Editorial Desk</a>
+        <a href="studio.html">AI Studio</a>
+        <a href="distribution.html">Distribution</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="https://www.linkedin.com/in/abhi266raj/" target="_blank" rel="noopener noreferrer">Abhiraj Kumar</a>
+        <a href="https://www.linkedin.com/in/parthkumar-panchal/" target="_blank" rel="noopener noreferrer">Parthkumar Panchal</a>
+      </div>
     </div>
   </div>
 </footer>
