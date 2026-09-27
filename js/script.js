@@ -27,26 +27,18 @@
     revealEls.forEach(function(el){ el.classList.add('in'); });
   }
 
-  // Scroll-spy active nav link
-  var sections = ['top','how','story-desk','reel-factory','audience','team','ask']
-    .map(function(id){ return document.getElementById(id); })
-    .filter(Boolean);
+  // Highlight active page link in navigation
+  var path = window.location.pathname.replace(/\/$/, "");
+  var currentPage = path.split('/').pop() || 'index.html';
   var navLinks = document.querySelectorAll('.navlinks a');
-  function updateActiveNav(){
-    var scrollPos = window.scrollY + 100;
-    var current = sections[0];
-    sections.forEach(function(sec){
-      if(sec.offsetTop <= scrollPos) current = sec;
-    });
-    navLinks.forEach(function(link){
-      var href = link.getAttribute('href').replace('#','');
-      link.classList.toggle('active', current && current.id === href);
-    });
-  }
-  document.addEventListener('scroll', updateActiveNav, {passive:true});
-  updateActiveNav();
+  navLinks.forEach(function(link){
+    var href = link.getAttribute('href');
+    if(href === currentPage || (currentPage === '' && href === 'index.html')){
+      link.classList.add('active');
+    }
+  });
 
-  // Interactive cost calculator
+  // Interactive cost calculator (if present on page)
   var range = document.getElementById('langRange');
   var langVal = document.getElementById('langVal');
   var tradBar = document.getElementById('tradBar');
@@ -55,17 +47,18 @@
   var khabVal = document.getElementById('khabVal');
 
   function renderCalc(){
+    if(!range) return;
     var n = parseInt(range.value, 10);
-    langVal.textContent = n;
-    var tradUnits = n * 10;      // 10 units per language, traditional
-    var khabUnits = 10 + (n - 1) * 1.5; // one base unit + small per-language increment
+    if(langVal) langVal.textContent = n;
+    var tradUnits = n * 10;
+    var khabUnits = 10 + (n - 1) * 1.5;
     var maxUnits = 12 * 10;
     var tradPct = Math.min(100, (tradUnits / maxUnits) * 100);
     var khabPct = Math.min(100, (khabUnits / maxUnits) * 100);
-    tradBar.style.width = tradPct + '%';
-    khabBar.style.width = khabPct + '%';
-    tradVal.textContent = tradUnits + 'x';
-    khabVal.textContent = khabUnits.toFixed(1) + 'x';
+    if(tradBar) tradBar.style.width = tradPct + '%';
+    if(khabBar) khabBar.style.width = khabPct + '%';
+    if(tradVal) tradVal.textContent = tradUnits + 'x';
+    if(khabVal) khabVal.textContent = khabUnits.toFixed(1) + 'x';
   }
   if(range){
     range.addEventListener('input', renderCalc);

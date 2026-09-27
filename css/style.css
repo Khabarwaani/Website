@@ -75,8 +75,7 @@
   .tag{border:1px solid var(--rule); padding:7px 14px; font-size:13.5px; border-radius:2px; color:#4b5160;}
 
   .divider-nav{background:#F1ECE1; padding:56px 0;}
-  .explore-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:24px;}
-  @media(max-width:820px){.explore-grid{grid-template-columns:repeat(2,1fr);}}
+  .explore-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:16px; margin-top:24px;}
   @media(max-width:480px){.explore-grid{grid-template-columns:1fr;}}
   .explore-tile{display:block; background:var(--paper); border:1px solid var(--rule); border-radius:6px; padding:22px 20px;
     text-decoration:none; cursor:pointer; transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;}
