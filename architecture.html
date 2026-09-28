@@ -13,59 +13,41 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon_32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon_16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon_180.png">
-<style>
-  /* Guaranteed Header, Goal Bar & Visibility (immune to local browser cache) */
-  .site-header { position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; z-index: 1000 !important; background: #FAF7F0 !important; border-bottom: 1px solid rgba(21,24,29,0.12) !important; padding-top: env(safe-area-inset-top, 0px) !important; display: block !important; }
-  .header-goal-bar { display: block !important; background: #1F1A14 !important; color: #F1EEE7 !important; padding: 7px 0 !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; font-size: 12px !important; line-height: 1.4 !important; text-align: center !important; }
-  .header-goal-wrap { display: flex !important; align-items: center !important; justify-content: center !important; gap: 8px !important; flex-wrap: wrap !important; text-align: center !important; margin: 0 auto !important; max-width: 980px !important; padding: 0 20px !important; }
-  .header-goal-main { display: inline-flex !important; align-items: center !important; gap: 6px !important; }
-  .header-goal-badge { background: #E0692A !important; color: #fff !important; font-size: 9.5px !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.07em !important; padding: 2px 7px !important; border-radius: 3px !important; display: inline-block !important; }
-  .header-goal-brand { font-family: 'Fraunces', serif !important; font-weight: 700 !important; font-size: 13px !important; letter-spacing: 0.06em !important; color: #fff !important; }
-  .header-goal-tagline { color: #E0692A !important; font-weight: 600 !important; }
-  .header-goal-shift { color: rgba(241,238,231,0.92) !important; font-size: 12px !important; }
-  .site-header nav { position: relative !important; top: auto !important; height: 56px !important; background: #FAF7F0 !important; border-bottom: none !important; display: block !important; }
-  body { padding-top: calc(96px + env(safe-area-inset-top, 0px)) !important; }
-  .reveal { opacity: 1 !important; transform: none !important; }
-  @media(max-width:768px){
-    body { padding-top: calc(134px + env(safe-area-inset-top,0px)) !important; }
-    .header-goal-bar { padding: 5px 0 !important; }
-    .header-goal-wrap { flex-direction: column !important; gap: 2px !important; padding: 0 12px !important; }
-    .header-goal-sep { display: none !important; }
-    .site-header nav { height: auto !important; padding-bottom: 8px !important; }
-  }
-</style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-goal-bar">
-    <div class="wrap header-goal-wrap">
-      <div class="header-goal-main">
-        <span class="header-goal-badge">Project Goal</span>
-        <span class="header-goal-brand">KHABARWAANI</span>
-        <span class="header-goal-divider">·</span>
-        <span class="header-goal-tagline">News, Reimagined</span>
-      </div>
-      <span class="header-goal-sep">—</span>
-      <div class="header-goal-shift">From Humiliation, Shouting to Curiosity, Conversation &amp; Fun.</div>
+<header class="site-brand-header" role="banner">
+  <div class="brand-container">
+    <a href="index.html" class="brand-group" aria-label="Khabarwaani Home">
+      <span class="brand-logo-wrapper">
+        <img class="brand-logo-img" src="assets/mark.png" alt="Khabarwaani Logo" width="26" height="26" onerror="this.style.display='none';">
+      </span>
+      <span class="brand-name">Khabarwaani</span>
+    </a>
+    <div class="brand-tagline-cluster">
+      <span class="lead-phrase">News, Reimagined</span>
+      <span class="tagline-sep" aria-hidden="true">—</span>
+      <span class="brand-tagline">From Humiliation, Shouting to <strong>Curiosity, Conversation &amp; Fun</strong></span>
     </div>
   </div>
-  <nav>
-  <div class="nav-inner">
-    <a class="brand" href="index.html"><img class="mark" src="assets/mark.png" alt="Khabarwaani"><span class="word">Khabarwaani</span></a>
-    <ul class="navlinks">
-      <li><a href="index.html">Overview</a></li>
-      <li><a href="thesis.html">Market Thesis</a></li>
-      <li><a href="architecture.html" class="active">Architecture</a></li>
-      <li><a href="pipeline.html">Pipeline</a></li>
-      <li><a href="editorial.html">Editorial Desk</a></li>
-      <li><a href="studio.html">AI Studio</a></li>
-      <li><a href="distribution.html">Distribution</a></li>
-      <li><a href="leadership.html">Leadership</a></li>
-    </ul>
+</header>
+
+<nav class="nav-section" id="navSection" aria-label="Sections">
+  <div class="nav-container">
+    <div class="nav-track" id="navTrack" tabindex="0" role="region" aria-label="Scrollable Section Menu">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="index.html" class="nav-link">Overview</a></li>
+        <li class="nav-item"><a href="thesis.html" class="nav-link">Market Thesis</a></li>
+        <li class="nav-item"><a href="architecture.html" class="nav-link active" aria-current="page">Architecture</a></li>
+        <li class="nav-item"><a href="pipeline.html" class="nav-link">Pipeline</a></li>
+        <li class="nav-item"><a href="editorial.html" class="nav-link">Editorial Desk</a></li>
+        <li class="nav-item"><a href="studio.html" class="nav-link">AI Studio</a></li>
+        <li class="nav-item"><a href="distribution.html" class="nav-link">Distribution</a></li>
+        <li class="nav-item"><a href="leadership.html" class="nav-link">Leadership</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
-</header>
 
 <section class="hero" style="padding: 76px 0 58px;">
   <div class="wrap">
@@ -91,10 +73,10 @@
   <div class="wrap col">
     <span class="kicker">Core Problem</span>
     <h2>AI Video Generation Has an Orchestration Problem</h2>
-    <p style="font-size:16px; color:#4b5160; margin-bottom:20px;">
+    <p style="font-size:16px; color:var(--ink-secondary); margin-bottom:20px;">
       Producing a reliable, fast, and verified news video is far more difficult than generating a visually impressive 5-second clip. <b>News production is not a single AI task — it is a chain of interconnected tasks.</b>
     </p>
-    <p style="font-size:15px; color:#4b5160; margin-bottom:24px;">
+    <p style="font-size:15px; color:var(--ink-secondary); margin-bottom:24px;">
       Research requires one system. Fact-checking requires another. Script generation, speech synthesis, scene rendering, subtitles, and quality control all require different models or specialized tools. Standalone video models do not understand the requirements of the entire pipeline. Left unconstrained, generative video models suffer from:
     </p>
 
@@ -108,7 +90,7 @@
 
     <div class="callout" style="margin-top:24px;">
       <strong style="color:var(--navy); font-size:16px;">The Orchestration Imperative:</strong>
-      <p style="margin:4px 0 0; font-size:14.5px; color:#3a3f4a;">
+      <p style="margin:4px 0 0; font-size:14.5px; color:var(--ink-secondary);">
         The challenge is not waiting for a single monolithic model to do everything. The challenge is building an intelligent orchestration layer that coordinates specialized models with deterministic accuracy.
       </p>
     </div>
@@ -120,21 +102,21 @@
   <div class="wrap">
     <span class="kicker">Specification Layer</span>
     <h2>Machine-Readable Production Specs</h2>
-    <p style="color:#4b5160; font-size:15.5px; max-width:720px; margin-bottom:28px;">
+    <p style="color:var(--ink-secondary); font-size:15.5px; max-width:720px; margin-bottom:28px;">
       In automated news production, natural language prompts alone are too ambiguous. Khabarwaani compiles creative intent into structured, machine-readable JSON scene parameters:
     </p>
 
     <div class="spec-compare">
       <div class="spec-box vague">
-        <h3 style="font-size:16px; color:#9a3b2c; margin-bottom:6px;">Ambiguous Text Prompt</h3>
-        <p style="font-size:13.5px; color:#6a6f78; margin:0 0 12px;">Leaves spatial blocking, timing, and continuity to chance.</p>
+        <h3 style="font-size:16px; color:var(--stat-bad); margin-bottom:6px;">Ambiguous Text Prompt</h3>
+        <p style="font-size:13.5px; color:var(--ink-muted); margin:0 0 12px;">Leaves spatial blocking, timing, and continuity to chance.</p>
         <pre>"Two people discuss the news in an office."</pre>
-        <p style="font-size:12.5px; color:#9a3b2c; margin-top:12px; font-weight:600;">Result: Identity swaps, random angles, overlapping speech, broken continuity.</p>
+        <p style="font-size:12.5px; color:var(--stat-bad); margin-top:12px; font-weight:600;">Result: Identity swaps, random angles, overlapping speech, broken continuity.</p>
       </div>
 
       <div class="spec-box engineered">
-        <h3 style="font-size:16px; color:#2c7a4b; margin-bottom:6px;">Khabarwaani Production Spec</h3>
-        <p style="font-size:13.5px; color:#6a6f78; margin:0 0 12px;">Structured parameterization encoding characters, blocking, and timing constraints.</p>
+        <h3 style="font-size:16px; color:var(--stat-good); margin-bottom:6px;">Khabarwaani Production Spec</h3>
+        <p style="font-size:13.5px; color:var(--ink-muted); margin:0 0 12px;">Structured parameterization encoding characters, blocking, and timing constraints.</p>
         <pre>{
   "scene_id": "shot_03_discussion",
   "characters": [
@@ -149,7 +131,7 @@
   ],
   "constraints": ["no_direct_camera_gaze", "strict_continuity_bg"]
 }</pre>
-        <p style="font-size:12.5px; color:#2c7a4b; margin-top:12px; font-weight:600;">Result: Deterministic blocking, exact speech pauses, and seamless cut transitions.</p>
+        <p style="font-size:12.5px; color:var(--stat-good); margin-top:12px; font-weight:600;">Result: Deterministic blocking, exact speech pauses, and seamless cut transitions.</p>
       </div>
     </div>
   </div>
@@ -160,7 +142,7 @@
   <div class="wrap">
     <span class="kicker">Orchestration Mesh</span>
     <h2>Specialized Agent Roles in the Newsroom</h2>
-    <p style="color:#4b5160; font-size:15.5px; max-width:740px; margin-bottom:28px;">
+    <p style="color:var(--ink-secondary); font-size:15.5px; max-width:740px; margin-bottom:28px;">
       Rather than relying on a single generalist model, Khabarwaani distributes production across specialized modules governed by a unified bus:
     </p>
 
@@ -239,7 +221,7 @@
   <div class="wrap">
     <span class="kicker">Operational Efficiency</span>
     <h2>Dynamic Model Routing &amp; Granular Quality Control</h2>
-    <p style="color:#4b5160; font-size:15.5px; max-width:720px; margin-bottom:24px;">
+    <p style="color:var(--ink-secondary); font-size:15.5px; max-width:720px; margin-bottom:24px;">
       The best model is not the same for every shot. A production studio cannot select the most expensive model for every second of video. Khabarwaani routes tasks dynamically based on complexity and latency:
     </p>
 
@@ -273,9 +255,9 @@
       </table>
     </div>
 
-    <div class="callout" style="margin-top:24px; border-left-color:#2c7a4b;">
+    <div class="callout" style="margin-top:24px; border-left-color:var(--stat-good);">
       <strong style="color:var(--navy); font-size:16px;">Targeted Sub-Clip Repair:</strong>
-      <p style="margin:4px 0 0; font-size:14.5px; color:#3a3f4a;">
+      <p style="margin:4px 0 0; font-size:14.5px; color:var(--ink-secondary);">
         When an individual 3-second shot fails a continuity or lip-sync check during automated evaluation, the orchestrator re-renders <b>only that specific sub-clip</b> with tighter constraints — rather than regenerating the entire video.
       </p>
     </div>
@@ -287,7 +269,7 @@
   <div class="wrap col">
     <span class="kicker">Journalistic Grounding</span>
     <h2>Factual Traceability in News Video</h2>
-    <p style="font-size:16px; color:#4b5160; margin-bottom:20px;">
+    <p style="font-size:16px; color:var(--ink-secondary); margin-bottom:20px;">
       News is strictly more demanding than entertainment. While creative video allows artistic liberties, a news explainer must defend every sentence against factual errors and hallucinations.
     </p>
 
@@ -316,7 +298,7 @@
 
     <div class="callout" style="margin-top:24px;">
       <strong style="color:var(--navy); font-size:16px;">Fast Corrections &amp; Updates:</strong>
-      <p style="margin:4px 0 0; font-size:14.5px; color:#3a3f4a;">
+      <p style="margin:4px 0 0; font-size:14.5px; color:var(--ink-secondary);">
         Because each script line and video scene is mapped back to its primary source node, breaking updates or official clarifications can be edited and re-rendered in minutes without rebuilding the story from scratch.
       </p>
     </div>
@@ -386,10 +368,13 @@
 <footer>
   <div class="wrap">
     <div class="footer-goal">
-      <div class="footer-goal-tag">Project Goal</div>
-      <h3 class="footer-goal-title">KHABARWAANI</h3>
-      <div class="footer-goal-tagline">News, Reimagined</div>
-      <p class="footer-goal-statement">From Humiliation, Shouting to Curiosity, Conversation &amp; Fun.</p>
+      <div class="footer-goal-lead">
+        <span class="footer-goal-tag">Project Goal</span>
+        <h3 class="footer-goal-title">KHABARWAANI</h3>
+        <span class="footer-goal-divider">·</span>
+        <span class="footer-goal-tagline">News, Reimagined</span>
+      </div>
+      <p class="footer-goal-statement">From Humiliation, Shouting to <strong>Curiosity, Conversation &amp; Fun</strong>.</p>
     </div>
     <div class="footer-meta">
       <div class="footer-copy">
