@@ -403,6 +403,7 @@
   footer .fnav{display:flex; gap:18px; flex-wrap:wrap; margin-top:2px;}
   footer .fnav a{color:#6a6f78; text-decoration:none; font-size:13px; cursor:pointer; transition:color .15s;}
   footer .fnav a:hover{color:var(--gold);}
+  footer .fnav a:focus-visible{outline:2px solid var(--gold); outline-offset:2px; border-radius:2px;}
 
 
 
