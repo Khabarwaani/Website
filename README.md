@@ -67,10 +67,12 @@ All project work in Khabarwaani follows a strict 3-tier parent-child relationshi
    - Contains task checklists (`- [ ]`) for granular **tabs, sections, and micro-interactions**.
 
 #### 🔗 Linkage & Relationship Rules:
-- Every active sub-feature must be explicitly tied to a parent feature.
-- Every feature must be explicitly tied to a master epic.
-- Epics, Features, and Sub-features must share the overarching epic label (e.g., `epic:golden-circle`).
-- PRs and commits should reference the specific Sub-feature number to preserve audit trails.
+- **Epic-Driven Work**: Every **Epic MUST have child Features / Tasks**, and every Feature under an Epic MUST have child Sub-features / Tasks.
+- **Independent Features**: Standalone features not tied to an Epic are fully permitted, BUT an **Independent Feature MUST have child Sub-features / Subtasks** to ensure it is decomposed into executable units. A feature without subtasks is incomplete.
+- **Independent Tasks**: Standalone chores, bug fixes, or maintenance items (e.g. Issue #19) can exist independently without requiring parent epics.
+- **Action-Driven Relationships**: Linkages must not exist only as markdown comments or text lists; they must be executed via GitHub native sub-issue relationships (`--parent` / `--add-sub-issue`).
+- **Consistent Labeling**: Epics, Features, and Sub-features belonging to an initiative must share the initiative label (e.g., `epic:golden-circle`).
+- **Traceability**: PRs, commits, and agent execution steps should reference the specific Sub-feature / Task number to preserve audit trails.
 
 ### 📋 Active Roadmap & GitHub Tasks Hierarchy (Epic: `epic:golden-circle`)
 
