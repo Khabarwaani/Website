@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Systems Architecture &amp; Engineering — Khabarwaani</title>
+<title>How: Systems Architecture — Khabarwaani</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260927_3">
-<link rel="stylesheet" href="css/future-modules.css?v=20260927_3">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260927_4">
+<link rel="stylesheet" href="css/future-modules.css?v=20260927_4">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon_32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon_16.png">
@@ -116,75 +116,212 @@
   </div>
 </nav>
 
-<section class="hero" style="padding: 76px 0 58px;">
+<!-- HERO -->
+<section class="hero" style="padding: 72px 0 54px;">
   <div class="wrap">
-    <div class="eyebrow">Systems Engineering &amp; Architecture</div>
-    <h1>The AI News Production Problem: Why the Next Layer Is Orchestration</h1>
-    <p class="lede">Producing verified news reels at speed is an orchestration challenge across specialized models—not a single prompt.</p>
-    <div class="hero-links">
-      <a class="btn primary" href="#systems-problem">Read Engineering Thesis</a>
-      <a class="btn ghost" href="#orchestration">Orchestration Pipeline</a>
-      <a class="btn ghost" href="#routing">Model Routing</a>
+    <div class="eyebrow">How 1 · Systems Architecture</div>
+    <h1 style="font-size:clamp(30px,4.5vw,48px); line-height:1.15; margin-bottom:14px;">
+      How Autonomous AI Newsrooms Operate: The Multi-Agent Mesh
+    </h1>
+    <p class="lede" style="font-size:17.5px; max-width:680px; line-height:1.55; margin-top:14px; margin-bottom:24px;">
+      Traditional newsrooms are paralyzed by heavy studio leases, camera crews, and manual editing delays. Khabarwaani orchestrates specialized, deterministic AI agents across ingestion, fact verification, scripting, and kinetic rendering.
+    </p>
+
+    <div class="hero-links" style="margin-top:0;">
+      <a class="btn primary" href="#architecture-tabs">Explore Systems Architecture ↓</a>
+      <a class="btn ghost" href="pipeline.html">Proceed to 6-Stage Pipeline →</a>
     </div>
-    <div class="stat-strip">
-      <div class="stat"><b>End-to-End</b><span>From source retrieval to multi-platform delivery</span></div>
-      <div class="stat"><b>Modular Mesh</b><span>Specialized coordinators for research, script &amp; visuals</span></div>
-      <div class="stat"><b>Shot-Level QA</b><span>Granular validation before final export</span></div>
-      <div class="stat"><b>Source Audit</b><span>Direct factual grounding to primary records</span></div>
+
+    <div class="hero-kpis-mini" style="margin-top:28px;">
+      <div class="hero-kpi-pill"><b>100%</b> Primary Source Grounding</div>
+      <div class="hero-kpi-pill"><b>&lt; 5 Mins</b> Breaking Turnaround</div>
+      <div class="hero-kpi-pill"><b>Targeted</b> Sub-Clip Repair</div>
+      <div class="hero-kpi-pill"><b>90%</b> Production Cost Reduction</div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 1: THE SYSTEMS PROBLEM -->
-<section class="reveal" id="systems-problem">
-  <div class="wrap col">
-    <span class="kicker">Core Problem</span>
-    <h2>AI Video Generation Has an Orchestration Problem</h2>
-    <p style="font-size:15.5px; color:var(--ink-secondary); margin-bottom:20px;">
-      News production is a chain of specialized tasks: research, fact verification, scripting, speech synthesis, and scene rendering. Left unconstrained, standalone video models suffer from:
-    </p>
-
-    <ul class="pill-list">
-      <li>Identity drift and wardrobe swaps between adjacent shots</li>
-      <li>Inconsistent character eye-lines, gaze direction, and posture</li>
-      <li>Dialogue pauses that collapse natural spoken rhythm</li>
-      <li>Hallucinated backgrounds and temporal motion artifacts</li>
-      <li>Struggles with conversational turn-taking and reaction shots</li>
-    </ul>
-
-    <div class="callout" style="margin-top:24px;">
-      <strong style="color:var(--navy); font-size:16px;">The Orchestration Imperative:</strong>
-      <p style="margin:4px 0 0; font-size:14.5px; color:var(--ink-secondary);">
-        The challenge is not waiting for a single monolithic model to do everything. The challenge is building an intelligent orchestration layer that coordinates specialized models with deterministic accuracy.
+<!-- MAIN TABBED SYSTEMS ARCHITECTURE -->
+<section class="reveal" id="architecture-tabs" style="padding: 56px 0;">
+  <div class="wrap">
+    <div style="text-align:center; max-width:700px; margin:0 auto 28px;">
+      <span class="kicker">Systems Engineering</span>
+      <h2 style="font-size:clamp(24px,3.6vw,34px); margin-bottom:10px;">The 3 Architectural Layers</h2>
+      <p style="font-size:15px; color:var(--ink-secondary); line-height:1.55; margin:0;">
+        Select a layer below to inspect the multi-agent mesh, model routing engine, and journalistic audit grounding.
       </p>
     </div>
-  </div>
-</section>
 
-<!-- SECTION 2: PRODUCTION ENGINEERING & SPECIFICATIONS -->
-<section class="reveal" id="prompt-engineering">
-  <div class="wrap">
-    <span class="kicker">Specification Layer</span>
-    <h2>Machine-Readable Production Specs</h2>
-    <p style="color:var(--ink-secondary); font-size:15.5px; max-width:720px; margin-bottom:28px;">
-      In automated news production, natural language prompts alone are too ambiguous. Khabarwaani compiles creative intent into structured, machine-readable JSON scene parameters:
-    </p>
-
-    <div class="spec-compare">
-      <div class="spec-box vague">
-        <h3 style="font-size:16px; color:var(--stat-bad); margin-bottom:6px;">Ambiguous Text Prompt</h3>
-        <p style="font-size:13.5px; color:var(--ink-muted); margin:0 0 12px;">Leaves spatial blocking, timing, and continuity to chance.</p>
-        <pre>"Two people discuss the news in an office."</pre>
-        <p style="font-size:12.5px; color:var(--stat-bad); margin-top:12px; font-weight:600;">Result: Identity swaps, random angles, overlapping speech, broken continuity.</p>
+    <!-- TABS CONTAINER -->
+    <div class="how-tabs-container">
+      <div class="how-tablist" role="tablist" aria-label="Architecture Sub-Systems">
+        <button class="how-tab-btn active" role="tab" aria-selected="true" aria-controls="tab-mesh" id="btn-tab-mesh">
+          <span class="tab-badge">01</span> Multi-Agent Mesh
+        </button>
+        <button class="how-tab-btn" role="tab" aria-selected="false" aria-controls="tab-routing" id="btn-tab-routing">
+          <span class="tab-badge">02</span> LLM Orchestration &amp; Routing
+        </button>
+        <button class="how-tab-btn" role="tab" aria-selected="false" aria-controls="tab-grounding" id="btn-tab-grounding">
+          <span class="tab-badge">03</span> Source Grounding &amp; Audit
+        </button>
       </div>
 
-      <div class="spec-box engineered">
-        <h3 style="font-size:16px; color:var(--stat-good); margin-bottom:6px;">Khabarwaani Production Spec</h3>
-        <p style="font-size:13.5px; color:var(--ink-muted); margin:0 0 12px;">Structured parameterization encoding characters, blocking, and timing constraints.</p>
-        <pre>{
+      <!-- TAB 1: MULTI-AGENT MESH -->
+      <div class="how-tabpanel active" id="tab-mesh" role="tabpanel" aria-labelledby="btn-tab-mesh">
+        <div style="margin-bottom:28px;">
+          <span class="kicker" style="font-size:12px; color:var(--gold);">Decoupled Operating Architecture</span>
+          <h3 style="font-size:22px; margin-bottom:8px; color:var(--navy);">The Specialized Multi-Agent Operating Mesh</h3>
+          <p style="font-size:14.5px; color:var(--ink-secondary); line-height:1.6; max-width:720px; margin:0;">
+            Monolithic AI models hallucinate facts and drift visually. Khabarwaani distributes production across specialized, isolated micro-agents communicating via a structured event bus.
+          </p>
+        </div>
+
+        <div class="twocol" style="gap:20px; margin-bottom:32px;">
+          <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-left:4px solid var(--gold); border-radius:8px; padding:22px;">
+            <span class="kicker" style="font-size:11px; color:var(--gold); margin-bottom:4px;">Agent 01 · Signal Intake</span>
+            <h4 style="font-size:17px; margin-bottom:6px; color:var(--navy);">Ingestor Agent</h4>
+            <p style="font-size:13.5px; color:#4B5160; line-height:1.55; margin:0;">
+              Monitors official gazettes, court orders, and regulatory wires around the clock. Extracts structured atomic claims with strict origin metadata.
+            </p>
+          </div>
+
+          <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-left:4px solid #2c7a4b; border-radius:8px; padding:22px;">
+            <span class="kicker" style="font-size:11px; color:#2c7a4b; margin-bottom:4px;">Agent 02 · Journalistic Firewall</span>
+            <h4 style="font-size:17px; margin-bottom:6px; color:var(--navy);">Fact Verification Auditor</h4>
+            <p style="font-size:13.5px; color:#4B5160; line-height:1.55; margin:0;">
+              Cross-references claims against primary source records. Scores factual certainty and rejects unverified speculation before any script is approved.
+            </p>
+          </div>
+
+          <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-left:4px solid #C55216; border-radius:8px; padding:22px;">
+            <span class="kicker" style="font-size:11px; color:#C55216; margin-bottom:4px;">Agent 03 · Engagement &amp; Wit</span>
+            <h4 style="font-size:17px; margin-bottom:6px; color:var(--navy);">Scriptwriter &amp; Humor Agent</h4>
+            <p style="font-size:13.5px; color:#4B5160; line-height:1.55; margin:0;">
+              Translates complex policy into 15s–60s spoken vertical arcs using relatable analogies, witty punchlines, and zero throat-clearing fluff.
+            </p>
+          </div>
+
+          <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-left:4px solid var(--navy); border-radius:8px; padding:22px;">
+            <span class="kicker" style="font-size:11px; color:var(--navy); margin-bottom:4px;">Agent 04 · Visual Blocking</span>
+            <h4 style="font-size:17px; margin-bottom:6px; color:var(--navy);">Scene Staging Parameterizer</h4>
+            <p style="font-size:13.5px; color:#4B5160; line-height:1.55; margin:0;">
+              Converts script lines into machine-readable JSON scene parameters encoding camera angles, character eye-lines, facial seeds, and timing bounds.
+            </p>
+          </div>
+
+          <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-left:4px solid #285BAC; border-radius:8px; padding:22px;">
+            <span class="kicker" style="font-size:11px; color:#285BAC; margin-bottom:4px;">Agent 05 · Compute Mesh</span>
+            <h4 style="font-size:17px; margin-bottom:6px; color:var(--navy);">Model Router &amp; Render Mesh</h4>
+            <p style="font-size:13.5px; color:#4B5160; line-height:1.55; margin:0;">
+              Dispatches shot specs to optimal video, SVG motion, and regional neural voice generators. Enforces isolated sub-clip repair on failures.
+            </p>
+          </div>
+
+          <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-left:4px solid #822111; border-radius:8px; padding:22px;">
+            <span class="kicker" style="font-size:11px; color:#822111; margin-bottom:4px;">Agent 06 · Quality Assurance</span>
+            <h4 style="font-size:17px; margin-bottom:6px; color:var(--navy);">Telemetry &amp; QA Agent</h4>
+            <p style="font-size:13.5px; color:#4B5160; line-height:1.55; margin:0;">
+              Audits finished clips for lip-sync accuracy, audio cadence, and subtitle legibility. Feeds audience retention data back into the scripting mesh.
+            </p>
+          </div>
+        </div>
+
+        <!-- ASCII ARCHITECTURE CARD -->
+        <div class="arch-diagram-card" style="margin-top:16px;">
+          <pre>
+                                  <span class="highlight">KHABARWAANI MULTI-AGENT ORCHESTRATION LAYER</span>
+                                                 │
+            ┌────────────────────────────────────┼────────────────────────────────────┐
+            │                                    │                                    │
+   <span class="highlight">1. Signal &amp; Ingestion Mesh</span>           <span class="highlight">2. Editorial &amp; Creative Bus</span>          <span class="highlight">3. Execution &amp; Render Mesh</span>
+            │                                    │                                    │
+   ┌────────┴────────┐                  ┌────────┴────────┐                  ┌────────┴────────┐
+   │ Official Wires  │                  │ Fact Auditor    │                  │ Dynamic Router  │
+   │ Court Filings   │                  │ Script &amp; Wit    │                  │ Video &amp; Voice   │
+   │ Regulatory Data │                  │ JSON Scene Spec │                  │ SVG Motion Engine│
+   └─────────────────┘                  └─────────────────┘                  └─────────────────┘
+            │                                    │                                    │
+            └────────────────────────────────────┼────────────────────────────────────┘
+                                                 │
+                                 ┌───────────────┴───────────────┐
+                                 │                               │
+                       <span class="highlight">Targeted QA Evaluator</span>           <span class="highlight">Automated Compositor</span>
+                       Shot-Level Validation           Subtitles &amp; Audio Sync
+                       Isolate Failed 3s Clips         Regional Vernacular Cuts
+                                 │                               │
+                                 └───────────────┬───────────────┘
+                                                 │
+                                         <span class="highlight">PUBLISHED 9:16 REEL</span>
+                                (Instagram, YouTube Shorts, Mobile)
+          </pre>
+        </div>
+      </div>
+
+      <!-- TAB 2: LLM ORCHESTRATION & MODEL ROUTING -->
+      <div class="how-tabpanel" id="tab-routing" role="tabpanel" aria-labelledby="btn-tab-routing" hidden>
+        <div style="margin-bottom:28px;">
+          <span class="kicker" style="font-size:12px; color:var(--gold);">Resource Optimization &amp; Speed</span>
+          <h3 style="font-size:22px; margin-bottom:8px; color:var(--navy);">Dynamic Model Routing &amp; Granular Quality Control</h3>
+          <p style="font-size:14.5px; color:var(--ink-secondary); line-height:1.6; max-width:720px; margin:0;">
+            A production studio cannot run the most expensive generative model for every second of video. Tasks are routed dynamically based on scene complexity and latency.
+          </p>
+        </div>
+
+        <div style="overflow-x:auto; margin-bottom:28px;">
+          <table class="cost-table" style="min-width:640px;">
+            <tr>
+              <th>Scene Type</th>
+              <th>Routing Strategy</th>
+              <th>Engineering Rationale</th>
+            </tr>
+            <tr>
+              <td><b>Simple Talking Head</b></td>
+              <td>High-speed, low-latency model adapter</td>
+              <td>Prioritizes fast lip-sync alignment and rapid turnaround under 2 minutes.</td>
+            </tr>
+            <tr>
+              <td><b>Complex 2-Person Interaction</b></td>
+              <td>High-fidelity generative model</td>
+              <td>Preserves multi-character spatial continuity, eye-lines, and natural turn-taking.</td>
+            </tr>
+            <tr>
+              <td><b>Data / Infographic Explainer</b></td>
+              <td>Deterministic SVG &amp; kinetic typography engine</td>
+              <td>Eliminates hallucination risk; programmatic numeric visual rendering.</td>
+            </tr>
+            <tr>
+              <td><b>Vernacular Speech Synthesis</b></td>
+              <td>Dialect-specialized neural TTS</td>
+              <td>Natural spoken cadence with colloquial pause modulation in regional Indian languages.</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="callout" style="border-left-color:var(--stat-good); margin-bottom:32px;">
+          <strong style="color:var(--navy); font-size:15.5px;">Targeted Sub-Clip Repair:</strong>
+          <p style="margin:4px 0 0; font-size:14px; color:var(--ink-secondary); line-height:1.55;">
+            When an individual 3-second shot fails a continuity or lip-sync check during automated evaluation, the orchestrator re-renders <b>only that specific sub-clip</b> with tighter constraints—rather than regenerating the entire video.
+          </p>
+        </div>
+
+        <!-- SPECIFICATION COMPARISON -->
+        <div>
+          <span class="kicker" style="font-size:11.5px; color:var(--navy);">Machine-Readable Scene Parameters</span>
+          <div class="spec-compare">
+            <div class="spec-box vague">
+              <h4 style="font-size:15px; color:var(--stat-bad); margin-bottom:6px;">Ambiguous Natural Language Prompt</h4>
+              <p style="font-size:13px; color:var(--ink-muted); margin:0 0 10px;">Leaves spatial blocking, timing, and continuity to chance.</p>
+              <pre>"Two people discuss the news in an office."</pre>
+              <p style="font-size:12px; color:var(--stat-bad); margin-top:10px; font-weight:600;">Result: Identity swaps, random camera angles, broken continuity.</p>
+            </div>
+
+            <div class="spec-box engineered">
+              <h4 style="font-size:15px; color:var(--stat-good); margin-bottom:6px;">Khabarwaani Production Spec (JSON)</h4>
+              <p style="font-size:13px; color:var(--ink-muted); margin:0 0 10px;">Structured parameterization encoding characters, blocking, and timing constraints.</p>
+              <pre>{
   "scene_id": "shot_03_discussion",
   "characters": [
-    {"id": "char_A", "role": "lead_anchor", "pose": "seated_desk", "face_seed": "ak_4021"},
+    {"id": "char_A", "role": "lead_anchor", "face_seed": "ak_4021"},
     {"id": "char_B", "role": "analyst", "pose": "standing_profile"}
   ],
   "camera": {"angle": "medium_two_shot", "lens_mm": 50, "focal_lock": "char_A"},
@@ -192,200 +329,73 @@
     {"speaker": "char_A", "start_s": 0.0, "end_s": 3.8, "gaze": "char_B"},
     {"pause_ms": 350, "pacing": "natural_breath"},
     {"speaker": "char_B", "start_s": 4.15, "end_s": 8.5, "gaze": "char_A"}
-  ],
-  "constraints": ["no_direct_camera_gaze", "strict_continuity_bg"]
+  ]
 }</pre>
-        <p style="font-size:12.5px; color:var(--stat-good); margin-top:12px; font-weight:600;">Result: Deterministic blocking, exact speech pauses, and seamless cut transitions.</p>
+              <p style="font-size:12px; color:var(--stat-good); margin-top:10px; font-weight:600;">Result: Deterministic blocking, exact speech pauses, and seamless cut transitions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: PRIMARY SOURCE GROUNDING & TRACEABILITY -->
+      <div class="how-tabpanel" id="tab-grounding" role="tabpanel" aria-labelledby="btn-tab-grounding" hidden>
+        <div style="margin-bottom:28px;">
+          <span class="kicker" style="font-size:12px; color:var(--gold);">Zero Hallucination Standard</span>
+          <h3 style="font-size:22px; margin-bottom:8px; color:var(--navy);">Journalistic Grounding &amp; Primary Records Traceability</h3>
+          <p style="font-size:14.5px; color:var(--ink-secondary); line-height:1.6; max-width:720px; margin:0;">
+            News is strictly more demanding than entertainment. Every sentence in a Khabarwaani reel is deterministically anchored to an official record before rendering begins.
+          </p>
+        </div>
+
+        <div class="trace-flow" style="margin-bottom:28px;">
+          <div class="trace-node">
+            <div class="node-step">Step 1</div>
+            <div class="node-title">Primary Source</div>
+            <div class="node-desc">Official Gazette / Court Order / Regulatory Wire</div>
+          </div>
+          <div class="trace-node">
+            <div class="node-step">Step 2</div>
+            <div class="node-title">Atomic Claim</div>
+            <div class="node-desc">Isolated verifiable fact with confidence check</div>
+          </div>
+          <div class="trace-node">
+            <div class="node-step">Step 3</div>
+            <div class="node-title">Script Sentence</div>
+            <div class="node-desc">15s–60s spoken line with relatable analogy</div>
+          </div>
+          <div class="trace-node">
+            <div class="node-step">Step 4</div>
+            <div class="node-title">Video Scene</div>
+            <div class="node-desc">Corresponding visual shot and typographic overlay</div>
+          </div>
+        </div>
+
+        <div class="callout" style="border-left-color:var(--gold);">
+          <strong style="color:var(--navy); font-size:15.5px;">Fast Live Corrections &amp; Updates:</strong>
+          <p style="margin:4px 0 0; font-size:14px; color:var(--ink-secondary); line-height:1.55;">
+            Because each script line and video scene is mapped back to its primary source node, breaking updates or official clarifications can be patched in minutes by updating only the relevant node—without rebuilding the story from scratch.
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 3: SPECIALIZED AGENTIC MESH & ORCHESTRATION -->
-<section class="reveal" id="orchestration">
-  <div class="wrap">
-    <span class="kicker">Orchestration Mesh</span>
-    <h2>Specialized Agent Roles in the Newsroom</h2>
-    <p style="color:var(--ink-secondary); font-size:15.5px; max-width:740px; margin-bottom:28px;">
-      Rather than relying on a single generalist model, Khabarwaani distributes production across specialized modules governed by a unified bus:
+<!-- TRANSITION TO HOW CHAPTER 2: PIPELINE -->
+<section class="reveal" style="background:#F1ECE1; padding: 52px 0; border-top:1px solid var(--rule-lt); border-bottom:1px solid var(--rule-lt);">
+  <div class="wrap" style="text-align:center;">
+    <span class="kicker">Next in "How"</span>
+    <h3 style="font-size:24px; margin-bottom:10px; color:var(--navy);">The 6-Stage Newsroom Operating Pipeline</h3>
+    <p style="font-size:15px; color:var(--ink-secondary); max-width:620px; margin:0 auto 22px; line-height:1.55;">
+      See how an intake signal travels through research, comedy scripting, fact-auditing, rendering, and vernacular synthesis in under 5 minutes.
     </p>
-
-    <div class="agent-chain">
-      <div class="agent-step">
-        <span class="agent-badge">Module 01</span>
-        <h4>Research &amp; Ingestion</h4>
-        <p>Monitors official wires, court filings, and regulatory gazettes for verified signal.</p>
-      </div>
-      <div class="agent-step">
-        <span class="agent-badge">Module 02</span>
-        <h4>Fact Verification</h4>
-        <p>Audits claims against primary source records and tags statements with confidence checks.</p>
-      </div>
-      <div class="agent-step">
-        <span class="agent-badge">Module 03</span>
-        <h4>Script &amp; Vernacular</h4>
-        <p>Shapes verified claims into 15s–60s spoken vertical arcs with humor, analogies, and zero filler.</p>
-      </div>
-      <div class="agent-step">
-        <span class="agent-badge">Module 04</span>
-        <h4>Scene Staging</h4>
-        <p>Converts script lines into machine-readable shot lists, focal lengths, and camera moves.</p>
-      </div>
-      <div class="agent-step">
-        <span class="agent-badge">Module 05</span>
-        <h4>Model Routing</h4>
-        <p>Dispatches individual scene specs to the optimal video, voice, or motion generators.</p>
-      </div>
-      <div class="agent-step">
-        <span class="agent-badge">Module 06</span>
-        <h4>Quality Assurance</h4>
-        <p>Evaluates rendered clips against spatial, timing, lip-sync, and continuity parameters.</p>
-      </div>
-      <div class="agent-step">
-        <span class="agent-badge">Module 07</span>
-        <h4>Compositing &amp; Export</h4>
-        <p>Assembles validated clips, burns animated kinetic typography, syncs regional audio, and exports final 9:16 cuts.</p>
-      </div>
-    </div>
-
-    <!-- ARCHITECTURE ASCII DIAGRAM -->
-    <div class="arch-diagram-card" style="margin-top:32px;">
-      <pre>
-                                  <span class="highlight">KHABARWAANI ORCHESTRATION LAYER</span>
-                                                 │
-            ┌────────────────────────────────────┼────────────────────────────────────┐
-            │                                    │                                    │
-   <span class="highlight">1. Research &amp; Ingestion</span>              <span class="highlight">2. Creative Reasoning</span>                <span class="highlight">3. Generation Mesh</span>
-            │                                    │                                    │
-   ┌────────┴────────┐                  ┌────────┴────────┐                  ┌────────┴────────┐
-   │ Primary Sources │                  │ Script Drafting │                  │ Model Routing   │
-   │ Official Wires  │                  │ Prompt Compiler │                  │ Video &amp; Speech  │
-   │ Fact-Check Mesh │                  │ Shot Blocking   │                  │ Motion Engine   │
-   └─────────────────┘                  └─────────────────┘                  └─────────────────┘
-            │                                    │                                    │
-            └────────────────────────────────────┼────────────────────────────────────┘
-                                                 │
-                                 ┌───────────────┴───────────────┐
-                                 │                               │
-                       <span class="highlight">Closed-Loop QA Module</span>            <span class="highlight">Automated Compositor</span>
-                       Criteria Evaluation             Subtitles &amp; Typography
-                       Isolate Failed Sub-Clips        Multi-Language Render
-                                 │                               │
-                                 └───────────────┬───────────────┘
-                                                 │
-                                         <span class="highlight">PUBLISHED NEWS REEL</span>
-                                   (Instagram, YouTube Shorts, Web)
-      </pre>
-    </div>
+    <a class="btn primary" href="pipeline.html">
+      Proceed to Chapter 2: The 6-Stage Pipeline →
+    </a>
   </div>
 </section>
 
-<!-- SECTION 4: DYNAMIC MODEL ROUTING -->
-<section class="reveal" id="routing">
-  <div class="wrap">
-    <span class="kicker">Operational Efficiency</span>
-    <h2>Dynamic Model Routing &amp; Granular Quality Control</h2>
-    <p style="color:var(--ink-secondary); font-size:15.5px; max-width:720px; margin-bottom:24px;">
-      The best model is not the same for every shot. A production studio cannot select the most expensive model for every second of video. Khabarwaani routes tasks dynamically based on complexity and latency:
-    </p>
-
-    <div style="overflow-x:auto;">
-      <table class="cost-table" style="min-width:640px;">
-        <tr>
-          <th>Scene Type</th>
-          <th>Routing Strategy</th>
-          <th>Engineering Rationale</th>
-        </tr>
-        <tr>
-          <td><b>Simple Talking Head</b></td>
-          <td>High-speed, low-latency model adapter</td>
-          <td>Prioritizes fast lip-sync alignment and rapid turnaround.</td>
-        </tr>
-        <tr>
-          <td><b>Complex 2-Person Interaction</b></td>
-          <td>High-fidelity generative model</td>
-          <td>Preserves multi-character spatial continuity, eye-lines, and natural turn-taking.</td>
-        </tr>
-        <tr>
-          <td><b>Data / Infographic Explainer</b></td>
-          <td>Deterministic motion engine</td>
-          <td>Eliminates hallucination risk; programmatic SVG and numeric visual rendering.</td>
-        </tr>
-        <tr>
-          <td><b>Vernacular Speech Synthesis</b></td>
-          <td>Dialect-specialized neural TTS</td>
-          <td>Natural spoken cadence with colloquial pause modulation in regional Indian languages.</td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="callout" style="margin-top:24px; border-left-color:var(--stat-good);">
-      <strong style="color:var(--navy); font-size:16px;">Targeted Sub-Clip Repair:</strong>
-      <p style="margin:4px 0 0; font-size:14.5px; color:var(--ink-secondary);">
-        When an individual 3-second shot fails a continuity or lip-sync check during automated evaluation, the orchestrator re-renders <b>only that specific sub-clip</b> with tighter constraints — rather than regenerating the entire video.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- SECTION 5: FACTUAL TRACEABILITY -->
-<section class="reveal" id="traceability">
-  <div class="wrap col">
-    <span class="kicker">Journalistic Grounding</span>
-    <h2>Factual Traceability in News Video</h2>
-    <p style="font-size:16px; color:var(--ink-secondary); margin-bottom:20px;">
-      News is strictly more demanding than entertainment. While creative video allows artistic liberties, a news explainer must defend every sentence against factual errors and hallucinations.
-    </p>
-
-    <div class="trace-flow">
-      <div class="trace-node">
-        <div class="node-step">Step 1</div>
-        <div class="node-title">Primary Source</div>
-        <div class="node-desc">Official Gazette / Court Order / Regulatory Wire</div>
-      </div>
-      <div class="trace-node">
-        <div class="node-step">Step 2</div>
-        <div class="node-title">Atomic Claim</div>
-        <div class="node-desc">Isolated verifiable fact with confidence check</div>
-      </div>
-      <div class="trace-node">
-        <div class="node-step">Step 3</div>
-        <div class="node-title">Script Sentence</div>
-        <div class="node-desc">Target sentence in short vertical explainer</div>
-      </div>
-      <div class="trace-node">
-        <div class="node-step">Step 4</div>
-        <div class="node-title">Video Scene</div>
-        <div class="node-desc">Corresponding visual shot and typographic overlay</div>
-      </div>
-    </div>
-
-    <div class="callout" style="margin-top:24px;">
-      <strong style="color:var(--navy); font-size:16px;">Fast Corrections &amp; Updates:</strong>
-      <p style="margin:4px 0 0; font-size:14.5px; color:var(--ink-secondary);">
-        Because each script line and video scene is mapped back to its primary source node, breaking updates or official clarifications can be edited and re-rendered in minutes without rebuilding the story from scratch.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- CTA -->
-<section class="cta reveal" id="ask">
-  <div class="wrap col">
-    <span class="kicker" style="color:var(--gold);">Collaboration &amp; Partnerships</span>
-    <h2>Partner with the architects of AI-native media</h2>
-    <p style="font-size:16.5px; margin-bottom:26px;">Whether you are an AI researcher, a media technologist, or a newsroom partner exploring agentic pipelines — let's connect.</p>
-    <div style="display:flex; gap:12px; flex-wrap:wrap;">
-      <a class="btn primary" href="https://www.linkedin.com/in/abhi266raj/" target="_blank" rel="noopener noreferrer">Abhiraj on LinkedIn</a>
-      <a class="btn primary" href="https://www.linkedin.com/in/parthkumar-panchal/" target="_blank" rel="noopener noreferrer" style="background:#0A66C2; border-color:#0A66C2;">Parth on LinkedIn</a>
-      <a class="btn ghost" href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer">Watch Short Video Pilot</a>
-    </div>
-  </div>
-</section>
-
+<!-- HOW GLOBAL FOOTER -->
 <footer class="site-footer" role="contentinfo">
   <div class="wrap">
     <div class="footer-grid">
@@ -393,25 +403,27 @@
         <h4 class="footer-col-title">Navigation</h4>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="thesis.html">Why</a></li>
+          <li><a href="thesis.html">Why Overview</a></li>
           <li><a href="leadership.html">Team</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4 class="footer-col-title">Platform</h4>
+        <h4 class="footer-col-title">How Khabarwaani</h4>
         <ul class="footer-links">
-          <li><a href="architecture.html">Architecture</a></li>
-          <li><a href="pipeline.html">Pipeline</a></li>
+          <li><a href="architecture.html">1. Systems Architecture</a></li>
+          <li><a href="pipeline.html">2. 6-Stage Pipeline</a></li>
+          <li><a href="editorial.html">3. Editorial Desk</a></li>
+          <li><a href="studio.html">4. AI Reel Studio</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4 class="footer-col-title">Studio</h4>
+        <h4 class="footer-col-title">The Product</h4>
         <ul class="footer-links">
-          <li><a href="editorial.html">Editorial Desk</a></li>
-          <li><a href="studio.html">AI Studio</a></li>
-          <li><a href="distribution.html">Distribution</a></li>
+          <li><a href="distribution.html">Multilingual Distribution</a></li>
+          <li><a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer">Watch Live Pilot on Instagram ↗</a></li>
+          <li><a href="index.html#shift">Legacy Broadcast vs Reels</a></li>
         </ul>
       </div>
 
@@ -444,6 +456,6 @@
   </div>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/script.js?v=20260927_4"></script>
 </body>
 </html>

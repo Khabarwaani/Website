@@ -126,5 +126,50 @@
         el.classList.add('in');
       });
     }
-  }
+  // Accessible tab switcher for HOW & modular pages
+  var tablists = document.querySelectorAll('[role="tablist"]');
+  tablists.forEach(function(tablist){
+    var tabs = tablist.querySelectorAll('[role="tab"]');
+    tabs.forEach(function(tab){
+      tab.addEventListener('click', function(e){
+        e.preventDefault();
+        var targetId = tab.getAttribute('aria-controls');
+        var container = tablist.closest('.how-tabs-container') || document;
+
+        tabs.forEach(function(t){
+          t.setAttribute('aria-selected', 'false');
+          t.classList.remove('active');
+        });
+        tab.setAttribute('aria-selected', 'true');
+        tab.classList.add('active');
+
+        var panels = container.querySelectorAll('[role="tabpanel"]');
+        panels.forEach(function(panel){
+          if (panel.id === targetId) {
+            panel.hidden = false;
+            panel.classList.add('active');
+          } else {
+            panel.hidden = true;
+            panel.classList.remove('active');
+          }
+        });
+      });
+
+      tab.addEventListener('keydown', function(e){
+        var tabArr = Array.from(tabs);
+        var idx = tabArr.indexOf(tab);
+        var nextTab = null;
+        if (e.key === 'ArrowRight') {
+          nextTab = tabArr[(idx + 1) % tabArr.length];
+        } else if (e.key === 'ArrowLeft') {
+          nextTab = tabArr[(idx - 1 + tabArr.length) % tabArr.length];
+        }
+        if (nextTab) {
+          e.preventDefault();
+          nextTab.focus();
+          nextTab.click();
+        }
+      });
+    });
+  });
 })();
