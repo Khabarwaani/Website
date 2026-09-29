@@ -12,6 +12,7 @@
     'genz.html': 'dropdownWhy',
     'reels.html': 'dropdownWhy',
     'ai-newsroom.html': 'dropdownWhy',
+    'how.html': 'dropdownHow',
     'architecture.html': 'dropdownHow',
     'pipeline.html': 'dropdownHow',
     'editorial.html': 'dropdownHow',

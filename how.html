@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How Khabarwaani Works — The Operating Engine Overview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260927_4">
+<link rel="stylesheet" href="css/future-modules.css?v=20260927_4">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon_32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon_16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon_180.png">
+</head>
+<body id="top">
+
+<header class="site-brand-header" role="banner">
+  <div class="brand-container">
+    <a href="index.html" class="brand-group" aria-label="Khabarwaani Home">
+      <span class="brand-logo-wrapper">
+        <img class="brand-logo-img" src="assets/mark.png" alt="Khabarwaani Logo" width="26" height="26" onerror="this.style.display='none';">
+      </span>
+      <span class="brand-name">Khabarwaani</span>
+    </a>
+    <div class="brand-tagline-cluster">
+      <span class="lead-phrase">News, Reimagined</span>
+      <span class="tagline-sep" aria-hidden="true">—</span>
+      <span class="brand-tagline">From Humiliation, Shouting to <strong>Curiosity, Conversation &amp; Fun</strong></span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-section" id="navSection" aria-label="Sections">
+  <div class="nav-container">
+    <div class="nav-track" id="navTrack" tabindex="0" role="region" aria-label="Navigation Menu">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item nav-dropdown">
+          <a href="thesis.html" class="nav-link dropdown-toggle" id="dropdownWhy" aria-haspopup="true" aria-expanded="false">
+            Why <span class="dropdown-caret" aria-hidden="true">▾</span>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="dropdownWhy" role="menu">
+            <a href="thesis.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Why Overview</span>
+              <span class="dropdown-desc">The Core Thesis Hub</span>
+            </a>
+            <a href="media.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Media Crisis</span>
+              <span class="dropdown-desc">The 39% Avoidance Paradox</span>
+            </a>
+            <a href="genz.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Gen Z Shift</span>
+              <span class="dropdown-desc">Attention on Mobile Feeds</span>
+            </a>
+            <a href="reels.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Reels Format</span>
+              <span class="dropdown-desc">15s–60s Positive Emotion</span>
+            </a>
+            <a href="ai-newsroom.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Agentic AI</span>
+              <span class="dropdown-desc">Scalable 90% Cost Cut</span>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item nav-dropdown">
+          <a href="how.html" class="nav-link dropdown-toggle active" id="dropdownHow" aria-haspopup="true" aria-expanded="false" aria-current="page">
+            How <span class="dropdown-caret" aria-hidden="true">▾</span>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="dropdownHow" role="menu">
+            <a href="how.html" class="dropdown-item active" role="menuitem" aria-current="page">
+              <span class="dropdown-title">How Overview</span>
+              <span class="dropdown-desc">The Operating Engine Hub</span>
+            </a>
+            <a href="architecture.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Architecture</span>
+              <span class="dropdown-desc">Multi-Agent Mesh Orchestration</span>
+            </a>
+            <a href="pipeline.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Pipeline</span>
+              <span class="dropdown-desc">6-Stage Newsroom Operations</span>
+            </a>
+            <a href="editorial.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Editorial Desk</span>
+              <span class="dropdown-desc">Fact Verification &amp; Standards</span>
+            </a>
+            <a href="studio.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">AI Studio</span>
+              <span class="dropdown-desc">9:16 Video &amp; Voice Synthesis</span>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item nav-dropdown">
+          <a href="distribution.html" class="nav-link dropdown-toggle" id="dropdownWhat" aria-haspopup="true" aria-expanded="false">
+            What <span class="dropdown-caret" aria-hidden="true">▾</span>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="dropdownWhat" role="menu">
+            <a href="distribution.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Distribution</span>
+              <span class="dropdown-desc">Multilingual Regional Reach</span>
+            </a>
+            <a href="index.html#shift" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Format Shift</span>
+              <span class="dropdown-desc">Legacy Cable vs. Reels</span>
+            </a>
+            <a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Watch Pilot ↗</span>
+              <span class="dropdown-desc">Live Instagram Reel Proof</span>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="leadership.html" class="nav-link">Team</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO: HOW KHABARWAANI OPERATES & WHAT WE ARE ENGINEERING -->
+<section class="hero" style="padding: 72px 0 56px;">
+  <div class="wrap">
+    <div class="hero-tag-badge">⚡ The Engine &amp; Engineering Blueprint · In Active Development</div>
+    <h1 style="font-size:clamp(30px,4.5vw,50px); line-height:1.15; margin-bottom:16px;">
+      How Khabarwaani Works &amp; How We Are Engineering It
+    </h1>
+    <p class="lede" style="font-size:18px; max-width:700px; line-height:1.6; margin-top:14px; margin-bottom:26px;">
+      Khabarwaani replaces traditional television broadcast friction with an autonomous multi-agent software mesh. How do we take raw primary source signals and deliver fact-checked, witty vertical reels in under 5 minutes?
+    </p>
+    <p style="font-size:15.5px; color:rgba(241,238,231,0.82); max-width:680px; line-height:1.6; margin-bottom:26px;">
+      We are actively engineering an autonomous operating engine for mobile news. Our system coordinates specialized micro-agents across ingestion, deterministic verification, comedy scripting, and kinetic rendering—cutting unit costs by 90% while enforcing zero-hallucination accuracy.
+    </p>
+
+    <div class="hero-links" style="margin-top:0;">
+      <a class="btn primary" href="#pillars">The 4 Operating Pillars ↓</a>
+      <a class="btn ghost" href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer">Watch Our Active Pilot on Instagram ↗</a>
+    </div>
+
+    <div class="hero-kpis-mini" style="margin-top:28px;">
+      <div class="hero-kpi-pill"><b>The Architecture:</b> Multi-Agent Mesh</div>
+      <div class="hero-kpi-pill"><b>The Velocity:</b> &lt; 5 Min Wire-to-Reel</div>
+      <div class="hero-kpi-pill"><b>The Standard:</b> 100% Primary Grounding</div>
+      <div class="hero-kpi-pill"><b>The Economics:</b> 90% Unit Cost Reduction</div>
+    </div>
+  </div>
+</section>
+
+<!-- MASTER 4-PILLAR HOW MATRIX -->
+<section class="reveal" id="pillars" style="padding: 60px 0;">
+  <div class="wrap">
+    <div style="text-align:center; max-width:680px; margin:0 auto 36px;">
+      <span class="kicker">The Operating System</span>
+      <h2 style="font-size:clamp(24px,3.6vw,34px); margin-bottom:10px;">How Khabarwaani Operates: The 4 Engineering Pillars</h2>
+      <p style="font-size:15px; color:var(--ink-secondary); line-height:1.55; margin:0;">
+        Four technological and editorial disciplines form our autonomous newsroom operating engine.
+      </p>
+    </div>
+
+    <div class="twocol" style="gap: 22px;">
+      <!-- Pillar 1: Architecture -->
+      <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-radius:8px; padding:26px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <span class="kicker" style="font-size:11.5px; color:#C55216; margin:0;">Pillar 01 · Infrastructure</span>
+            <span style="font-size:11.5px; font-weight:700; color:var(--gold); background:rgba(224,105,42,0.12); padding:2px 8px; border-radius:3px;">MULTI-AGENT MESH</span>
+          </div>
+          <h3 style="font-size:19px; margin-bottom:10px; color:var(--navy);">Systems Architecture &amp; Orchestration</h3>
+          <p style="font-size:14px; color:#4B5160; line-height:1.6; margin-bottom:16px;">
+            Monolithic AI models break continuity and hallucinate facts. We distribute news production across isolated micro-agents (ingestor, auditor, scriptwriter, staging, and QA) communicating over a structured event bus.
+          </p>
+        </div>
+        <div>
+          <a class="btn ghost" href="architecture.html" style="font-size:13px; padding:8px 14px; border-color:var(--rule); color:var(--navy); width:100%; justify-content:center;">
+            Deep Dive: Systems Architecture →
+          </a>
+        </div>
+      </div>
+
+      <!-- Pillar 2: Pipeline -->
+      <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-radius:8px; padding:26px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <span class="kicker" style="font-size:11.5px; color:#C55216; margin:0;">Pillar 02 · Lifecycle</span>
+            <span style="font-size:11.5px; font-weight:700; color:#2c7a4b; background:rgba(44,122,75,0.12); padding:2px 8px; border-radius:3px;">&lt; 5 MIN TURNAROUND</span>
+          </div>
+          <h3 style="font-size:19px; margin-bottom:10px; color:var(--navy);">6-Stage Newsroom Operating Pipeline</h3>
+          <p style="font-size:14px; color:#4B5160; line-height:1.6; margin-bottom:16px;">
+            From intake signal to published vertical cut in under 5 minutes: automated signal intake, comedy scripting, fact-auditing, 9:16 rendering, regional voice, and audience telemetry.
+          </p>
+        </div>
+        <div>
+          <a class="btn ghost" href="pipeline.html" style="font-size:13px; padding:8px 14px; border-color:var(--rule); color:var(--navy); width:100%; justify-content:center;">
+            Deep Dive: 6-Stage Pipeline →
+          </a>
+        </div>
+      </div>
+
+      <!-- Pillar 3: Editorial Desk -->
+      <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-radius:8px; padding:26px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <span class="kicker" style="font-size:11.5px; color:#C55216; margin:0;">Pillar 03 · Trust Firewall</span>
+            <span style="font-size:11.5px; font-weight:700; color:#285BAC; background:rgba(40,91,172,0.12); padding:2px 8px; border-radius:3px;">100% GROUNDED</span>
+          </div>
+          <h3 style="font-size:19px; margin-bottom:10px; color:var(--navy);">Editorial Desk &amp; Verification Standards</h3>
+          <p style="font-size:14px; color:#4B5160; line-height:1.6; margin-bottom:16px;">
+            Enforcing a deterministic journalistic firewall: atomic claim isolation, 99%+ primary source confidence gates, national beat checklists, on-screen source badges, and instant erratum patches.
+          </p>
+        </div>
+        <div>
+          <a class="btn ghost" href="editorial.html" style="font-size:13px; padding:8px 14px; border-color:var(--rule); color:var(--navy); width:100%; justify-content:center;">
+            Deep Dive: Editorial Desk →
+          </a>
+        </div>
+      </div>
+
+      <!-- Pillar 4: AI Reel Studio -->
+      <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-radius:8px; padding:26px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <span class="kicker" style="font-size:11.5px; color:#C55216; margin:0;">Pillar 04 · Creative Synthesis</span>
+            <span style="font-size:11.5px; font-weight:700; color:#822111; background:rgba(130,33,17,0.12); padding:2px 8px; border-radius:3px;">9:16 KINETIC MOTION</span>
+          </div>
+          <h3 style="font-size:19px; margin-bottom:10px; color:var(--navy);">AI Reel Studio &amp; Motion Synthesis</h3>
+          <p style="font-size:14px; color:#4B5160; line-height:1.6; margin-bottom:16px;">
+            Programmatic vertical compilation for phone screens: word-by-word animated kinetic typography for silent scrolling, zero-drift SVG charts, Indian neural voices, and sub-second retention sync.
+          </p>
+        </div>
+        <div>
+          <a class="btn ghost" href="studio.html" style="font-size:13px; padding:8px 14px; border-color:var(--rule); color:var(--navy); width:100%; justify-content:center;">
+            Deep Dive: AI Reel Studio →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MACRO CONTRAST MATRIX: TELEVISION BUREAU VS AGENTIC SOFTWARE ENGINE -->
+<section class="reveal" style="background:#F1ECE1; padding: 56px 0; border-top:1px solid var(--rule-lt); border-bottom:1px solid var(--rule-lt);">
+  <div class="wrap">
+    <div style="text-align:center; max-width:640px; margin:0 auto 32px;">
+      <span class="kicker">The Structural Reset</span>
+      <h2 style="font-size:clamp(22px,3.4vw,30px); margin-bottom:8px;">Traditional Television Bureau vs. Khabarwaani Operating Engine</h2>
+      <p style="font-size:14.5px; color:var(--ink-secondary); margin:0;">
+        Why physical broadcast infrastructure fails on modern smartphone feeds—and how software orchestration solves it.
+      </p>
+    </div>
+
+    <div class="twocol" style="gap:20px;">
+      <div style="background:var(--paper); border:1px solid var(--rule); border-left:4px solid #9a3b2c; border-radius:8px; padding:22px 24px;">
+        <h3 style="font-size:17px; color:#9a3b2c; margin-bottom:12px;">Traditional Broadcast Bureau</h3>
+        <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:9px; font-size:13.5px; color:#4B5160;">
+          <li>✕ <b>Massive Fixed Overhead:</b> Millions locked into physical studio real estate, camera crews, and teleprompters</li>
+          <li>✕ <b>Multi-Hour Delays:</b> 4–6 hours from newsbreak to finished edited package</li>
+          <li>✕ <b>Monolingual Silos:</b> Dubbing requires duplicate crews, separate voice talent, and days of lag</li>
+          <li>✕ <b>Panic-Driven Outrage:</b> Sensational shouting and clickbait to pay for massive physical infrastructure</li>
+        </ul>
+      </div>
+
+      <div style="background:var(--paper); border:1px solid var(--rule); border-left:4px solid #2c7a4b; border-radius:8px; padding:22px 24px;">
+        <h3 style="font-size:17px; color:#2c7a4b; margin-bottom:12px;">Khabarwaani Operating Engine</h3>
+        <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:9px; font-size:13.5px; color:#4B5160;">
+          <li>✓ <b>100% Software-Defined:</b> Cloud GPU orchestration with zero physical studio real estate leases</li>
+          <li>✓ <b>Sub-5-Minute Turnaround:</b> Direct automated pipeline from verified wire to published 9:16 reel</li>
+          <li>✓ <b>Native Multilingual Mesh:</b> Simultaneous vernacular release across Indian regional languages</li>
+          <li>✓ <b>Profitable Micro-Scale:</b> 90% lower production costs, anchored in curiosity, wit, and verified facts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSITION TO CHAPTER 3: DISTRIBUTION -->
+<section class="reveal" style="background:#F1ECE1; padding: 52px 0; border-top:1px solid var(--rule-lt); border-bottom:1px solid var(--rule-lt);">
+  <div class="wrap" style="text-align:center;">
+    <span class="kicker">Chapter 3 · The Product</span>
+    <h3 style="font-size:24px; margin-bottom:10px; color:var(--navy);">Multilingual Reach &amp; Distribution</h3>
+    <p style="font-size:15px; color:var(--ink-secondary); max-width:620px; margin:0 auto 22px; line-height:1.55;">
+      Discover how Khabarwaani distributes vertical news reels across social feeds (piloting on Instagram) and scales into owned regional networks.
+    </p>
+    <a class="btn primary" href="distribution.html">
+      Proceed to Chapter 3: Distribution →
+    </a>
+  </div>
+</section>
+
+<!-- HOW GLOBAL FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how.html">How Overview</a></li>
+          <li><a href="leadership.html">Team</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">How Khabarwaani</h4>
+        <ul class="footer-links">
+          <li><a href="architecture.html">1. Systems Architecture</a></li>
+          <li><a href="pipeline.html">2. 6-Stage Pipeline</a></li>
+          <li><a href="editorial.html">3. Editorial Desk</a></li>
+          <li><a href="studio.html">4. AI Reel Studio</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">The Product</h4>
+        <ul class="footer-links">
+          <li><a href="distribution.html">Multilingual Distribution</a></li>
+          <li><a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer">Watch Live Pilot on Instagram ↗</a></li>
+          <li><a href="index.html#shift">Legacy Broadcast vs Reels</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Connect</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/Khabarwaani/Website" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+          <li><a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer">Instagram ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/abhi266raj/" target="_blank" rel="noopener noreferrer">Abhiraj Kumar ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/parthkumar-panchal/" target="_blank" rel="noopener noreferrer">Parthkumar Panchal ↗</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-brand-row">
+        <a href="index.html" class="footer-brand" aria-label="Khabarwaani Home">
+          <img src="assets/mark.png" alt="" class="footer-brand-mark" width="20" height="20">
+          <span class="footer-brand-name">Khabarwaani</span>
+        </a>
+        <span class="footer-brand-sep" aria-hidden="true">—</span>
+        <span class="footer-brand-goal">News, Reimagined: From humiliation and shouting to curiosity, conversation, and fun.</span>
+      </div>
+
+      <div class="footer-utility-row">
+        <p class="footer-copy">© 2026 Khabarwaani. All rights reserved.</p>
+        <a href="#top" class="footer-back-to-top" aria-label="Back to top">Back to top ↑</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js?v=20260927_4"></script>
+</body>
+</html>
