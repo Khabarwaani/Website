@@ -41,18 +41,76 @@ The website itself must embody this principle. Developers, designers, writers, a
 > 1. Always refer to the **GitHub Tasks / Issues** as the primary source of truth and reference for all tasks, feature implementations, and backlog priorities before making changes.
 > 2. **Task Closure Protocol**: Git commits and direct pushes do not automatically close GitHub issues. Agents should **not** attempt to close or update GitHub tasks/issues directly. Instead, when a task is completed, the agent must provide the exact CLI command (e.g., `gh issue close <number>`) to the user so the user can execute it to update or close the task.
 
+### 📋 Active Roadmap & GitHub Tasks Hierarchy (Epic: `epic:golden-circle`)
+
+| Level | Issue | Type & Label | Scope & Objectives |
+| :--- | :--- | :--- | :--- |
+| **Master Epic** | [#28](https://github.com/Khabarwaani/Website/issues/28) | `epic` | Epic: Golden Circle Storytelling, Modular Navigation & Content Reduction |
+| ├── **Cleanup** | [#29](https://github.com/Khabarwaani/Website/issues/29) | `task` | Task: Clean Old & Legacy Files, Assets and Deprecated Navigation |
+| ├── **Feature 1** | [#20](https://github.com/Khabarwaani/Website/issues/20) | `feature` | Feature 1: Universal Navigation Dropdown & 4-Column Footer System (Resolving Issue #19) |
+| ├── **Feature 2** | [#21](https://github.com/Khabarwaani/Website/issues/21) | `feature` | Feature 2: Create "Why" Micro-Pages with Page & Tab Subtasks (`media`, `genz`, `reels`, `ai-newsroom`) |
+| ├── **Feature 3** | [#22](https://github.com/Khabarwaani/Website/issues/22) | `feature` | Feature 3: Refactor `thesis.html` into Master "Why" Overview Hub with Page & Tab Subtasks |
+| ├── **Feature 4** | [#23](https://github.com/Khabarwaani/Website/issues/23) | `feature` | Feature 4: Aggressive Content Pruning & Tab Navigation on "HOW" Pages |
+| ├── **Feature 5** | [#24](https://github.com/Khabarwaani/Website/issues/24) | `feature` | Feature 5: Streamline Multilingual Distribution & Pilot Showcase |
+| ├── **Feature 6** | [#25](https://github.com/Khabarwaani/Website/issues/25) | `feature` | Feature 6: Create `mission.html` — The Story Climax ("Why Work On This") [`leadership.html` locked] |
+| ├── **Feature 7** | [#26](https://github.com/Khabarwaani/Website/issues/26) | `feature` | Feature 7: Update `index.html` Front Door, Golden Circle Navigation & Story Climax Link |
+| └── **Task 8** | [#27](https://github.com/Khabarwaani/Website/issues/27) | `documentation` | Task 8: Update `README.md` Documentation & Information Architecture |
+
 ---
 
 ## 🚀 About Khabarwaani
 
 Khabarwaani is an agentic AI news-reels studio transforming daily current affairs into 15s–60s fact-checked vertical reels across Indian languages, focused on humor, wit, positive emotion, and verified reporting.
 
-### 🌐 Pages Overview
-- `index.html` — Mission, format shift comparison, and Golden Circle framework (Why, How, What)
-- `thesis.html` — Why: the news avoidance paradox, mobile format shifts, and verified storytelling
-- `architecture.html` — System architecture and autonomous agent orchestration
-- `pipeline.html` — 6-stage newsroom operating pipeline from signal intake to telemetry
-- `editorial.html` — Editorial intake beats, standards, and fact-auditing verification framework
-- `studio.html` — AI reel generation, visual engines, and voice synthesis
-- `distribution.html` — Multilingual distribution channels and audience loops
-- `leadership.html` — Co-Founders and core leadership
+---
+
+## 🏛️ Narrative Architecture: Simon Sinek's Golden Circle
+
+The Khabarwaani website functions as an interactive pitch deck and story matrix structured into three core pillars and a climactic mission finale:
+
+```
+┌───────────────────────────────┬──────────────────────────────────┬───────────────────────────────┐
+│ 1. WHY (Thesis) ▾             │ 2. HOW (Engine) ▾                │ 3. WHAT (Product) ▾           │
+├───────────────────────────────┼──────────────────────────────────┼───────────────────────────────┤
+│ • Media Crisis                │ • System Architecture            │ • Multilingual Reach          │
+│ • Gen Z Shift                 │ • 6-Stage Pipeline               │ • 15s–60s Format Shift        │
+│ • Reels Format                │ • Editorial Verification Desk    │ • Watch Live Pilot ↗          │
+│ • Agentic AI                  │ • AI Reel Studio & Voice         │                               │
+├───────────────────────────────┴──────────────────────────────────┴───────────────────────────────┤
+│                                                │                                                 │
+│                                                ▼                                                 │
+│                         [ THE STORY CLIMAX: MISSION & REASON TO BUILD ]                          │
+│                           "Why It Is Worth Working On Khabarwaani"                               │
+│                         ──────────────────────────────────────────                               │
+│                         • The $10B Attention Vacuum (700M+ mobile users)                         │
+│                         • 10x Unit Economics of Agentic Journalism (90% cut)                     │
+│                         • High-Status Democratic Mission: Truth without toxicity                 │
+│                         • Open Invitation: Co-Founders, Team & Collaborators                     │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+### 🌐 Pages & Topology Overview
+
+#### Chapter 1: WHY (The Thesis & Catalysts)
+- `thesis.html` — Master Why Overview Hub (Media, Gen Z, Reels, AI)
+- `media.html` — Why 1: The Media Crisis, cable shouting, and the 39% news avoidance paradox
+- `genz.html` — Why 2: Gen Z mobile information habits and the collapse of TV news attention
+- `reels.html` — Why 3: Why 15s–60s vertical reels, humor, curiosity, and positive emotion
+- `ai-newsroom.html` — Why 4: Why autonomous agentic AI now (speed, scale, 90% cost reduction)
+
+#### Chapter 2: HOW (The Multi-Agent Operating System)
+- `architecture.html` — Multi-agent mesh orchestration and technical stack
+- `pipeline.html` — 6-stage newsroom operational lifecycle from signal intake to telemetry
+- `editorial.html` — Journalistic fact-auditing desk, primary records, and verification standards
+- `studio.html` — AI Reel Studio, 9:16 programmatic visual motion, and regional voice synthesis
+
+#### Chapter 3: WHAT (The Product, Distribution & Proof)
+- `distribution.html` — Multilingual distribution channels, formats, and audience telemetry
+- `index.html#shift` — Format comparison: Legacy TV News vs. Khabarwaani Reels
+- Instagram Pilot ↗ (`https://www.instagram.com/khabarwaani`) — Live vertical reel pilot proof
+
+#### Chapter 4: THE CLIMAX & TEAM
+- `mission.html` — The Story Climax: Why solving the news crisis is worth your life's best work
+- `leadership.html` — [LOCKED] Co-Founders and core leadership team (Abhiraj Kumar, Parthkumar Panchal)
+- `index.html` — Executive summary, Golden Circle framework, and ending transition hook
+
