@@ -90,8 +90,8 @@ All project work in Khabarwaani follows a strict 3-tier parent-child relationshi
 | │   ├── Page | [#31](https://github.com/Khabarwaani/Website/issues/31) | `sub-issue` | [Completed] `genz.html` (Why 2: The Gen Z Shift & Feed Migration) |
 | │   ├── Page | [#32](https://github.com/Khabarwaani/Website/issues/32) | `sub-issue` | [Completed] `reels.html` (Why 3: Why Vertical Reels & Positive Emotion) |
 | │   └── Page | [#33](https://github.com/Khabarwaani/Website/issues/33) | `sub-issue` | [Completed] `ai-newsroom.html` (Why 4: Why Agentic AI Newsrooms Now) |
-| ├── **Feature 3** | [#22](https://github.com/Khabarwaani/Website/issues/22) | `feature` | Refactor `thesis.html` into Master "Why" Overview Hub |
-| │   └── Sub-feat | [#42](https://github.com/Khabarwaani/Website/issues/42) | `sub-issue` | `thesis.html` Master Why Hub Page Layout |
+| ├── **Feature 3** | [#22](https://github.com/Khabarwaani/Website/issues/22) | `feature` | [Completed] Refactor `thesis.html` into Master "Why" Overview Hub |
+| │   └── Sub-feat | [#42](https://github.com/Khabarwaani/Website/issues/42) | `sub-issue` | [Completed] `thesis.html` Master Why Hub Page Layout |
 | ├── **Feature 4** | [#23](https://github.com/Khabarwaani/Website/issues/23) | `feature` | Aggressive Content Pruning & Tab Navigation on "HOW" Pages |
 | │   ├── Page | [#34](https://github.com/Khabarwaani/Website/issues/34) | `sub-issue` | `architecture.html` (Systems Architecture & Multi-Agent Mesh) |
 | │   ├── Page | [#35](https://github.com/Khabarwaani/Website/issues/35) | `sub-issue` | `pipeline.html` (6-Stage Newsroom Operating Pipeline) |
