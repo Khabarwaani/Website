@@ -33,16 +33,83 @@
 
 <nav class="nav-section" id="navSection" aria-label="Sections">
   <div class="nav-container">
-    <div class="nav-track" id="navTrack" tabindex="0" role="region" aria-label="Scrollable Section Menu">
+    <div class="nav-track" id="navTrack" tabindex="0" role="region" aria-label="Navigation Menu">
       <ul class="nav-list">
-        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="thesis.html" class="nav-link">Why</a></li>
-        <li class="nav-item"><a href="architecture.html" class="nav-link">Architecture</a></li>
-        <li class="nav-item"><a href="pipeline.html" class="nav-link">Pipeline</a></li>
-        <li class="nav-item"><a href="editorial.html" class="nav-link">Editorial Desk</a></li>
-        <li class="nav-item"><a href="studio.html" class="nav-link">AI Studio</a></li>
-        <li class="nav-item"><a href="distribution.html" class="nav-link">Distribution</a></li>
-        <li class="nav-item"><a href="leadership.html" class="nav-link active" aria-current="page">Team</a></li>
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item nav-dropdown">
+          <a href="thesis.html" class="nav-link dropdown-toggle" id="dropdownWhy" aria-haspopup="true" aria-expanded="false">
+            Why <span class="dropdown-caret" aria-hidden="true">▾</span>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="dropdownWhy" role="menu">
+            <a href="thesis.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Why Overview</span>
+              <span class="dropdown-desc">The Core Thesis Hub</span>
+            </a>
+            <a href="media.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Media Crisis</span>
+              <span class="dropdown-desc">The 39% Avoidance Paradox</span>
+            </a>
+            <a href="genz.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Gen Z Shift</span>
+              <span class="dropdown-desc">Attention on Mobile Feeds</span>
+            </a>
+            <a href="reels.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Reels Format</span>
+              <span class="dropdown-desc">15s–60s Positive Emotion</span>
+            </a>
+            <a href="ai-newsroom.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Agentic AI</span>
+              <span class="dropdown-desc">Scalable 90% Cost Cut</span>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item nav-dropdown">
+          <a href="architecture.html" class="nav-link dropdown-toggle" id="dropdownHow" aria-haspopup="true" aria-expanded="false">
+            How <span class="dropdown-caret" aria-hidden="true">▾</span>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="dropdownHow" role="menu">
+            <a href="architecture.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Architecture</span>
+              <span class="dropdown-desc">Multi-Agent Mesh Orchestration</span>
+            </a>
+            <a href="pipeline.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Pipeline</span>
+              <span class="dropdown-desc">6-Stage Newsroom Operations</span>
+            </a>
+            <a href="editorial.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Editorial Desk</span>
+              <span class="dropdown-desc">Fact Verification &amp; Standards</span>
+            </a>
+            <a href="studio.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">AI Studio</span>
+              <span class="dropdown-desc">9:16 Video &amp; Voice Synthesis</span>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item nav-dropdown">
+          <a href="distribution.html" class="nav-link dropdown-toggle" id="dropdownWhat" aria-haspopup="true" aria-expanded="false">
+            What <span class="dropdown-caret" aria-hidden="true">▾</span>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="dropdownWhat" role="menu">
+            <a href="distribution.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Distribution</span>
+              <span class="dropdown-desc">Multilingual Regional Reach</span>
+            </a>
+            <a href="index.html#shift" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Format Shift</span>
+              <span class="dropdown-desc">Legacy Cable vs. Reels</span>
+            </a>
+            <a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Watch Pilot ↗</span>
+              <span class="dropdown-desc">Live Instagram Reel Proof</span>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="leadership.html" class="nav-link active" aria-current="page">Team</a>
+        </li>
       </ul>
     </div>
   </div>
