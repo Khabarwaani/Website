@@ -78,13 +78,18 @@ All project work in Khabarwaani follows a strict 3-tier parent-child relationshi
 | :--- | :--- | :--- | :--- |
 | **Master Epic** | [#28](https://github.com/Khabarwaani/Website/issues/28) | `epic` | Epic: Golden Circle Storytelling, Modular Navigation & Content Reduction |
 | ├── **Cleanup** | [#29](https://github.com/Khabarwaani/Website/issues/29) | `task` | Clean Old & Legacy Files, Assets and Deprecated Navigation |
+| │   ├── Sub-feat | [#45](https://github.com/Khabarwaani/Website/issues/45) | `sub-issue` | Workspace File & Legacy Asset Cleanup |
+| │   └── Sub-feat | [#46](https://github.com/Khabarwaani/Website/issues/46) | `sub-issue` | Deprecated Navigation & CSS Purge |
 | ├── **Feature 1** | [#20](https://github.com/Khabarwaani/Website/issues/20) | `feature` | Universal Navigation Dropdown & 4-Column Footer System (Issue #19) |
+| │   ├── Sub-feat | [#40](https://github.com/Khabarwaani/Website/issues/40) | `sub-issue` | Universal Header Navigation & Sub-Tabs Dropdown |
+| │   └── Sub-feat | [#41](https://github.com/Khabarwaani/Website/issues/41) | `sub-issue` | 4-Column Balanced Storytelling Footer (Issue #19) |
 | ├── **Feature 2** | [#21](https://github.com/Khabarwaani/Website/issues/21) | `feature` | Create "Why" Micro-Pages with Ruthless Content Reduction |
 | │   ├── Page | [#30](https://github.com/Khabarwaani/Website/issues/30) | `sub-issue` | `media.html` (Why 1: The Media Crisis & Avoidance Paradox) |
 | │   ├── Page | [#31](https://github.com/Khabarwaani/Website/issues/31) | `sub-issue` | `genz.html` (Why 2: The Gen Z Shift & Feed Migration) |
 | │   ├── Page | [#32](https://github.com/Khabarwaani/Website/issues/32) | `sub-issue` | `reels.html` (Why 3: Why Vertical Reels & Positive Emotion) |
 | │   └── Page | [#33](https://github.com/Khabarwaani/Website/issues/33) | `sub-issue` | `ai-newsroom.html` (Why 4: Why Agentic AI Newsrooms Now) |
 | ├── **Feature 3** | [#22](https://github.com/Khabarwaani/Website/issues/22) | `feature` | Refactor `thesis.html` into Master "Why" Overview Hub |
+| │   └── Sub-feat | [#42](https://github.com/Khabarwaani/Website/issues/42) | `sub-issue` | `thesis.html` Master Why Hub Page Layout |
 | ├── **Feature 4** | [#23](https://github.com/Khabarwaani/Website/issues/23) | `feature` | Aggressive Content Pruning & Tab Navigation on "HOW" Pages |
 | │   ├── Page | [#34](https://github.com/Khabarwaani/Website/issues/34) | `sub-issue` | `architecture.html` (Systems Architecture & Multi-Agent Mesh) |
 | │   ├── Page | [#35](https://github.com/Khabarwaani/Website/issues/35) | `sub-issue` | `pipeline.html` (6-Stage Newsroom Operating Pipeline) |
@@ -95,7 +100,11 @@ All project work in Khabarwaani follows a strict 3-tier parent-child relationshi
 | ├── **Feature 6** | [#25](https://github.com/Khabarwaani/Website/issues/25) | `feature` | Create `mission.html` — The Story Climax ("Why Work On This") |
 | │   └── Page | [#39](https://github.com/Khabarwaani/Website/issues/39) | `sub-issue` | `mission.html` (The Story Climax: $10B Vacuum & 10x Economics) |
 | ├── **Feature 7** | [#26](https://github.com/Khabarwaani/Website/issues/26) | `feature` | Update `index.html` Front Door, Golden Circle Navigation & Story Climax Link |
+| │   ├── Sub-feat | [#43](https://github.com/Khabarwaani/Website/issues/43) | `sub-issue` | `index.html` Front Door & Navigation Integration |
+| │   └── Sub-feat | [#44](https://github.com/Khabarwaani/Website/issues/44) | `sub-issue` | `index.html` Golden Circle Hub & Climax Transition |
 | └── **Task 8** | [#27](https://github.com/Khabarwaani/Website/issues/27) | `documentation` | Update `README.md` Documentation & Information Architecture |
+|     ├── Sub-feat | [#47](https://github.com/Khabarwaani/Website/issues/47) | `sub-issue` | Narrative Architecture & Pages Topology Docs |
+|     └── Sub-feat | [#48](https://github.com/Khabarwaani/Website/issues/48) | `sub-issue` | Hierarchy Rules & Active Roadmap Table Docs |
 
 ---
 
