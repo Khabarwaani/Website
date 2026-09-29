@@ -41,20 +41,61 @@ The website itself must embody this principle. Developers, designers, writers, a
 > 1. Always refer to the **GitHub Tasks / Issues** as the primary source of truth and reference for all tasks, feature implementations, and backlog priorities before making changes.
 > 2. **Task Closure Protocol**: Git commits and direct pushes do not automatically close GitHub issues. Agents should **not** attempt to close or update GitHub tasks/issues directly. Instead, when a task is completed, the agent must provide the exact CLI command (e.g., `gh issue close <number>`) to the user so the user can execute it to update or close the task.
 
+### 📐 Project Issue Hierarchy Rules: Epic → Feature → Sub-feature
+
+All project work in Khabarwaani follows a strict 3-tier parent-child relationship system enforced via GitHub Sub-issues:
+
+1. **Tier 1: Epic (`epic`, `epic:<name>`)**
+   - High-level initiative or architectural refactoring (e.g., [#28](https://github.com/Khabarwaani/Website/issues/28)).
+   - Represents the macro narrative or strategic objective.
+   - Contains child **Features** and cross-cutting **Tasks**.
+
+2. **Tier 2: Feature (`feature`, `epic:<name>`)**
+   - Standalone, deliverable system capability or page group (e.g., [#21](https://github.com/Khabarwaani/Website/issues/21), [#23](https://github.com/Khabarwaani/Website/issues/23)).
+   - Must be linked to its parent Epic using GitHub's native parent relationship:
+     ```bash
+     gh issue edit <feature-number> --parent <epic-number>
+     ```
+   - Features represent pages or major components and contain **Sub-features / Page Sub-issues**.
+
+3. **Tier 3: Sub-feature / Page Sub-issue (`sub-issue`, `epic:<name>`)**
+   - Individual page or atomic micro-component (e.g., [#30](https://github.com/Khabarwaani/Website/issues/30), [#31](https://github.com/Khabarwaani/Website/issues/31)).
+   - Must be linked to its parent Feature using:
+     ```bash
+     gh issue edit <subfeature-number> --parent <feature-number>
+     ```
+   - Contains task checklists (`- [ ]`) for granular **tabs, sections, and micro-interactions**.
+
+#### 🔗 Linkage & Relationship Rules:
+- Every active sub-feature must be explicitly tied to a parent feature.
+- Every feature must be explicitly tied to a master epic.
+- Epics, Features, and Sub-features must share the overarching epic label (e.g., `epic:golden-circle`).
+- PRs and commits should reference the specific Sub-feature number to preserve audit trails.
+
 ### 📋 Active Roadmap & GitHub Tasks Hierarchy (Epic: `epic:golden-circle`)
 
 | Level | Issue | Type & Label | Scope & Objectives |
 | :--- | :--- | :--- | :--- |
 | **Master Epic** | [#28](https://github.com/Khabarwaani/Website/issues/28) | `epic` | Epic: Golden Circle Storytelling, Modular Navigation & Content Reduction |
-| ├── **Cleanup** | [#29](https://github.com/Khabarwaani/Website/issues/29) | `task` | Task: Clean Old & Legacy Files, Assets and Deprecated Navigation |
-| ├── **Feature 1** | [#20](https://github.com/Khabarwaani/Website/issues/20) | `feature` | Feature 1: Universal Navigation Dropdown & 4-Column Footer System (Resolving Issue #19) |
-| ├── **Feature 2** | [#21](https://github.com/Khabarwaani/Website/issues/21) | `feature` | Feature 2: Create "Why" Micro-Pages with Page & Tab Subtasks (`media`, `genz`, `reels`, `ai-newsroom`) |
-| ├── **Feature 3** | [#22](https://github.com/Khabarwaani/Website/issues/22) | `feature` | Feature 3: Refactor `thesis.html` into Master "Why" Overview Hub with Page & Tab Subtasks |
-| ├── **Feature 4** | [#23](https://github.com/Khabarwaani/Website/issues/23) | `feature` | Feature 4: Aggressive Content Pruning & Tab Navigation on "HOW" Pages |
-| ├── **Feature 5** | [#24](https://github.com/Khabarwaani/Website/issues/24) | `feature` | Feature 5: Streamline Multilingual Distribution & Pilot Showcase |
-| ├── **Feature 6** | [#25](https://github.com/Khabarwaani/Website/issues/25) | `feature` | Feature 6: Create `mission.html` — The Story Climax ("Why Work On This") [`leadership.html` locked] |
-| ├── **Feature 7** | [#26](https://github.com/Khabarwaani/Website/issues/26) | `feature` | Feature 7: Update `index.html` Front Door, Golden Circle Navigation & Story Climax Link |
-| └── **Task 8** | [#27](https://github.com/Khabarwaani/Website/issues/27) | `documentation` | Task 8: Update `README.md` Documentation & Information Architecture |
+| ├── **Cleanup** | [#29](https://github.com/Khabarwaani/Website/issues/29) | `task` | Clean Old & Legacy Files, Assets and Deprecated Navigation |
+| ├── **Feature 1** | [#20](https://github.com/Khabarwaani/Website/issues/20) | `feature` | Universal Navigation Dropdown & 4-Column Footer System (Issue #19) |
+| ├── **Feature 2** | [#21](https://github.com/Khabarwaani/Website/issues/21) | `feature` | Create "Why" Micro-Pages with Ruthless Content Reduction |
+| │   ├── Page | [#30](https://github.com/Khabarwaani/Website/issues/30) | `sub-issue` | `media.html` (Why 1: The Media Crisis & Avoidance Paradox) |
+| │   ├── Page | [#31](https://github.com/Khabarwaani/Website/issues/31) | `sub-issue` | `genz.html` (Why 2: The Gen Z Shift & Feed Migration) |
+| │   ├── Page | [#32](https://github.com/Khabarwaani/Website/issues/32) | `sub-issue` | `reels.html` (Why 3: Why Vertical Reels & Positive Emotion) |
+| │   └── Page | [#33](https://github.com/Khabarwaani/Website/issues/33) | `sub-issue` | `ai-newsroom.html` (Why 4: Why Agentic AI Newsrooms Now) |
+| ├── **Feature 3** | [#22](https://github.com/Khabarwaani/Website/issues/22) | `feature` | Refactor `thesis.html` into Master "Why" Overview Hub |
+| ├── **Feature 4** | [#23](https://github.com/Khabarwaani/Website/issues/23) | `feature` | Aggressive Content Pruning & Tab Navigation on "HOW" Pages |
+| │   ├── Page | [#34](https://github.com/Khabarwaani/Website/issues/34) | `sub-issue` | `architecture.html` (Systems Architecture & Multi-Agent Mesh) |
+| │   ├── Page | [#35](https://github.com/Khabarwaani/Website/issues/35) | `sub-issue` | `pipeline.html` (6-Stage Newsroom Operating Pipeline) |
+| │   ├── Page | [#36](https://github.com/Khabarwaani/Website/issues/36) | `sub-issue` | `editorial.html` (Editorial Desk & Verification Standards) |
+| │   └── Page | [#37](https://github.com/Khabarwaani/Website/issues/37) | `sub-issue` | `studio.html` (AI Reel Studio, 9:16 Motion & Voice Synthesis) |
+| ├── **Feature 5** | [#24](https://github.com/Khabarwaani/Website/issues/24) | `feature` | Streamline Multilingual Distribution & Pilot Showcase |
+| │   └── Page | [#38](https://github.com/Khabarwaani/Website/issues/38) | `sub-issue` | `distribution.html` (Multilingual Reach & Telemetry) |
+| ├── **Feature 6** | [#25](https://github.com/Khabarwaani/Website/issues/25) | `feature` | Create `mission.html` — The Story Climax ("Why Work On This") |
+| │   └── Page | [#39](https://github.com/Khabarwaani/Website/issues/39) | `sub-issue` | `mission.html` (The Story Climax: $10B Vacuum & 10x Economics) |
+| ├── **Feature 7** | [#26](https://github.com/Khabarwaani/Website/issues/26) | `feature` | Update `index.html` Front Door, Golden Circle Navigation & Story Climax Link |
+| └── **Task 8** | [#27](https://github.com/Khabarwaani/Website/issues/27) | `documentation` | Update `README.md` Documentation & Information Architecture |
 
 ---
 
