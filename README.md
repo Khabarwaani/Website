@@ -82,9 +82,9 @@ All project work in Khabarwaani follows a strict 3-tier parent-child relationshi
 | ├── **Cleanup** | [#29](https://github.com/Khabarwaani/Website/issues/29) | `task` | Clean Old & Legacy Files, Assets and Deprecated Navigation |
 | │   ├── Sub-feat | [#45](https://github.com/Khabarwaani/Website/issues/45) | `sub-issue` | Workspace File & Legacy Asset Cleanup |
 | │   └── Sub-feat | [#46](https://github.com/Khabarwaani/Website/issues/46) | `sub-issue` | Deprecated Navigation & CSS Purge |
-| ├── **Feature 1** | [#20](https://github.com/Khabarwaani/Website/issues/20) | `feature` | Universal Navigation Dropdown & 4-Column Footer System (Issue #19) |
-| │   ├── Sub-feat | [#40](https://github.com/Khabarwaani/Website/issues/40) | `sub-issue` | Universal Header Navigation & Sub-Tabs Dropdown |
-| │   └── Sub-feat | [#41](https://github.com/Khabarwaani/Website/issues/41) | `sub-issue` | 4-Column Balanced Storytelling Footer (Issue #19) |
+| ├── **Feature 1** | [#20](https://github.com/Khabarwaani/Website/issues/20) | `feature` | [Completed] Universal Navigation Dropdown & 4-Column Footer System (Issue #19) |
+| │   ├── Sub-feat | [#40](https://github.com/Khabarwaani/Website/issues/40) | `sub-issue` | [Completed] Universal Header Navigation & Sub-Tabs Dropdown |
+| │   └── Sub-feat | [#41](https://github.com/Khabarwaani/Website/issues/41) | `sub-issue` | [Completed] 4-Column Balanced Storytelling Footer (Issue #19) |
 | ├── **Feature 2** | [#21](https://github.com/Khabarwaani/Website/issues/21) | `feature` | Create "Why" Micro-Pages with Ruthless Content Reduction |
 | │   ├── Page | [#30](https://github.com/Khabarwaani/Website/issues/30) | `sub-issue` | `media.html` (Why 1: The Media Crisis & Avoidance Paradox) |
 | │   ├── Page | [#31](https://github.com/Khabarwaani/Website/issues/31) | `sub-issue` | `genz.html` (Why 2: The Gen Z Shift & Feed Migration) |
