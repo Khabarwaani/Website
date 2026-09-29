@@ -85,11 +85,11 @@ All project work in Khabarwaani follows a strict 3-tier parent-child relationshi
 | ├── **Feature 1** | [#20](https://github.com/Khabarwaani/Website/issues/20) | `feature` | [Completed] Universal Navigation Dropdown & 4-Column Footer System (Issue #19) |
 | │   ├── Sub-feat | [#40](https://github.com/Khabarwaani/Website/issues/40) | `sub-issue` | [Completed] Universal Header Navigation & Sub-Tabs Dropdown |
 | │   └── Sub-feat | [#41](https://github.com/Khabarwaani/Website/issues/41) | `sub-issue` | [Completed] 4-Column Balanced Storytelling Footer (Issue #19) |
-| ├── **Feature 2** | [#21](https://github.com/Khabarwaani/Website/issues/21) | `feature` | Create "Why" Micro-Pages with Ruthless Content Reduction |
-| │   ├── Page | [#30](https://github.com/Khabarwaani/Website/issues/30) | `sub-issue` | `media.html` (Why 1: The Media Crisis & Avoidance Paradox) |
-| │   ├── Page | [#31](https://github.com/Khabarwaani/Website/issues/31) | `sub-issue` | `genz.html` (Why 2: The Gen Z Shift & Feed Migration) |
-| │   ├── Page | [#32](https://github.com/Khabarwaani/Website/issues/32) | `sub-issue` | `reels.html` (Why 3: Why Vertical Reels & Positive Emotion) |
-| │   └── Page | [#33](https://github.com/Khabarwaani/Website/issues/33) | `sub-issue` | `ai-newsroom.html` (Why 4: Why Agentic AI Newsrooms Now) |
+| ├── **Feature 2** | [#21](https://github.com/Khabarwaani/Website/issues/21) | `feature` | [Completed] Create "Why" Micro-Pages with Ruthless Content Reduction |
+| │   ├── Page | [#30](https://github.com/Khabarwaani/Website/issues/30) | `sub-issue` | [Completed] `media.html` (Why 1: The Media Crisis & Avoidance Paradox) |
+| │   ├── Page | [#31](https://github.com/Khabarwaani/Website/issues/31) | `sub-issue` | [Completed] `genz.html` (Why 2: The Gen Z Shift & Feed Migration) |
+| │   ├── Page | [#32](https://github.com/Khabarwaani/Website/issues/32) | `sub-issue` | [Completed] `reels.html` (Why 3: Why Vertical Reels & Positive Emotion) |
+| │   └── Page | [#33](https://github.com/Khabarwaani/Website/issues/33) | `sub-issue` | [Completed] `ai-newsroom.html` (Why 4: Why Agentic AI Newsrooms Now) |
 | ├── **Feature 3** | [#22](https://github.com/Khabarwaani/Website/issues/22) | `feature` | Refactor `thesis.html` into Master "Why" Overview Hub |
 | │   └── Sub-feat | [#42](https://github.com/Khabarwaani/Website/issues/42) | `sub-issue` | `thesis.html` Master Why Hub Page Layout |
 | ├── **Feature 4** | [#23](https://github.com/Khabarwaani/Website/issues/23) | `feature` | Aggressive Content Pruning & Tab Navigation on "HOW" Pages |
