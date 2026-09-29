@@ -34,8 +34,8 @@ The website itself must embody this principle. Developers, designers, writers, a
 
 **Important:** All project tasks, milestones, bug reports, and roadmap items are stored and tracked in **GitHub Tasks / Issues**.
 
-- **GitHub Repository**: [khabarwaani-website](https://github.com/abhi266raj/khabarwaani-website)
-- **GitHub Tasks / Issues**: [https://github.com/abhi266raj/khabarwaani-website/issues](https://github.com/abhi266raj/khabarwaani-website/issues)
+- **GitHub Repository**: [Website](https://github.com/Khabarwaani/Website)
+- **GitHub Tasks / Issues**: [https://github.com/Khabarwaani/Website/issues](https://github.com/Khabarwaani/Website/issues)
 
 > **Guideline for Developers & Agents:**  
 > 1. Always refer to the **GitHub Tasks / Issues** as the primary source of truth and reference for all tasks, feature implementations, and backlog priorities before making changes.
