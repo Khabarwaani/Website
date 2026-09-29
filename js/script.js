@@ -17,6 +17,7 @@
     'pipeline.html': 'dropdownHow',
     'editorial.html': 'dropdownHow',
     'studio.html': 'dropdownHow',
+    'what.html': 'dropdownWhat',
     'distribution.html': 'dropdownWhat'
   };
 
