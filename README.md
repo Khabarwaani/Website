@@ -38,7 +38,8 @@ The website itself must embody this principle. Developers, designers, writers, a
 - **GitHub Tasks / Issues**: [https://github.com/abhi266raj/khabarwaani-website/issues](https://github.com/abhi266raj/khabarwaani-website/issues)
 
 > **Guideline for Developers & Agents:**  
-> Always refer to the **GitHub Tasks / Issues** as the primary source of truth and reference for all tasks, feature implementations, and backlog priorities before making changes.
+> 1. Always refer to the **GitHub Tasks / Issues** as the primary source of truth and reference for all tasks, feature implementations, and backlog priorities before making changes.
+> 2. **Task Closure Protocol**: Git commits and direct pushes do not automatically close GitHub issues. Agents should **not** attempt to close or update GitHub tasks/issues directly. Instead, when a task is completed, the agent must provide the exact CLI command (e.g., `gh issue close <number>`) to the user so the user can execute it to update or close the task.
 
 ---
 
