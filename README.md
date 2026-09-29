@@ -158,6 +158,7 @@ The Khabarwaani website functions as an interactive pitch deck and story matrix 
 - `studio.html` — AI Reel Studio, 9:16 programmatic visual motion, and regional voice synthesis
 
 #### Chapter 3: WHAT (The Product, Distribution & Proof)
+- `what.html` — Master What Overview Hub (The Product, Distribution & Live Pilot Hub)
 - `distribution.html` — Multilingual distribution channels, formats, and audience telemetry
 - `index.html#shift` — Format comparison: Legacy TV News vs. Khabarwaani Reels
 - Instagram Pilot ↗ (`https://www.instagram.com/khabarwaani`) — Live vertical reel pilot proof
