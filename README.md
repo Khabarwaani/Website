@@ -49,7 +49,7 @@ Khabarwaani is an agentic AI news-reels studio transforming daily current affair
 
 ### 🌐 Pages Overview
 - `index.html` — Mission, format shift comparison, and Golden Circle framework (Why, How, What)
-- `thesis.html` — Why Khabarwaani: the news avoidance paradox, mobile format shifts, and verified storytelling
+- `thesis.html` — Why: the news avoidance paradox, mobile format shifts, and verified storytelling
 - `architecture.html` — System architecture and autonomous agent orchestration
 - `pipeline.html` — 6-stage newsroom operating pipeline from signal intake to telemetry
 - `editorial.html` — Editorial intake beats, standards, and fact-auditing verification framework

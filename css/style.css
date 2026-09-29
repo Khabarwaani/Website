@@ -1,5 +1,5 @@
 :root{
-    --paper:#FAF7F0; --ink:#1C1712; --navy:#1F1A14; --gold:#E0692A;
+    --paper:#FAF7F0; --ink:#1C1712; --ink-secondary:#5C5852; --navy:#1F1A14; --gold:#E0692A;
     --rule: rgba(21,24,29,0.12); --rule-lt: rgba(21,24,29,0.08);
     padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
   }
@@ -412,9 +412,18 @@
     padding-right: 16px;
   }
   .footer-brand {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     text-decoration: none;
     margin-bottom: 10px;
+  }
+  .footer-brand-mark {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    display: inline-block;
+    flex-shrink: 0;
   }
   .footer-brand-name {
     font-family: 'Fraunces', serif;
@@ -484,6 +493,15 @@
     font-size: 12.5px;
     color: #7A808C;
     margin: 0;
+  }
+  .footer-back-to-top {
+    font-size: 12.5px;
+    color: #7A808C;
+    text-decoration: none;
+    transition: color .15s ease;
+  }
+  .footer-back-to-top:hover {
+    color: var(--gold);
   }
 
   @media(max-width: 820px) {
