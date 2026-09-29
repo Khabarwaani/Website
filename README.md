@@ -151,6 +151,7 @@ The Khabarwaani website functions as an interactive pitch deck and story matrix 
 - `ai-newsroom.html` — Why 4: Why autonomous agentic AI now (speed, scale, 90% cost reduction)
 
 #### Chapter 2: HOW (The Multi-Agent Operating System)
+- `how.html` — Master How Overview Hub (The Autonomous Operating Engine Hub)
 - `architecture.html` — Multi-agent mesh orchestration and technical stack
 - `pipeline.html` — 6-stage newsroom operational lifecycle from signal intake to telemetry
 - `editorial.html` — Journalistic fact-auditing desk, primary records, and verification standards
