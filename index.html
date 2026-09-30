@@ -16,113 +16,7 @@
 </head>
 <body id="top">
 
-<header class="site-brand-header" role="banner">
-  <div class="brand-container">
-    <a href="index.html" class="brand-group" aria-label="Khabarwaani Home">
-      <span class="brand-logo-wrapper">
-        <img class="brand-logo-img" src="assets/mark.png" alt="Khabarwaani Logo" width="26" height="26" onerror="this.style.display='none';">
-      </span>
-      <span class="brand-name">Khabarwaani</span>
-    </a>
-    <div class="brand-tagline-cluster">
-      <span class="lead-phrase">News, Reimagined</span>
-      <span class="tagline-sep" aria-hidden="true">—</span>
-      <span class="brand-tagline">From Humiliation, Shouting to <strong>Curiosity, Conversation &amp; Fun</strong></span>
-    </div>
-  </div>
-</header>
-
-<nav class="nav-section" id="navSection" aria-label="Sections">
-  <div class="nav-container">
-    <div class="nav-track" id="navTrack" tabindex="0" role="region" aria-label="Navigation Menu">
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a href="index.html" class="nav-link active" aria-current="page">Home</a>
-        </li>
-        <li class="nav-item nav-dropdown">
-          <a href="thesis.html" class="nav-link dropdown-toggle" id="dropdownWhy" aria-haspopup="true" aria-expanded="false">
-            Why <span class="dropdown-caret" aria-hidden="true">▾</span>
-          </a>
-          <div class="nav-dropdown-menu" aria-labelledby="dropdownWhy" role="menu">
-            <a href="thesis.html" class="dropdown-item" role="menuitem">
-              <span class="dropdown-title">Why Overview</span>
-              <span class="dropdown-desc">The Core Thesis Hub</span>
-            </a>
-            <a href="media.html" class="dropdown-item" role="menuitem">
-              <span class="dropdown-title">Media Crisis</span>
-              <span class="dropdown-desc">The 39% Avoidance Paradox</span>
-            </a>
-            <a href="genz.html" class="dropdown-item" role="menuitem">
-              <span class="dropdown-title">Gen Z Shift</span>
-              <span class="dropdown-desc">Attention on Mobile Feeds</span>
-            </a>
-            <a href="reels.html" class="dropdown-item" role="menuitem">
-              <span class="dropdown-title">Reels Format</span>
-              <span class="dropdown-desc">15s–60s Positive Emotion</span>
-            </a>
-            <a href="ai-newsroom.html" class="dropdown-item" role="menuitem">
-              <span class="dropdown-title">Agentic AI</span>
-              <span class="dropdown-desc">Scalable 90% Cost Cut</span>
-            </a>
-          </div>
-        </li>
-        <li class="nav-item nav-dropdown">
-          <a href="how.html" class="nav-link dropdown-toggle" id="dropdownHow" aria-haspopup="true" aria-expanded="false">
-            How <span class="dropdown-caret" aria-hidden="true">▾</span>
-          </a>
-          <div class="nav-dropdown-menu" aria-labelledby="dropdownHow" role="menu">
-            <a href="how.html" class="dropdown-item" role="menuitem">
-              <span class="dropdown-title">How Overview</span>
-              <span class="dropdown-desc">The Operating Engine Hub</span>
-            </a>
-            <a href="architecture.html" class="dropdown-item" role="menuitem">
-              <span class="dropdown-title">Architecture</span>
-              <span class="dropdown-desc">Multi-Agent Mesh Orchestration</span>
-            </a>
-            <a href="pipeline.html" class="dropdown-item" role="menuitem">
-              <span class="dropdown-title">Pipeline</span>
-              <span class="dropdown-desc">6-Stage Newsroom Operations</span>
-            </a>
-            <a href="editorial.html" class="dropdown-item" role="menuitem">
-              <span class="dropdown-title">Editorial Desk</span>
-              <span class="dropdown-desc">Fact Verification &amp; Standards</span>
-            </a>
-            <a href="studio.html" class="dropdown-item" role="menuitem">
-              <span class="dropdown-title">AI Studio</span>
-              <span class="dropdown-desc">9:16 Video &amp; Voice Synthesis</span>
-            </a>
-          </div>
-        </li>
-        <li class="nav-item nav-dropdown">
-          <a href="what.html" class="nav-link dropdown-toggle" id="dropdownWhat" aria-haspopup="true" aria-expanded="false">
-            What <span class="dropdown-caret" aria-hidden="true">▾</span>
-          </a>
-          <div class="nav-dropdown-menu" aria-labelledby="dropdownWhat" role="menu">
-            <a href="what.html" class="dropdown-item" role="menuitem">
-              <span class="dropdown-title">What Overview</span>
-              <span class="dropdown-desc">The Product &amp; Distribution Hub</span>
-            </a>
-            <a href="distribution.html" class="dropdown-item" role="menuitem">
-              <span class="dropdown-title">Distribution</span>
-              <span class="dropdown-desc">Multilingual Regional Reach</span>
-            </a>
-            <a href="index.html#shift" class="dropdown-item" role="menuitem">
-              <span class="dropdown-title">Format Shift</span>
-              <span class="dropdown-desc">Legacy Cable vs. Reels</span>
-            </a>
-            <a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer" class="dropdown-item" role="menuitem">
-              <span class="dropdown-title">Watch Pilot ↗</span>
-              <span class="dropdown-desc">Live Instagram Reel Proof</span>
-            </a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a href="leadership.html" class="nav-link">Team</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<div id="site-header"></div>
 
 <!-- TOP HEADER: THE CENTRAL QUESTION & REPORTER INTERROGATION -->
 <section class="hero" id="top" style="padding: 72px 0 54px;">
@@ -157,7 +51,7 @@
 
       <!-- Right Column: The News Experience Shift -->
       <div>
-        <div class="hero-reporter-card">
+        <div class="hero-reporter-card" id="shift">
           <div class="reporter-card-header">
             <span class="reporter-card-tag">⚡ The Format Shift</span>
             <span class="reporter-live-pill">Curiosity &amp; Fun</span>
@@ -315,64 +209,9 @@
   </div>
 </section>
 
-<footer class="site-footer" role="contentinfo">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4 class="footer-col-title">Navigation</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="thesis.html">Why</a></li>
-          <li><a href="leadership.html">Team</a></li>
-        </ul>
-      </div>
+<div id="site-footer"></div>
 
-      <div class="footer-col">
-        <h4 class="footer-col-title">Platform</h4>
-        <ul class="footer-links">
-          <li><a href="architecture.html">Architecture</a></li>
-          <li><a href="pipeline.html">Pipeline</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4 class="footer-col-title">Studio</h4>
-        <ul class="footer-links">
-          <li><a href="editorial.html">Editorial Desk</a></li>
-          <li><a href="studio.html">AI Studio</a></li>
-          <li><a href="distribution.html">Distribution</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4 class="footer-col-title">Connect</h4>
-        <ul class="footer-links">
-          <li><a href="https://github.com/Khabarwaani/Website" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
-          <li><a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer">Instagram ↗</a></li>
-          <li><a href="https://www.linkedin.com/in/abhi266raj/" target="_blank" rel="noopener noreferrer">Abhiraj Kumar ↗</a></li>
-          <li><a href="https://www.linkedin.com/in/parthkumar-panchal/" target="_blank" rel="noopener noreferrer">Parthkumar Panchal ↗</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="footer-brand-row">
-        <a href="index.html" class="footer-brand" aria-label="Khabarwaani Home">
-          <img src="assets/mark.png" alt="" class="footer-brand-mark" width="20" height="20">
-          <span class="footer-brand-name">Khabarwaani</span>
-        </a>
-        <span class="footer-brand-sep" aria-hidden="true">—</span>
-        <span class="footer-brand-goal">News, Reimagined: From humiliation and shouting to curiosity, conversation, and fun.</span>
-      </div>
-
-      <div class="footer-utility-row">
-        <p class="footer-copy">© 2026 Khabarwaani. All rights reserved.</p>
-        <a href="#top" class="footer-back-to-top" aria-label="Back to top">Back to top ↑</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="js/script.js"></script>
+<script src="js/layout.js?v=20260927_6"></script>
+<script src="js/script.js?v=20260927_6"></script>
 </body>
 </html>

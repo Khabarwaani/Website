@@ -1,6 +1,11 @@
 (function(){
   'use strict';
 
+  // Ensure reusable layout is mounted before initializing listeners
+  if (window.mountKhabarwaaniLayout) {
+    window.mountKhabarwaaniLayout();
+  }
+
   // Highlight active page link and parent dropdown in universal navigation
   var path = window.location.pathname.replace(/\/$/, "");
   var currentPage = path.split('/').pop() || 'index.html';
@@ -18,7 +23,8 @@
     'editorial.html': 'dropdownHow',
     'studio.html': 'dropdownHow',
     'what.html': 'dropdownWhat',
-    'distribution.html': 'dropdownWhat'
+    'scripting-agent.html': 'dropdownWhat',
+    'video-builder.html': 'dropdownWhat'
   };
 
   // Highlight direct nav links
@@ -128,6 +134,8 @@
         el.classList.add('in');
       });
     }
+  }
+
   // Accessible tab switcher for HOW & modular pages
   var tablists = document.querySelectorAll('[role="tablist"]');
   tablists.forEach(function(tablist){
@@ -174,4 +182,26 @@
       });
     });
   });
+
+  // Handle direct hash navigation to tabs (e.g. #telemetry or #tab-telemetry)
+  function activateTabFromHash() {
+    var hash = window.location.hash;
+    if (!hash) return;
+    var targetId = hash.replace('#', '');
+    if (targetId === 'telemetry') targetId = 'tab-telemetry';
+    var targetBtn = document.querySelector('[aria-controls="' + targetId + '"]');
+    if (targetBtn) {
+      targetBtn.click();
+      setTimeout(function() {
+        var el = document.getElementById(targetId) || targetBtn;
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', activateTabFromHash);
+  } else {
+    activateTabFromHash();
+  }
+  window.addEventListener('hashchange', activateTabFromHash);
 })();

@@ -26,7 +26,7 @@ The website itself must embody this principle. Developers, designers, writers, a
    - Maintain a witty, curiosity-driven, and positive tone.
    - Avoid sounding academic, clinical, or overly self-important.
 4. **Audit Before Adding**:
-   - When modifying any page (`index.html`, `thesis.html`, `architecture.html`, `editorial.html`, `pipeline.html`, `studio.html`, `distribution.html`, `leadership.html`), actively audit existing sections to eliminate outdated, bloated, or non-essential text.
+   - When modifying any page (`index.html`, `thesis.html`, `architecture.html`, `editorial.html`, `pipeline.html`, `studio.html`, `what.html`, `leadership.html`), actively audit existing sections to eliminate outdated, bloated, or non-essential text.
 
 ---
 
@@ -92,13 +92,13 @@ All project work in Khabarwaani follows a strict 3-tier parent-child relationshi
 | │   └── Page | [#33](https://github.com/Khabarwaani/Website/issues/33) | `sub-issue` | [Completed] `ai-newsroom.html` (Why 4: Why Agentic AI Newsrooms Now) |
 | ├── **Feature 3** | [#22](https://github.com/Khabarwaani/Website/issues/22) | `feature` | [Completed] Refactor `thesis.html` into Master "Why" Overview Hub |
 | │   └── Sub-feat | [#42](https://github.com/Khabarwaani/Website/issues/42) | `sub-issue` | [Completed] `thesis.html` Master Why Hub Page Layout |
-| ├── **Feature 4** | [#23](https://github.com/Khabarwaani/Website/issues/23) | `feature` | Aggressive Content Pruning & Tab Navigation on "HOW" Pages |
-| │   ├── Page | [#34](https://github.com/Khabarwaani/Website/issues/34) | `sub-issue` | `architecture.html` (Systems Architecture & Multi-Agent Mesh) |
-| │   ├── Page | [#35](https://github.com/Khabarwaani/Website/issues/35) | `sub-issue` | `pipeline.html` (6-Stage Newsroom Operating Pipeline) |
-| │   ├── Page | [#36](https://github.com/Khabarwaani/Website/issues/36) | `sub-issue` | `editorial.html` (Editorial Desk & Verification Standards) |
-| │   └── Page | [#37](https://github.com/Khabarwaani/Website/issues/37) | `sub-issue` | `studio.html` (AI Reel Studio, 9:16 Motion & Voice Synthesis) |
-| ├── **Feature 5** | [#24](https://github.com/Khabarwaani/Website/issues/24) | `feature` | Streamline Multilingual Distribution & Pilot Showcase |
-| │   └── Page | [#38](https://github.com/Khabarwaani/Website/issues/38) | `sub-issue` | `distribution.html` (Multilingual Reach & Telemetry) |
+| ├── **Feature 4** | [#23](https://github.com/Khabarwaani/Website/issues/23) | `feature` | [Completed] Aggressive Content Pruning & Tab Navigation on "HOW" Pages |
+| │   ├── Page | [#34](https://github.com/Khabarwaani/Website/issues/34) | `sub-issue` | [Completed] `architecture.html` (Systems Architecture & Multi-Agent Mesh) |
+| │   ├── Page | [#35](https://github.com/Khabarwaani/Website/issues/35) | `sub-issue` | [Completed] `pipeline.html` (6-Stage Newsroom Operating Pipeline) |
+| │   ├── Page | [#36](https://github.com/Khabarwaani/Website/issues/36) | `sub-issue` | [Completed] `editorial.html` (Editorial Desk & Verification Standards) |
+| │   └── Page | [#37](https://github.com/Khabarwaani/Website/issues/37) | `sub-issue` | [Completed] `studio.html` (AI Reel Studio, 9:16 Motion & Voice Synthesis) |
+| ├── **Feature 5** | [#24](https://github.com/Khabarwaani/Website/issues/24) | `feature` | [Completed] The Product Solution: AI Scripting Agent & Hindi Video Builder |
+| │   └── Page | [#38](https://github.com/Khabarwaani/Website/issues/38) | `sub-issue` | [Completed] `what.html` (Product Solution Deep Dive & Live Pilot) |
 | ├── **Feature 6** | [#25](https://github.com/Khabarwaani/Website/issues/25) | `feature` | Create `mission.html` — The Story Climax ("Why Work On This") |
 | │   └── Page | [#39](https://github.com/Khabarwaani/Website/issues/39) | `sub-issue` | `mission.html` (The Story Climax: $10B Vacuum & 10x Economics) |
 | ├── **Feature 7** | [#26](https://github.com/Khabarwaani/Website/issues/26) | `feature` | Update `index.html` Front Door, Golden Circle Navigation & Story Climax Link |
@@ -125,7 +125,7 @@ The Khabarwaani website functions as an interactive pitch deck and story matrix 
 │ 1. WHY (Thesis) ▾             │ 2. HOW (Engine) ▾                │ 3. WHAT (Product) ▾           │
 ├───────────────────────────────┼──────────────────────────────────┼───────────────────────────────┤
 │ • Media Crisis                │ • System Architecture            │ • Multilingual Reach          │
-│ • Gen Z Shift                 │ • 6-Stage Pipeline               │ • 15s–60s Format Shift        │
+│ • Gen Z Shift                 │ • 6-Stage Pipeline               │ • Continuous QA Loop          │
 │ • Reels Format                │ • Editorial Verification Desk    │ • Watch Live Pilot ↗          │
 │ • Agentic AI                  │ • AI Reel Studio & Voice         │                               │
 ├───────────────────────────────┴──────────────────────────────────┴───────────────────────────────┤
@@ -157,14 +157,23 @@ The Khabarwaani website functions as an interactive pitch deck and story matrix 
 - `editorial.html` — Journalistic fact-auditing desk, primary records, and verification standards
 - `studio.html` — AI Reel Studio, 9:16 programmatic visual motion, and regional voice synthesis
 
-#### Chapter 3: WHAT (The Product, Distribution & Proof)
-- `what.html` — Master What Overview Hub (The Product, Distribution & Live Pilot Hub)
-- `distribution.html` — Multilingual distribution channels, formats, and audience telemetry
-- `index.html#shift` — Format comparison: Legacy TV News vs. Khabarwaani Reels
+#### Chapter 3: WHAT (The Product Solution)
+- `what.html` — Master What Overview (Crisp Architecture & Product Hub)
+- `scripting-agent.html` — Engine 01 Deep Dive: The AI Agent Scripting App
+- `video-builder.html` — Engine 02 Deep Dive: The End-to-End Hindi Video Builder
 - Instagram Pilot ↗ (`https://www.instagram.com/khabarwaani`) — Live vertical reel pilot proof
 
-#### Chapter 4: THE CLIMAX & TEAM
+#### Chapter 4: ROADMAP, MISSION & TEAM
+- `roadmap.html` — Execution Reality & Funding Roadmap (Live Instagram pilot & scaling milestones)
 - `mission.html` — The Story Climax: Why solving the news crisis is worth your life's best work
 - `leadership.html` — [LOCKED] Co-Founders and core leadership team (Abhiraj Kumar, Parthkumar Panchal)
 - `index.html` — Executive summary, Golden Circle framework, and ending transition hook
+
+---
+
+### 🧩 Reusable Layout Architecture (`js/layout.js`)
+All pages use client-side reusable layout placeholders:
+- `<div id="site-header"></div>` — Mounts the brand header and two-tier universal navigation.
+- `<div id="site-footer"></div>` — Mounts the standardized 4-column footer.
+- `js/layout.js` — Single source of truth. Updates to navigation or footer are made once in `js/layout.js` and automatically apply across all 17 HTML pages. Active page highlighting is calculated dynamically.
 
