@@ -1,6 +1,6 @@
 # Khabarwaani Website
 
-> **News, Reimagined**: From humiliation and shouting to curiosity, conversation, and fun.
+> **News, Reimagined**: Serious about the facts, friendly in the delivery. Clear, confident, credible, and human.
 
 ---
 
@@ -10,7 +10,7 @@
 > **Aggressively remove unnecessary, verbose, and redundant text across the entire Khabarwaani website.** Every line of copy must earn its place.
 
 Khabarwaani's founding thesis asks:  
-> *"Why can't news be interesting like reels—and funny? Why does news need to be verbose?"*
+> *"Why can't news be clear, engaging, and genuinely human? Why does news need to be verbose?"*
 
 The website itself must embody this principle. Developers, designers, writers, and AI agents contributing to this project must treat **text reduction, conciseness, and ruthless pruning of fluff as a core goal**.
 
