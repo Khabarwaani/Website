@@ -40,7 +40,7 @@
         '<div class="brand-tagline-cluster">' +
           '<span class="lead-phrase">News, Reimagined</span>' +
           '<span class="tagline-sep" aria-hidden="true">—</span>' +
-          '<span class="brand-tagline">Serious about the facts, <strong>friendly in the delivery</strong></span>' +
+          '<span class="brand-tagline">From Humiliation, Shouting to <strong>Curiosity, Conversation &amp; Fun</strong></span>' +
         '</div>' +
       '</div>' +
     '</header>' +
@@ -203,7 +203,7 @@
               '<span class="footer-brand-name">Khabarwaani</span>' +
             '</a>' +
             '<span class="footer-brand-sep" aria-hidden="true">—</span>' +
-            '<span class="footer-brand-goal">News, Reimagined: Serious about the facts, friendly in the delivery. Clear, confident, credible, and human.</span>' +
+            '<span class="footer-brand-goal">News, Reimagined: From humiliation and shouting to curiosity, conversation, and fun.</span>' +
           '</div>' +
 
           '<div class="footer-utility-row">' +
