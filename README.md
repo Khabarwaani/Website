@@ -143,6 +143,10 @@ The Khabarwaani website functions as an interactive pitch deck and story matrix 
 
 ### 🌐 Pages & Topology Overview
 
+#### Entry & Context
+- `index.html` — Homepage: Interactive Golden Circle Simulator (Why / How / What live flow & phone simulation)
+- `problem.html` — The Problem: Legacy TV Shouting vs. Witty Fact-Checked Reels
+
 #### Chapter 1: WHY (The Thesis & Catalysts)
 - `thesis.html` — Master Why Overview Hub (Media, Gen Z, Reels, AI)
 - `media.html` — Why 1: The Media Crisis, cable shouting, and the 39% news avoidance paradox
@@ -167,7 +171,6 @@ The Khabarwaani website functions as an interactive pitch deck and story matrix 
 - `roadmap.html` — Execution Reality & Funding Roadmap (Live Instagram pilot & scaling milestones)
 - `mission.html` — The Story Climax: Why solving the news crisis is worth your life's best work
 - `leadership.html` — [LOCKED] Co-Founders and core leadership team (Abhiraj Kumar, Parthkumar Panchal)
-- `index.html` — Executive summary, Golden Circle framework, and ending transition hook
 
 ---
 
@@ -175,5 +178,5 @@ The Khabarwaani website functions as an interactive pitch deck and story matrix 
 All pages use client-side reusable layout placeholders:
 - `<div id="site-header"></div>` — Mounts the brand header and two-tier universal navigation.
 - `<div id="site-footer"></div>` — Mounts the standardized 4-column footer.
-- `js/layout.js` — Single source of truth. Updates to navigation or footer are made once in `js/layout.js` and automatically apply across all 17 HTML pages. Active page highlighting is calculated dynamically.
+- `js/layout.js` — Single source of truth. Updates to navigation or footer are made once in `js/layout.js` and automatically apply across all 18 HTML pages. Active page highlighting is calculated dynamically.
 
