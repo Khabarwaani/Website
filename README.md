@@ -145,7 +145,7 @@ The Khabarwaani website functions as an interactive pitch deck and story matrix 
 
 #### Entry & Context
 - `index.html` — Homepage: Interactive Golden Circle Simulator (Why / How / What live flow & phone simulation)
-- `problem.html` — The Problem: Legacy TV Shouting vs. Witty Fact-Checked Reels
+- `vision.html` — The Vision: Why, How, What Framework & Legacy TV vs. Witty Fact-Checked Reels
 
 #### Chapter 1: WHY (The Thesis & Catalysts)
 - `thesis.html` — Master Why Overview Hub (Media, Gen Z, Reels, AI)

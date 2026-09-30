@@ -22,7 +22,7 @@
     var whatPages = ['what.html', 'scripting-agent.html', 'video-builder.html'];
 
     var isHome = (page === 'index.html');
-    var isProblem = (page === 'problem.html');
+    var isVision = (page === 'vision.html');
     var isWhy = whyPages.indexOf(page) !== -1;
     var isHow = howPages.indexOf(page) !== -1;
     var isWhat = whatPages.indexOf(page) !== -1;
@@ -53,7 +53,7 @@
               '<a href="index.html" class="nav-link' + (isHome ? ' active" aria-current="page' : '') + '">Home</a>' +
             '</li>' +
             '<li class="nav-item">' +
-              '<a href="problem.html" class="nav-link' + (isProblem ? ' active" aria-current="page' : '') + '">Problem</a>' +
+              '<a href="vision.html" class="nav-link' + (isVision ? ' active" aria-current="page' : '') + '">Vision</a>' +
             '</li>' +
             '<li class="nav-item nav-dropdown">' +
               '<a href="thesis.html" class="nav-link dropdown-toggle' + (isWhy ? ' active" aria-current="page' : '') + '" id="dropdownWhy" aria-haspopup="true" aria-expanded="false">' +
@@ -185,7 +185,7 @@
             '<h4 class="footer-col-title">Company &amp; Connect</h4>' +
             '<ul class="footer-links">' +
               '<li><a href="index.html">Home</a></li>' +
-              '<li><a href="problem.html">The Problem</a></li>' +
+              '<li><a href="vision.html">The Vision</a></li>' +
               '<li><a href="mission.html">The Story Climax</a></li>' +
               '<li><a href="leadership.html">Team &amp; Founders</a></li>' +
               '<li><a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer">Instagram ↗</a></li>' +
