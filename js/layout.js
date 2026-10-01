@@ -66,7 +66,7 @@
               '<a href="what.html" class="nav-link' + (isWhat ? ' active" aria-current="page' : '') + '">What</a>' +
             '</li>' +
             '<li class="nav-item">' +
-              '<a href="roadmap.html" class="nav-link' + (isRoadmap ? ' active" aria-current="page' : '') + '">Roadmap</a>' +
+              '<a href="execution.html" class="nav-link' + (isRoadmap ? ' active" aria-current="page' : '') + '">Roadmap</a>' +
             '</li>' +
             '<li class="nav-item">' +
               '<a href="leadership.html" class="nav-link' + (isTeam ? ' active" aria-current="page' : '') + '">Team</a>' +
@@ -146,10 +146,7 @@
       headerHtml += '<nav class="subnav-section" aria-label="Roadmap Sub-Navigation">' +
         '<div class="subnav-container">' +
           '<div class="subnav-track">' +
-            '<a href="roadmap.html" class="subnav-pill' + (page === 'roadmap.html' ? ' active" aria-current="page' : '') + '">' +
-              'Overview' +
-            '</a>' +
-            '<a href="execution.html" class="subnav-pill' + (page === 'execution.html' ? ' active" aria-current="page' : '') + '">' +
+            '<a href="execution.html" class="subnav-pill' + (page === 'execution.html' || page === 'roadmap.html' ? ' active" aria-current="page' : '') + '">' +
               'Execution' +
             '</a>' +
             '<a href="funding.html" class="subnav-pill' + (page === 'funding.html' ? ' active" aria-current="page' : '') + '">' +
@@ -196,7 +193,6 @@
               '<li><a href="what.html">What Overview</a></li>' +
               '<li><a href="scripting-agent.html">1. AI Scripting Agent</a></li>' +
               '<li><a href="video-builder.html">2. Hindi Video Builder</a></li>' +
-              '<li><a href="roadmap.html">Roadmap Overview</a></li>' +
               '<li><a href="execution.html">3. Execution Roadmap</a></li>' +
               '<li><a href="funding.html">4. Funding Horizon</a></li>' +
               '<li><a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer">Watch Live Pilot ↗</a></li>' +
