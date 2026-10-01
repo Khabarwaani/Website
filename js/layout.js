@@ -58,55 +58,11 @@
             '<li class="nav-item">' +
               '<a href="thesis.html" class="nav-link' + (isWhy ? ' active" aria-current="page' : '') + '">Why</a>' +
             '</li>' +
-            '<li class="nav-item nav-dropdown">' +
-              '<a href="how.html" class="nav-link dropdown-toggle' + (isHow ? ' active" aria-current="page' : '') + '" id="dropdownHow" aria-haspopup="true" aria-expanded="false">' +
-                'How <span class="dropdown-caret" aria-hidden="true">▾</span>' +
-              '</a>' +
-              '<div class="nav-dropdown-menu" aria-labelledby="dropdownHow" role="menu">' +
-                '<a href="how.html" class="dropdown-item' + (page === 'how.html' ? ' active" aria-current="page' : '') + '" role="menuitem">' +
-                  '<span class="dropdown-title">How Overview</span>' +
-                  '<span class="dropdown-desc">The Operating Engine Hub</span>' +
-                '</a>' +
-                '<a href="architecture.html" class="dropdown-item' + (page === 'architecture.html' ? ' active" aria-current="page' : '') + '" role="menuitem">' +
-                  '<span class="dropdown-title">Architecture</span>' +
-                  '<span class="dropdown-desc">Multi-Agent Mesh Orchestration</span>' +
-                '</a>' +
-                '<a href="pipeline.html" class="dropdown-item' + (page === 'pipeline.html' ? ' active" aria-current="page' : '') + '" role="menuitem">' +
-                  '<span class="dropdown-title">Pipeline</span>' +
-                  '<span class="dropdown-desc">6-Stage Newsroom Operations</span>' +
-                '</a>' +
-                '<a href="editorial.html" class="dropdown-item' + (page === 'editorial.html' ? ' active" aria-current="page' : '') + '" role="menuitem">' +
-                  '<span class="dropdown-title">Editorial Desk</span>' +
-                  '<span class="dropdown-desc">Fact Verification &amp; Standards</span>' +
-                '</a>' +
-                '<a href="studio.html" class="dropdown-item' + (page === 'studio.html' ? ' active" aria-current="page' : '') + '" role="menuitem">' +
-                  '<span class="dropdown-title">AI Studio</span>' +
-                  '<span class="dropdown-desc">9:16 Video &amp; Voice Synthesis</span>' +
-                '</a>' +
-              '</div>' +
+            '<li class="nav-item">' +
+              '<a href="how.html" class="nav-link' + (isHow ? ' active" aria-current="page' : '') + '">How</a>' +
             '</li>' +
-            '<li class="nav-item nav-dropdown">' +
-              '<a href="what.html" class="nav-link dropdown-toggle' + (isWhat ? ' active" aria-current="page' : '') + '" id="dropdownWhat" aria-haspopup="true" aria-expanded="false">' +
-                'What <span class="dropdown-caret" aria-hidden="true">▾</span>' +
-              '</a>' +
-              '<div class="nav-dropdown-menu" aria-labelledby="dropdownWhat" role="menu">' +
-                '<a href="what.html" class="dropdown-item' + (page === 'what.html' ? ' active" aria-current="page' : '') + '" role="menuitem">' +
-                  '<span class="dropdown-title">What Overview</span>' +
-                  '<span class="dropdown-desc">The Solution Architecture</span>' +
-                '</a>' +
-                '<a href="scripting-agent.html" class="dropdown-item' + (page === 'scripting-agent.html' ? ' active" aria-current="page' : '') + '" role="menuitem">' +
-                  '<span class="dropdown-title">AI Scripting Agent</span>' +
-                  '<span class="dropdown-desc">News Analysis to Emotion Scripts</span>' +
-                '</a>' +
-                '<a href="video-builder.html" class="dropdown-item' + (page === 'video-builder.html' ? ' active" aria-current="page' : '') + '" role="menuitem">' +
-                  '<span class="dropdown-title">Hindi Video Builder</span>' +
-                  '<span class="dropdown-desc">End-to-End Automated Editing</span>' +
-                '</a>' +
-                '<a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer" class="dropdown-item" role="menuitem">' +
-                  '<span class="dropdown-title">Watch Pilot ↗</span>' +
-                  '<span class="dropdown-desc">Live Instagram Reel Proof</span>' +
-                '</a>' +
-              '</div>' +
+            '<li class="nav-item">' +
+              '<a href="what.html" class="nav-link' + (isWhat ? ' active" aria-current="page' : '') + '">What</a>' +
             '</li>' +
             '<li class="nav-item">' +
               '<a href="roadmap.html" class="nav-link' + (isRoadmap ? ' active" aria-current="page' : '') + '">Roadmap</a>' +
@@ -137,6 +93,48 @@
             '</a>' +
             '<a href="ai-newsroom.html" class="subnav-pill' + (page === 'ai-newsroom.html' ? ' active" aria-current="page' : '') + '">' +
               'Agentic AI' +
+            '</a>' +
+          '</div>' +
+        '</div>' +
+      '</nav>';
+    }
+
+    if (isHow) {
+      headerHtml += '<nav class="subnav-section" aria-label="How Sub-Navigation">' +
+        '<div class="subnav-container">' +
+          '<div class="subnav-track">' +
+            '<a href="how.html" class="subnav-pill' + (page === 'how.html' ? ' active" aria-current="page' : '') + '">' +
+              'Overview' +
+            '</a>' +
+            '<a href="architecture.html" class="subnav-pill' + (page === 'architecture.html' ? ' active" aria-current="page' : '') + '">' +
+              'Architecture' +
+            '</a>' +
+            '<a href="pipeline.html" class="subnav-pill' + (page === 'pipeline.html' ? ' active" aria-current="page' : '') + '">' +
+              'Pipeline' +
+            '</a>' +
+            '<a href="editorial.html" class="subnav-pill' + (page === 'editorial.html' ? ' active" aria-current="page' : '') + '">' +
+              'Editorial Desk' +
+            '</a>' +
+            '<a href="studio.html" class="subnav-pill' + (page === 'studio.html' ? ' active" aria-current="page' : '') + '">' +
+              'AI Studio' +
+            '</a>' +
+          '</div>' +
+        '</div>' +
+      '</nav>';
+    }
+
+    if (isWhat) {
+      headerHtml += '<nav class="subnav-section" aria-label="What Sub-Navigation">' +
+        '<div class="subnav-container">' +
+          '<div class="subnav-track">' +
+            '<a href="what.html" class="subnav-pill' + (page === 'what.html' ? ' active" aria-current="page' : '') + '">' +
+              'Overview' +
+            '</a>' +
+            '<a href="scripting-agent.html" class="subnav-pill' + (page === 'scripting-agent.html' ? ' active" aria-current="page' : '') + '">' +
+              'Scripting Agent' +
+            '</a>' +
+            '<a href="video-builder.html" class="subnav-pill' + (page === 'video-builder.html' ? ' active" aria-current="page' : '') + '">' +
+              'Video Builder' +
             '</a>' +
           '</div>' +
         '</div>' +

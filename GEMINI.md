@@ -61,3 +61,12 @@ Every change in **How to Do It** must specify:
 - If a concept is foundational to **Media Crisis**, its canonical explanation belongs in [`media.html`](media.html). Other pages may link or briefly cite it with 1 sentence max.
 - If a concept is about **Video Architecture / Formats**, its canonical explanation belongs in [`reels.html`](reels.html).
 - If a concept is about **AI / Agents**, its canonical explanation belongs in [`ai-newsroom.html`](ai-newsroom.html) and [`pipeline.html`](pipeline.html).
+
+---
+
+## GitHub Tasks & Workflow Protocol
+
+### 1. Active Task Querying
+- When querying open/active work, **always use `gh issue list --state open`** (or `gh issue list`) directly in the shell instead of unnecessary manual fetching or guessing.
+- Keep task tracking centralized on GitHub issues as the single source of truth.
+
