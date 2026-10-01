@@ -180,7 +180,9 @@ The site implements a **Modular Hub & Spoke Topology** across all chapters to en
 - **Instagram Pilot ↗** ([`@khabarwaani`](https://www.instagram.com/khabarwaani)) — Real-world proof of concept and audience engagement live pilot.
 
 #### Chapter 4: ROADMAP, MISSION & LEADERSHIP
-- `roadmap.html` — **Execution Reality & Funding Roadmap**: Live pilot traction metrics, seed runway, scaling timeline, and hiring plan.
+- `roadmap.html` — **Master Roadmap Overview Hub**: 2-track hub routing to dedicated Execution and Funding deep dives.
+- `execution.html` — **Execution Roadmap**: Feature status table (active in-progress checkboxes vs remaining deliverables) and milestone checklists.
+- `funding.html` — **Funding Horizon**: Capital milestones table, 50/25/25% capital deployment breakdown, and infrastructure horizons.
 - `mission.html` — **The Story Climax ("Why Work On Khabarwaani")**: The grand finale pitch detailing the $10B attention vacuum, 10x unit economics, high-status democratic purpose, and co-founder/partner invitation.
 - `leadership.html` — **Team & Founders [STRICTLY LOCKED]**: Co-founder biographies and leadership credentials (Abhiraj Kumar, Parthkumar Panchal).  
   *Lock Status Policy:* This file is strictly frozen across automated refactors and maintenance tasks. Alterations to founder profiles, bios, or contact links require direct founder authorization.
@@ -214,6 +216,8 @@ Mounts into `<div id="site-header"></div>`:
     `Overview` · `Architecture` · `Pipeline` · `Editorial Desk` · `AI Studio`
   - **What Chapter** (Active on `what.html`, `scripting-agent.html`, `video-builder.html`):
     `Overview` · `Scripting Agent` · `Video Builder`
+  - **Roadmap Chapter** (Active on `roadmap.html`, `execution.html`, `funding.html`):
+    `Overview` · `Execution` · `Funding`
 
 ### 2. Standardized 4-Column Balanced Footer
 Mounts into `<div id="site-footer"></div>` and directly addresses [Issue #19](https://github.com/Khabarwaani/Website/issues/19) layout balancing:
@@ -236,7 +240,9 @@ Mounts into `<div id="site-footer"></div>` and directly addresses [Issue #19](ht
   - What Overview (`what.html`)
   - 1. AI Scripting Agent (`scripting-agent.html`)
   - 2. Hindi Video Builder (`video-builder.html`)
-  - 3. Roadmap & Funding (`roadmap.html`)
+  - Roadmap Overview (`roadmap.html`)
+  - 3. Execution Roadmap (`execution.html`)
+  - 4. Funding Horizon (`funding.html`)
   - Watch Live Pilot ↗ ([Instagram](https://www.instagram.com/khabarwaani))
 
 - **Column 4: Company & Connect**

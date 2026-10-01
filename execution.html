@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Execution Roadmap — Khabarwaani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260927_5">
+<link rel="stylesheet" href="css/future-modules.css?v=20260927_5">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon_32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon_16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon_180.png">
+<style>
+  .roadmap-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 28px;
+    background: var(--card-bg, #FFFFFF);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .roadmap-table th {
+    text-align: left;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-weight: 700;
+    color: var(--navy);
+    background: var(--tint-bg, #F1ECE1);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .roadmap-table td {
+    padding: 14px 16px;
+    font-size: 13.5px;
+    color: #3A3F4A;
+    border-bottom: 1px solid var(--rule-lt);
+    vertical-align: middle;
+  }
+  .roadmap-table tr:last-child td {
+    border-bottom: none;
+  }
+  .status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    white-space: nowrap;
+  }
+  .status-in-progress {
+    background: rgba(44, 122, 75, 0.12);
+    color: #2c7a4b;
+    border: 1px solid rgba(44, 122, 75, 0.25);
+  }
+  .status-remaining {
+    background: rgba(28, 23, 18, 0.05);
+    color: #7A808C;
+    border: 1px solid var(--rule);
+  }
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 24px;
+  }
+</style>
+</head>
+<body id="top">
+
+<div id="site-header"></div>
+
+<!-- HERO -->
+<section class="hero" style="padding: 72px 0 52px;">
+  <div class="wrap">
+    <div class="hero-tag-badge">⚡ Engineering &amp; Operations</div>
+    <h1 style="font-size:clamp(30px,4.5vw,48px); line-height:1.15; margin-bottom:14px;">
+      Execution Roadmap
+    </h1>
+    <p class="lede" style="font-size:17.5px; max-width:700px; line-height:1.6; margin-top:14px; margin-bottom:24px;">
+      Real-time tracking of active production capabilities in progress alongside pending system deliverables.
+    </p>
+
+    <div class="hero-kpis-mini" style="margin-top:28px;">
+      <div class="hero-kpi-pill"><b>Active Features:</b> 4 In Progress</div>
+      <div class="hero-kpi-pill"><b>Planned Features:</b> 4 Remaining</div>
+      <div class="hero-kpi-pill"><b>Target Turnaround:</b> &lt; 5 Min Wire-to-Reel</div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT: EXECUTION TRACKER -->
+<section class="reveal" style="padding: 60px 0;">
+  <div class="wrap">
+    <div style="margin-bottom:24px;">
+      <span class="kicker">Operational Status</span>
+      <h2 style="font-size:clamp(24px,3.6vw,34px); margin-bottom:8px; color:var(--navy);">
+        Feature Execution Tracker
+      </h2>
+      <p style="font-size:15px; color:var(--ink-secondary); margin:0;">
+        Capabilities currently operational in production versus upcoming roadmap modules.
+      </p>
+    </div>
+
+    <!-- EXECUTION STATUS TABLE -->
+    <div class="table-responsive">
+      <table class="roadmap-table">
+        <thead>
+          <tr>
+            <th style="width:170px;">Status</th>
+            <th style="width:200px;">Feature / Module</th>
+            <th style="width:160px;">Category</th>
+            <th>Deliverable &amp; Operational Scope</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <span class="status-tag status-in-progress">
+                <input type="checkbox" checked disabled style="margin:0; width:14px; height:14px; accent-color:#2c7a4b;">
+                In Progress
+              </span>
+            </td>
+            <td><strong>Live Reel Pilot</strong></td>
+            <td>Distribution &amp; Reach</td>
+            <td>Publishing daily 15s–60s current affairs reels; measuring audience retention curves and engagement in the wild.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-in-progress">
+                <input type="checkbox" checked disabled style="margin:0; width:14px; height:14px; accent-color:#2c7a4b;">
+                In Progress
+              </span>
+            </td>
+            <td><strong>AI Scripting Agent</strong></td>
+            <td>Engine 01 (Scripting)</td>
+            <td>Autonomous wire ingestion, emotion-driven scripting hooks, and human review/override editorial desk.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-in-progress">
+                <input type="checkbox" checked disabled style="margin:0; width:14px; height:14px; accent-color:#2c7a4b;">
+                In Progress
+              </span>
+            </td>
+            <td><strong>Hindi Video Builder</strong></td>
+            <td>Engine 02 (Video)</td>
+            <td>Programmatic 9:16 motion compilation with synchronized Devanagari captions and neural voiceovers in under 5 minutes.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-in-progress">
+                <input type="checkbox" checked disabled style="margin:0; width:14px; height:14px; accent-color:#2c7a4b;">
+                In Progress
+              </span>
+            </td>
+            <td><strong>Format Retention Testing</strong></td>
+            <td>Pacing &amp; Editorial</td>
+            <td>Calibrating 2-second visual hooks, audio rhythm, and drop-off reduction against traditional news benchmarks.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-remaining">
+                <input type="checkbox" disabled style="margin:0; width:14px; height:14px;">
+                Remaining
+              </span>
+            </td>
+            <td><strong>Autonomous Newsroom SaaS</strong></td>
+            <td>Platform Application</td>
+            <td>Multi-tenant web dashboard for journalists, creators, and editors with real-time wire monitors and side-by-side fact checkers.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-remaining">
+                <input type="checkbox" disabled style="margin:0; width:14px; height:14px;">
+                Remaining
+              </span>
+            </td>
+            <td><strong>Cloud GPU Rendering Mesh</strong></td>
+            <td>Infrastructure</td>
+            <td>Distributed cloud GPU rendering farm supporting 50+ concurrent reel builds with turnaround under 3 minutes.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-remaining">
+                <input type="checkbox" disabled style="margin:0; width:14px; height:14px;">
+                Remaining
+              </span>
+            </td>
+            <td><strong>Typography Engine v2</strong></td>
+            <td>Motion Synthesis</td>
+            <td>Advanced Devanagari ligature kerning, kinetic word highlighting, dynamic SVG chart overlays, and brand theme customization.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-remaining">
+                <input type="checkbox" disabled style="margin:0; width:14px; height:14px;">
+                Remaining
+              </span>
+            </td>
+            <td><strong>Multi-Language Telemetry</strong></td>
+            <td>Feedback Loop</td>
+            <td>Automated viewer retention analytics feeding back directly into scripting prompts and visual pacing models.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- EXECUTION SUMMARY LIST -->
+    <div style="background:var(--paper); border:1px solid var(--rule); border-radius:8px; padding:22px 24px;">
+      <h4 style="font-size:15px; margin-bottom:12px; color:var(--navy);">Milestone Checklist</h4>
+      <div class="twocol" style="gap:16px;">
+        <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; font-size:13.5px; color:#4B5160;">
+          <li style="display:flex; align-items:center; gap:8px;">
+            <span style="color:#2c7a4b; font-weight:700;">☑</span>
+            <span><b>Pilot Deployment:</b> Live production active with daily output</span>
+          </li>
+          <li style="display:flex; align-items:center; gap:8px;">
+            <span style="color:#2c7a4b; font-weight:700;">☑</span>
+            <span><b>Dual-Engine Mesh:</b> Scripting and video builder operating in tandem</span>
+          </li>
+        </ul>
+        <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; font-size:13.5px; color:#4B5160;">
+          <li style="display:flex; align-items:center; gap:8px;">
+            <span style="color:#7A808C; font-weight:700;">☐</span>
+            <span><b>SaaS Transition:</b> Moving internal tools to standalone multi-user platform</span>
+          </li>
+          <li style="display:flex; align-items:center; gap:8px;">
+            <span style="color:#7A808C; font-weight:700;">☐</span>
+            <span><b>Scale Pipeline:</b> High-throughput distributed GPU rendering cluster</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GLOBAL FOOTER -->
+<div id="site-footer"></div>
+
+<script src="js/layout.js?v=20260927_6"></script>
+<script src="js/script.js?v=20260927_6"></script>
+</body>
+</html>

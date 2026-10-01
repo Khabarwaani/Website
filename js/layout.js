@@ -20,13 +20,14 @@
     var whyPages = ['thesis.html', 'media.html', 'genz.html', 'reels.html', 'ai-newsroom.html'];
     var howPages = ['how.html', 'architecture.html', 'pipeline.html', 'editorial.html', 'studio.html'];
     var whatPages = ['what.html', 'scripting-agent.html', 'video-builder.html'];
+    var roadmapPages = ['roadmap.html', 'execution.html', 'funding.html'];
 
     var isHome = (page === 'index.html');
     var isVision = (page === 'vision.html');
     var isWhy = whyPages.indexOf(page) !== -1;
     var isHow = howPages.indexOf(page) !== -1;
     var isWhat = whatPages.indexOf(page) !== -1;
-    var isRoadmap = (page === 'roadmap.html');
+    var isRoadmap = roadmapPages.indexOf(page) !== -1;
     var isTeam = (page === 'leadership.html');
 
     var headerHtml = '<header class="site-brand-header" role="banner">' +
@@ -145,10 +146,13 @@
       headerHtml += '<nav class="subnav-section" aria-label="Roadmap Sub-Navigation">' +
         '<div class="subnav-container">' +
           '<div class="subnav-track">' +
-            '<a href="#execution" class="subnav-pill active">' +
+            '<a href="roadmap.html" class="subnav-pill' + (page === 'roadmap.html' ? ' active" aria-current="page' : '') + '">' +
+              'Overview' +
+            '</a>' +
+            '<a href="execution.html" class="subnav-pill' + (page === 'execution.html' ? ' active" aria-current="page' : '') + '">' +
               'Execution' +
             '</a>' +
-            '<a href="#funding" class="subnav-pill">' +
+            '<a href="funding.html" class="subnav-pill' + (page === 'funding.html' ? ' active" aria-current="page' : '') + '">' +
               'Funding' +
             '</a>' +
           '</div>' +
@@ -192,7 +196,9 @@
               '<li><a href="what.html">What Overview</a></li>' +
               '<li><a href="scripting-agent.html">1. AI Scripting Agent</a></li>' +
               '<li><a href="video-builder.html">2. Hindi Video Builder</a></li>' +
-              '<li><a href="roadmap.html">3. Roadmap &amp; Funding</a></li>' +
+              '<li><a href="roadmap.html">Roadmap Overview</a></li>' +
+              '<li><a href="execution.html">3. Execution Roadmap</a></li>' +
+              '<li><a href="funding.html">4. Funding Horizon</a></li>' +
               '<li><a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer">Watch Live Pilot ↗</a></li>' +
             '</ul>' +
           '</div>' +
