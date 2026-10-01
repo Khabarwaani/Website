@@ -814,3 +814,100 @@
     from { opacity: 0; transform: translateY(6px); }
     to { opacity: 1; transform: translateY(0); }
   }
+
+  /* ==========================================================================
+     Sub-Navigation Bar for Why Section (Best Practice Sticky Pill Header)
+     ========================================================================== */
+  .subnav-section {
+    position: sticky;
+    top: 52px;
+    z-index: 990;
+    background: #FAF7F2;
+    border-bottom: 1px solid var(--rule);
+    width: 100%;
+    user-select: none;
+    box-shadow: 0 2px 6px rgba(28, 23, 18, 0.03);
+  }
+
+  @media(max-width: 640px) {
+    .subnav-section {
+      top: 48px;
+    }
+  }
+
+  .subnav-container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    min-height: 42px;
+  }
+
+  @media(max-width: 640px) {
+    .subnav-container {
+      padding: 0 16px;
+      min-height: 38px;
+    }
+  }
+
+  .subnav-track {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    gap: 8px;
+    padding: 6px 0;
+  }
+
+  .subnav-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .subnav-prefix {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gold);
+    margin-right: 6px;
+    flex-shrink: 0;
+  }
+
+  .subnav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 11px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--ink-secondary);
+    text-decoration: none;
+    background: transparent;
+    border: 1px solid transparent;
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+  }
+
+  .subnav-pill:hover {
+    color: var(--navy);
+    background: rgba(28, 23, 18, 0.05);
+  }
+
+  .subnav-pill.active {
+    background: var(--paper);
+    color: #C55216;
+    border-color: rgba(197, 82, 22, 0.35);
+    font-weight: 700;
+    box-shadow: 0 1px 4px rgba(28, 23, 18, 0.06);
+  }
+
+  .subnav-pill .subnav-num {
+    font-size: 10.5px;
+    font-weight: 700;
+    opacity: 0.8;
+  }
+

@@ -29,7 +29,7 @@
     var isRoadmap = (page === 'roadmap.html');
     var isTeam = (page === 'leadership.html');
 
-    return '<header class="site-brand-header" role="banner">' +
+    var headerHtml = '<header class="site-brand-header" role="banner">' +
       '<div class="brand-container">' +
         '<a href="index.html" class="brand-group" aria-label="Khabarwaani Home">' +
           '<span class="brand-logo-wrapper">' +
@@ -55,32 +55,8 @@
             '<li class="nav-item">' +
               '<a href="vision.html" class="nav-link' + (isVision ? ' active" aria-current="page' : '') + '">Vision</a>' +
             '</li>' +
-            '<li class="nav-item nav-dropdown">' +
-              '<a href="thesis.html" class="nav-link dropdown-toggle' + (isWhy ? ' active" aria-current="page' : '') + '" id="dropdownWhy" aria-haspopup="true" aria-expanded="false">' +
-                'Why <span class="dropdown-caret" aria-hidden="true">▾</span>' +
-              '</a>' +
-              '<div class="nav-dropdown-menu" aria-labelledby="dropdownWhy" role="menu">' +
-                '<a href="thesis.html" class="dropdown-item' + (page === 'thesis.html' ? ' active" aria-current="page' : '') + '" role="menuitem">' +
-                  '<span class="dropdown-title">Why Overview</span>' +
-                  '<span class="dropdown-desc">The Core Thesis Hub</span>' +
-                '</a>' +
-                '<a href="media.html" class="dropdown-item' + (page === 'media.html' ? ' active" aria-current="page' : '') + '" role="menuitem">' +
-                  '<span class="dropdown-title">Media Crisis</span>' +
-                  '<span class="dropdown-desc">The 39% Avoidance Paradox</span>' +
-                '</a>' +
-                '<a href="genz.html" class="dropdown-item' + (page === 'genz.html' ? ' active" aria-current="page' : '') + '" role="menuitem">' +
-                  '<span class="dropdown-title">Gen Z Shift</span>' +
-                  '<span class="dropdown-desc">Attention on Mobile Feeds</span>' +
-                '</a>' +
-                '<a href="reels.html" class="dropdown-item' + (page === 'reels.html' ? ' active" aria-current="page' : '') + '" role="menuitem">' +
-                  '<span class="dropdown-title">Reels Format</span>' +
-                  '<span class="dropdown-desc">15s–60s Positive Emotion</span>' +
-                '</a>' +
-                '<a href="ai-newsroom.html" class="dropdown-item' + (page === 'ai-newsroom.html' ? ' active" aria-current="page' : '') + '" role="menuitem">' +
-                  '<span class="dropdown-title">Agentic AI</span>' +
-                  '<span class="dropdown-desc">Scalable 90% Cost Cut</span>' +
-                '</a>' +
-              '</div>' +
+            '<li class="nav-item">' +
+              '<a href="thesis.html" class="nav-link' + (isWhy ? ' active" aria-current="page' : '') + '">Why</a>' +
             '</li>' +
             '<li class="nav-item nav-dropdown">' +
               '<a href="how.html" class="nav-link dropdown-toggle' + (isHow ? ' active" aria-current="page' : '') + '" id="dropdownHow" aria-haspopup="true" aria-expanded="false">' +
@@ -142,7 +118,34 @@
         '</div>' +
       '</div>' +
     '</nav>';
+
+    if (isWhy) {
+      headerHtml += '<nav class="subnav-section" aria-label="Why Sub-Navigation">' +
+        '<div class="subnav-container">' +
+          '<div class="subnav-track">' +
+            '<a href="thesis.html" class="subnav-pill' + (page === 'thesis.html' ? ' active" aria-current="page' : '') + '">' +
+              'Overview' +
+            '</a>' +
+            '<a href="media.html" class="subnav-pill' + (page === 'media.html' ? ' active" aria-current="page' : '') + '">' +
+              'Media Crisis' +
+            '</a>' +
+            '<a href="genz.html" class="subnav-pill' + (page === 'genz.html' ? ' active" aria-current="page' : '') + '">' +
+              'Gen Z Shift' +
+            '</a>' +
+            '<a href="reels.html" class="subnav-pill' + (page === 'reels.html' ? ' active" aria-current="page' : '') + '">' +
+              'Reels Format' +
+            '</a>' +
+            '<a href="ai-newsroom.html" class="subnav-pill' + (page === 'ai-newsroom.html' ? ' active" aria-current="page' : '') + '">' +
+              'Agentic AI' +
+            '</a>' +
+          '</div>' +
+        '</div>' +
+      '</nav>';
+    }
+
+    return headerHtml;
   }
+
 
   function getFooterHTML() {
     return '<footer class="site-footer" role="contentinfo">' +
