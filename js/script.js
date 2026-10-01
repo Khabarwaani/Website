@@ -204,4 +204,68 @@
     activateTabFromHash();
   }
   window.addEventListener('hashchange', activateTabFromHash);
+
+  // Handle in-page subnav pill clicks and scrollspy (e.g. roadmap.html #execution and #funding)
+  function initInPageSubnav() {
+    var subnavLinks = document.querySelectorAll('.subnav-section a[href^="#"]');
+    if (!subnavLinks.length) return;
+
+    function setActivePill(hash) {
+      if (!hash) return;
+      subnavLinks.forEach(function(link) {
+        if (link.getAttribute('href') === hash) {
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+        } else {
+          link.classList.remove('active');
+          link.removeAttribute('aria-current');
+        }
+      });
+    }
+
+    subnavLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        setActivePill(link.getAttribute('href'));
+      });
+    });
+
+    if (window.location.hash) {
+      setActivePill(window.location.hash);
+    }
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            setActivePill('#' + entry.target.id);
+          }
+        });
+      }, { rootMargin: '-20% 0px -60% 0px' });
+
+      subnavLinks.forEach(function(link) {
+        var sec = document.querySelector(link.getAttribute('href'));
+        if (sec) observer.observe(sec);
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initInPageSubnav);
+  } else {
+    initInPageSubnav();
+  }
+  window.addEventListener('hashchange', function() {
+    var subnavLinks = document.querySelectorAll('.subnav-section a[href^="#"]');
+    if (subnavLinks.length && window.location.hash) {
+      subnavLinks.forEach(function(link) {
+        if (link.getAttribute('href') === window.location.hash) {
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+        } else {
+          link.classList.remove('active');
+          link.removeAttribute('aria-current');
+        }
+      });
+    }
+  });
 })();

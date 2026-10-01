@@ -141,6 +141,21 @@
       '</nav>';
     }
 
+    if (isRoadmap) {
+      headerHtml += '<nav class="subnav-section" aria-label="Roadmap Sub-Navigation">' +
+        '<div class="subnav-container">' +
+          '<div class="subnav-track">' +
+            '<a href="#execution" class="subnav-pill active">' +
+              'Execution' +
+            '</a>' +
+            '<a href="#funding" class="subnav-pill">' +
+              'Funding' +
+            '</a>' +
+          '</div>' +
+        '</div>' +
+      '</nav>';
+    }
+
     return headerHtml;
   }
 
