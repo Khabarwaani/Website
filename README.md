@@ -228,7 +228,7 @@ Mounts into `<div id="site-footer"></div>` with an ultra-clean, minimal 2-row la
 
 - **Row 2 (Copyright & Connect Links)**:
   - Copyright notice (`© 2026 Khabarwaani. All rights reserved.`).
-  - Essential external & utility links: `Instagram ↗` (live pilot), `GitHub ↗` (repository), and `Back to top ↑` anchor (`#top`).
+  - Essential external & utility links: `Instagram ↗` (live pilot) and `Back to top ↑` anchor (`#top`).
 
 ### 3. Reusable Layout System (`js/layout.js`)
 - **Single Source of Truth**: All navigation items, sub-navigation tracks, and footer components are maintained in `js/layout.js`.

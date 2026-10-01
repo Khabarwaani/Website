@@ -180,7 +180,6 @@
           '<p class="footer-copy">© 2026 Khabarwaani. All rights reserved.</p>' +
           '<div class="footer-links">' +
             '<a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram ↗</a>' +
-            '<a href="https://github.com/Khabarwaani/Website" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub ↗</a>' +
             '<a href="#top" class="footer-link footer-back-to-top" aria-label="Back to top">Back to top ↑</a>' +
           '</div>' +
         '</div>' +
