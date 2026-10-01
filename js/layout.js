@@ -164,69 +164,24 @@
   function getFooterHTML() {
     return '<footer class="site-footer" role="contentinfo">' +
       '<div class="wrap">' +
-        '<div class="footer-grid">' +
-          '<div class="footer-col">' +
-            '<h4 class="footer-col-title">Why Khabarwaani</h4>' +
-            '<ul class="footer-links">' +
-              '<li><a href="thesis.html">Why Overview</a></li>' +
-              '<li><a href="media.html">1. Media Crisis &amp; Avoidance</a></li>' +
-              '<li><a href="genz.html">2. Gen Z Attention Shift</a></li>' +
-              '<li><a href="reels.html">3. Reels &amp; Positive Emotion</a></li>' +
-              '<li><a href="ai-newsroom.html">4. Agentic AI Newsrooms</a></li>' +
-            '</ul>' +
-          '</div>' +
-
-          '<div class="footer-col">' +
-            '<h4 class="footer-col-title">How It Works</h4>' +
-            '<ul class="footer-links">' +
-              '<li><a href="how.html">How Overview</a></li>' +
-              '<li><a href="architecture.html">1. Systems Architecture</a></li>' +
-              '<li><a href="pipeline.html">2. 6-Stage Pipeline</a></li>' +
-              '<li><a href="editorial.html">3. Editorial Desk</a></li>' +
-              '<li><a href="studio.html">4. AI Reel Studio</a></li>' +
-            '</ul>' +
-          '</div>' +
-
-          '<div class="footer-col">' +
-            '<h4 class="footer-col-title">What We Build</h4>' +
-            '<ul class="footer-links">' +
-              '<li><a href="what.html">What Overview</a></li>' +
-              '<li><a href="scripting-agent.html">1. AI Scripting Agent</a></li>' +
-              '<li><a href="video-builder.html">2. Hindi Video Builder</a></li>' +
-              '<li><a href="execution.html">3. Execution Roadmap</a></li>' +
-              '<li><a href="funding.html">4. Funding Horizon</a></li>' +
-              '<li><a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer">Watch Live Pilot ↗</a></li>' +
-            '</ul>' +
-          '</div>' +
-
-          '<div class="footer-col">' +
-            '<h4 class="footer-col-title">Company &amp; Connect</h4>' +
-            '<ul class="footer-links">' +
-              '<li><a href="index.html">Home</a></li>' +
-              '<li><a href="vision.html">The Vision</a></li>' +
-              '<li><a href="mission.html">The Story Climax</a></li>' +
-              '<li><a href="leadership.html">Team &amp; Founders</a></li>' +
-              '<li><a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer">Instagram ↗</a></li>' +
-              '<li><a href="https://github.com/Khabarwaani/Website" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>' +
-              '<li><a href="https://www.linkedin.com/in/abhi266raj/" target="_blank" rel="noopener noreferrer">Abhiraj Kumar ↗</a></li>' +
-              '<li><a href="https://www.linkedin.com/in/parthkumar-panchal/" target="_blank" rel="noopener noreferrer">Parthkumar Panchal ↗</a></li>' +
-            '</ul>' +
-          '</div>' +
+        '<div class="footer-brand-row">' +
+          '<a href="index.html" class="footer-brand" aria-label="Khabarwaani Home">' +
+            '<img class="footer-brand-logo-img" src="assets/mark.png" alt="" width="22" height="22" onerror="this.style.display=\'none\';">' +
+            '<span class="footer-brand-name">Khabarwaani</span>' +
+          '</a>' +
+          '<p class="footer-tagline">' +
+            '<span class="footer-lead-phrase">News, Reimagined</span>' +
+            '<span class="footer-tagline-sep" aria-hidden="true">—</span>' +
+            '<span>From Humiliation, Shouting to <strong>Curiosity, Conversation &amp; Fun</strong></span>' +
+          '</p>' +
         '</div>' +
 
-        '<div class="footer-bottom">' +
-          '<div class="footer-brand-row">' +
-            '<a href="index.html" class="footer-brand" aria-label="Khabarwaani Home">' +
-              '<img src="assets/mark.png" alt="" class="footer-brand-mark" width="20" height="20">' +
-              '<span class="footer-brand-name">Khabarwaani</span>' +
-            '</a>' +
-            '<span class="footer-brand-sep" aria-hidden="true">—</span>' +
-            '<span class="footer-brand-goal">News, Reimagined: From humiliation and shouting to curiosity, conversation, and fun.</span>' +
-          '</div>' +
-
-          '<div class="footer-utility-row">' +
-            '<p class="footer-copy">© 2026 Khabarwaani. All rights reserved.</p>' +
-            '<a href="#top" class="footer-back-to-top" aria-label="Back to top">Back to top ↑</a>' +
+        '<div class="footer-utility-row">' +
+          '<p class="footer-copy">© 2026 Khabarwaani. All rights reserved.</p>' +
+          '<div class="footer-links">' +
+            '<a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram ↗</a>' +
+            '<a href="https://github.com/Khabarwaani/Website" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub ↗</a>' +
+            '<a href="#top" class="footer-link footer-back-to-top" aria-label="Back to top">Back to top ↑</a>' +
           '</div>' +
         '</div>' +
       '</div>' +

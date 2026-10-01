@@ -189,7 +189,7 @@ The site implements a **Modular Hub & Spoke Topology** across all chapters to en
 
 ---
 
-## 🧭 Navigation Taxonomy & 4-Column Balanced Footer
+## 🧭 Navigation Taxonomy & Simplified Header-Aligned Footer
 
 The website utilizes a unified, component-based layout managed through `js/layout.js`, ensuring consistent navigation and footer hierarchy across all 18 pages.
 
@@ -219,43 +219,18 @@ Mounts into `<div id="site-header"></div>`:
   - **Roadmap Chapter** (Active on `roadmap.html`, `execution.html`, `funding.html`):
     `Overview` · `Execution` · `Funding`
 
-### 2. Standardized 4-Column Balanced Footer
-Mounts into `<div id="site-footer"></div>` and directly addresses [Issue #19](https://github.com/Khabarwaani/Website/issues/19) layout balancing:
+### 2. Standardized Compact Footer
+Mounts into `<div id="site-footer"></div>` with an ultra-clean, minimal 2-row layout:
 
-- **Column 1: Why Khabarwaani**
-  - Why Overview (`thesis.html`)
-  - 1. Media Crisis & Avoidance (`media.html`)
-  - 2. Gen Z Attention Shift (`genz.html`)
-  - 3. Reels & Positive Emotion (`reels.html`)
-  - 4. Agentic AI Newsrooms (`ai-newsroom.html`)
+- **Row 1 (Brand & Tagline)**:
+  - Khabarwaani brand mark and wordmark.
+  - Core tagline: *News, Reimagined — From Humiliation, Shouting to Curiosity, Conversation & Fun*.
 
-- **Column 2: How It Works**
-  - How Overview (`how.html`)
-  - 1. Systems Architecture (`architecture.html`)
-  - 2. 6-Stage Pipeline (`pipeline.html`)
-  - 3. Editorial Desk (`editorial.html`)
-  - 4. AI Reel Studio (`studio.html`)
-
-- **Column 3: What We Build**
-  - What Overview (`what.html`)
-  - 1. AI Scripting Agent (`scripting-agent.html`)
-  - 2. Hindi Video Builder (`video-builder.html`)
-  - Roadmap Overview (`roadmap.html`)
-  - 3. Execution Roadmap (`execution.html`)
-  - 4. Funding Horizon (`funding.html`)
-  - Watch Live Pilot ↗ ([Instagram](https://www.instagram.com/khabarwaani))
-
-- **Column 4: Company & Connect**
-  - Home (`index.html`)
-  - The Vision (`vision.html`)
-  - The Story Climax (`mission.html`)
-  - Team & Founders (`leadership.html`)
-  - Instagram ↗ · GitHub ↗ · Abhiraj Kumar ↗ · Parthkumar Panchal ↗
-
-- **Brand Statement & Utility Row**:
-  - Unifies the brand seal, core mission statement, copyright notice, and a smooth `Back to top ↑` anchor (`#top`).
+- **Row 2 (Copyright & Connect Links)**:
+  - Copyright notice (`© 2026 Khabarwaani. All rights reserved.`).
+  - Essential external & utility links: `Instagram ↗` (live pilot), `GitHub ↗` (repository), and `Back to top ↑` anchor (`#top`).
 
 ### 3. Reusable Layout System (`js/layout.js`)
-- **Single Source of Truth**: All navigation items, sub-navigation tracks, and footer columns are maintained in `js/layout.js`.
+- **Single Source of Truth**: All navigation items, sub-navigation tracks, and footer components are maintained in `js/layout.js`.
 - **Zero Drift**: Eliminates hardcoded header/footer copy discrepancies across individual HTML templates.
 - **Progressive Fallback**: Layout mounts immediately on `DOMContentLoaded` or on document ready, with fallback execution hooks for browser scripts.
