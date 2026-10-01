@@ -13,190 +13,396 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon_32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon_16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon_180.png">
+<style>
+  .roadmap-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 28px;
+    background: var(--card-bg, #FFFFFF);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .roadmap-table th {
+    text-align: left;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-weight: 700;
+    color: var(--navy);
+    background: var(--tint-bg, #F1ECE1);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .roadmap-table td {
+    padding: 14px 16px;
+    font-size: 13.5px;
+    color: #3A3F4A;
+    border-bottom: 1px solid var(--rule-lt);
+    vertical-align: middle;
+  }
+  .roadmap-table tr:last-child td {
+    border-bottom: none;
+  }
+  .status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    white-space: nowrap;
+  }
+  .status-in-progress {
+    background: rgba(44, 122, 75, 0.12);
+    color: #2c7a4b;
+    border: 1px solid rgba(44, 122, 75, 0.25);
+  }
+  .status-remaining {
+    background: rgba(28, 23, 18, 0.05);
+    color: #7A808C;
+    border: 1px solid var(--rule);
+  }
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 24px;
+  }
+</style>
 </head>
 <body id="top">
 
 <div id="site-header"></div>
 
 <!-- HERO -->
-<section class="hero" style="padding: 72px 0 54px;">
+<section class="hero" style="padding: 72px 0 52px;">
   <div class="wrap">
-    <div class="hero-tag-badge">⚡ Traction, Validation &amp; Funding Horizon</div>
+    <div class="hero-tag-badge">⚡ Roadmap &amp; Milestones</div>
     <h1 style="font-size:clamp(30px,4.5vw,48px); line-height:1.15; margin-bottom:14px;">
-      Execution Reality &amp; Funding Roadmap
+      Execution &amp; Funding Roadmap
     </h1>
-    <p class="lede" style="font-size:17.5px; max-width:720px; line-height:1.6; margin-top:14px; margin-bottom:24px;">
-      We validate our core hypothesis live in public on Instagram today, measuring retention curves and viewer sentiment in the wild. Securing seed funding will unlock the full autonomous software application and cloud infrastructure at scale.
+    <p class="lede" style="font-size:17.5px; max-width:700px; line-height:1.6; margin-top:14px; margin-bottom:24px;">
+      Real-time tracking of active production capabilities, pending engineering work, and capital deployment milestones.
     </p>
 
     <div class="hero-links" style="margin-top:0;">
-      <a class="btn primary" href="#market-validation">1. In-Market Reality Today ↓</a>
-      <a class="btn primary" href="#funding-roadmap" style="background:#285BAC; border-color:#285BAC;">2. The Funding Horizon ↓</a>
-      <a class="btn ghost" href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer">
-        <svg class="insta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        Watch Live Pilot on Instagram ↗
-      </a>
+      <a class="btn primary" href="#execution">1. Execution Roadmap ↓</a>
+      <a class="btn primary" href="#funding" style="background:#285BAC; border-color:#285BAC;">2. Funding Horizon ↓</a>
     </div>
 
     <div class="hero-kpis-mini" style="margin-top:28px;">
-      <div class="hero-kpi-pill"><b>In Market:</b> Active Instagram Pilot (@khabarwaani)</div>
-      <div class="hero-kpi-pill"><b>Hypothesis Testing:</b> Wit &amp; Retention vs. TV Shouting</div>
-      <div class="hero-kpi-pill"><b>Engine Status:</b> Scripting &amp; Hindi Builder Operational</div>
-      <div class="hero-kpi-pill"><b>Next Step:</b> Standalone App &amp; Scale via Funding</div>
+      <div class="hero-kpi-pill"><b>Execution Status:</b> 4 Active · 4 Planned</div>
+      <div class="hero-kpi-pill"><b>Funding Status:</b> 2 Active · 4 Planned</div>
+      <div class="hero-kpi-pill"><b>Target Turnaround:</b> &lt; 5 Min Wire-to-Reel</div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 1: EXECUTION REALITY TODAY (IN-MARKET VALIDATION) -->
-<section class="reveal" id="market-validation" style="padding: 64px 0; border-top:1px solid var(--rule-lt);">
+<!-- STICKY SUB-NAVIGATION -->
+<nav class="subnav-section" aria-label="Roadmap Sub-Navigation">
+  <div class="subnav-container">
+    <div class="subnav-track">
+      <span class="subnav-prefix">Sections:</span>
+      <a href="#execution" class="subnav-pill active">1. Execution Roadmap</a>
+      <a href="#funding" class="subnav-pill">2. Funding Horizon</a>
+    </div>
+  </div>
+</nav>
+
+<!-- SECTION 1: EXECUTION ROADMAP -->
+<section class="reveal" id="execution" style="padding: 60px 0;">
   <div class="wrap">
-    <div style="max-width:760px; margin-bottom:36px;">
-      <span class="kicker" style="color:#E1306C;">Execution Reality · Active Today</span>
-      <h2 style="font-size:clamp(26px,4vw,36px); margin-bottom:12px; color:var(--navy);">
-        Live Hypothesis &amp; Reach Testing on Instagram
+    <div style="margin-bottom:28px;">
+      <span class="kicker">Section 01 · Engineering &amp; Operations</span>
+      <h2 style="font-size:clamp(24px,3.6vw,34px); margin-bottom:8px; color:var(--navy);">
+        1. Execution Roadmap
       </h2>
-      <p style="font-size:16px; color:#4B5160; line-height:1.6; margin:0;">
-        Rather than building software in a silo or relying on hypothetical focus groups, Khabarwaani is actively testing its format, pacing, and editorial voice directly in the wild on Instagram (<b>@khabarwaani</b>).
+      <p style="font-size:15px; color:var(--ink-secondary); margin:0;">
+        Active production features in progress alongside pending system deliverables.
       </p>
     </div>
 
-    <div class="twocol" style="gap:26px; margin-bottom:32px;">
-      <!-- Card 1 -->
-      <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-top:4px solid #E1306C; border-radius:8px; padding:26px 28px;">
-        <div style="font-size:11.5px; font-weight:700; color:#E1306C; text-transform:uppercase; margin-bottom:8px;">
-          Core Hypothesis Under Test
-        </div>
-        <h3 style="font-size:19px; margin-bottom:10px; color:var(--navy);">Does Positive Emotion Beat TV Panic?</h3>
-        <p style="font-size:14px; color:#4B5160; line-height:1.6; margin-bottom:14px;">
-          Legacy media assumes Indian audiences only respond to fear, religious division, and sensational outrage. Our live pilot tests whether young Indian mobile viewers engage deeper with witty, verified, and constructive news delivered in 15s–60s vertical reels.
-        </p>
-        <ul style="list-style:none; padding:0; margin:0; font-size:13.5px; color:#3A3F4A; display:flex; flex-direction:column; gap:6px;">
-          <li>✓ Testing thumb-stop hook rates in the first 3 seconds</li>
-          <li>✓ Measuring video completion rates against industry benchmarks</li>
-          <li>✓ Tracking voluntary saves and peer-to-peer DM sharing</li>
-        </ul>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-top:4px solid #E1306C; border-radius:8px; padding:26px 28px;">
-        <div style="font-size:11.5px; font-weight:700; color:#E1306C; text-transform:uppercase; margin-bottom:8px;">
-          Operational Feedback Loop
-        </div>
-        <h3 style="font-size:19px; margin-bottom:10px; color:var(--navy);">Audience Data Guides the AI Engines</h3>
-        <p style="font-size:14px; color:#4B5160; line-height:1.6; margin-bottom:14px;">
-          Every real reel published provides live telemetry that immediately improves our two engines:
-        </p>
-        <ul style="list-style:none; padding:0; margin:0; font-size:13.5px; color:#3A3F4A; display:flex; flex-direction:column; gap:6px;">
-          <li>• <b>Scripting Agent Tuning:</b> Calibrating joke subtlety, slang naturalness, and reading speed based on viewer drop-offs.</li>
-          <li>• <b>Video Builder Refinement:</b> Improving subtitle font weights, Devanagari kerning, and visual transition tempos.</li>
-          <li>• <b>Community Sentiment:</b> Analyzing comment sections to uncover civic topics young citizens actually care about.</li>
-        </ul>
-      </div>
+    <!-- EXECUTION STATUS TABLE -->
+    <div class="table-responsive">
+      <table class="roadmap-table">
+        <thead>
+          <tr>
+            <th style="width:170px;">Status</th>
+            <th style="width:200px;">Feature / Module</th>
+            <th style="width:150px;">Category</th>
+            <th>Deliverable &amp; Operational Scope</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <span class="status-tag status-in-progress">
+                <input type="checkbox" checked disabled style="margin:0; width:14px; height:14px; accent-color:#2c7a4b;">
+                In Progress
+              </span>
+            </td>
+            <td><strong>Live Reel Pilot</strong></td>
+            <td>Distribution &amp; Reach</td>
+            <td>Publishing daily 15s–60s current affairs reels; measuring audience retention curves and engagement in the wild.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-in-progress">
+                <input type="checkbox" checked disabled style="margin:0; width:14px; height:14px; accent-color:#2c7a4b;">
+                In Progress
+              </span>
+            </td>
+            <td><strong>AI Scripting Agent</strong></td>
+            <td>Engine 01 (Scripting)</td>
+            <td>Autonomous wire ingestion, emotion-driven scripting hooks, and human review/override editorial desk.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-in-progress">
+                <input type="checkbox" checked disabled style="margin:0; width:14px; height:14px; accent-color:#2c7a4b;">
+                In Progress
+              </span>
+            </td>
+            <td><strong>Hindi Video Builder</strong></td>
+            <td>Engine 02 (Video)</td>
+            <td>Programmatic 9:16 motion compilation with synchronized Devanagari captions and neural voiceovers in under 5 minutes.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-in-progress">
+                <input type="checkbox" checked disabled style="margin:0; width:14px; height:14px; accent-color:#2c7a4b;">
+                In Progress
+              </span>
+            </td>
+            <td><strong>Format Retention Testing</strong></td>
+            <td>Pacing &amp; Editorial</td>
+            <td>Calibrating 2-second visual hooks, audio rhythm, and drop-off reduction against traditional news benchmarks.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-remaining">
+                <input type="checkbox" disabled style="margin:0; width:14px; height:14px;">
+                Remaining
+              </span>
+            </td>
+            <td><strong>Autonomous Newsroom SaaS</strong></td>
+            <td>Platform Application</td>
+            <td>Multi-tenant web dashboard for journalists, creators, and editors with real-time wire monitors and side-by-side fact checkers.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-remaining">
+                <input type="checkbox" disabled style="margin:0; width:14px; height:14px;">
+                Remaining
+              </span>
+            </td>
+            <td><strong>Cloud GPU Rendering Mesh</strong></td>
+            <td>Infrastructure</td>
+            <td>Distributed cloud GPU rendering farm supporting 50+ concurrent reel builds with turnaround under 3 minutes.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-remaining">
+                <input type="checkbox" disabled style="margin:0; width:14px; height:14px;">
+                Remaining
+              </span>
+            </td>
+            <td><strong>Typography Engine v2</strong></td>
+            <td>Motion Synthesis</td>
+            <td>Advanced Devanagari ligature kerning, kinetic word highlighting, dynamic SVG chart overlays, and brand theme customization.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-remaining">
+                <input type="checkbox" disabled style="margin:0; width:14px; height:14px;">
+                Remaining
+              </span>
+            </td>
+            <td><strong>Multi-Language Telemetry</strong></td>
+            <td>Feedback Loop</td>
+            <td>Automated viewer retention analytics feeding back directly into scripting prompts and visual pacing models.</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <!-- Live Reel CTA Banner -->
-    <div style="background:#F7F5F0; border:1px solid var(--rule); border-radius:8px; padding:24px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
-      <div>
-        <h4 style="font-size:17px; margin-bottom:4px; color:var(--navy);">See Our Live Production in Action</h4>
-        <p style="font-size:14px; color:#4B5160; margin:0;">
-          Watch current affairs reels produced with our AI scripting agent and Hindi video builder.
-        </p>
-      </div>
-      <div>
-        <a class="btn primary" href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer" style="background:#E1306C; border-color:#E1306C; font-size:13.5px; padding:10px 18px;">
-          Watch Live Pilot on Instagram ↗
-        </a>
+    <!-- EXECUTION SUMMARY LIST -->
+    <div style="background:var(--paper); border:1px solid var(--rule); border-radius:8px; padding:22px 24px;">
+      <h4 style="font-size:15px; margin-bottom:12px; color:var(--navy);">Execution Milestone Breakdown</h4>
+      <div class="twocol" style="gap:16px;">
+        <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; font-size:13.5px; color:#4B5160;">
+          <li style="display:flex; align-items:center; gap:8px;">
+            <span style="color:#2c7a4b; font-weight:700;">☑</span>
+            <span><b>Pilot Deployment:</b> Live production active with daily output</span>
+          </li>
+          <li style="display:flex; align-items:center; gap:8px;">
+            <span style="color:#2c7a4b; font-weight:700;">☑</span>
+            <span><b>Dual-Engine Mesh:</b> Scripting and video builder operating in tandem</span>
+          </li>
+        </ul>
+        <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; font-size:13.5px; color:#4B5160;">
+          <li style="display:flex; align-items:center; gap:8px;">
+            <span style="color:#7A808C; font-weight:700;">☐</span>
+            <span><b>SaaS Transition:</b> Moving internal tools to standalone multi-user platform</span>
+          </li>
+          <li style="display:flex; align-items:center; gap:8px;">
+            <span style="color:#7A808C; font-weight:700;">☐</span>
+            <span><b>Scale Pipeline:</b> High-throughput distributed GPU rendering cluster</span>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 2: THE FUNDING HORIZON (WHAT SEED FUNDING UNLOCKS) -->
-<section class="reveal" id="funding-roadmap" style="padding: 64px 0; background:#F7F5F0; border-top:1px solid var(--rule-lt); border-bottom:1px solid var(--rule-lt);">
+<!-- SECTION 2: FUNDING HORIZON -->
+<section class="reveal" id="funding" style="padding: 60px 0; background:#F7F5F0; border-top:1px solid var(--rule-lt); border-bottom:1px solid var(--rule-lt);">
   <div class="wrap">
-    <div style="max-width:760px; margin-bottom:36px;">
-      <span class="kicker" style="color:#285BAC;">The Funding Horizon · Scaling the Software</span>
-      <h2 style="font-size:clamp(26px,4vw,36px); margin-bottom:12px; color:var(--navy);">
-        What Securing Funding Unlocks
+    <div style="margin-bottom:28px;">
+      <span class="kicker" style="color:#285BAC;">Section 02 · Capital Allocation &amp; Scale</span>
+      <h2 style="font-size:clamp(24px,3.6vw,34px); margin-bottom:8px; color:var(--navy);">
+        2. Funding Horizon
       </h2>
-      <p style="font-size:16px; color:#4B5160; line-height:1.6; margin:0;">
-        Today, our two core engines are operational prototypes driven by founder execution. Securing seed funding will transform this validated workflow into a full-scale autonomous software application and distribution platform.
+      <p style="font-size:15px; color:#4B5160; margin:0;">
+        Capital deployment targets and milestones unlocked through seed investment.
       </p>
     </div>
 
-    <div style="display:flex; flex-direction:column; gap:20px; margin-bottom:36px;">
-      <!-- Milestone 1 -->
-      <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-left:5px solid #285BAC; border-radius:8px; padding:24px 28px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-          <span style="font-size:12px; font-weight:700; color:#285BAC; text-transform:uppercase;">Milestone 01 · Software Platform</span>
-          <span style="font-size:11.5px; font-weight:700; color:#285BAC; background:rgba(40,91,172,0.1); padding:3px 8px; border-radius:4px;">CORE DELIVERABLE</span>
-        </div>
-        <h3 style="font-size:19px; margin-bottom:8px; color:var(--navy);">Autonomous SaaS Application &amp; Newsroom Dashboard</h3>
-        <p style="font-size:14px; color:#4B5160; line-height:1.6; margin:0;">
-          Building the self-serve web application for journalists, independent creators, and media organizations. Includes real-time wire ingestion monitors, the collaborative emotion-scripting editor, side-by-side fact citation checkers, and one-click video builder dispatch.
-        </p>
-      </div>
-
-      <!-- Milestone 2 -->
-      <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-left:5px solid #285BAC; border-radius:8px; padding:24px 28px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-          <span style="font-size:12px; font-weight:700; color:#285BAC; text-transform:uppercase;">Milestone 02 · Cloud Infrastructure</span>
-          <span style="font-size:11.5px; font-weight:700; color:#285BAC; background:rgba(40,91,172,0.1); padding:3px 8px; border-radius:4px;">PARALLEL RENDERING</span>
-        </div>
-        <h3 style="font-size:19px; margin-bottom:8px; color:var(--navy);">Scalable Cloud GPU Video Synthesis Pipeline</h3>
-        <p style="font-size:14px; color:#4B5160; line-height:1.6; margin:0;">
-          Transitioning video rendering to dedicated distributed cloud GPU instances. This enables simultaneous rendering of 50+ vertical news reels across breaking news cycles, dropping average wire-to-publish turnaround to under 3 minutes.
-        </p>
-      </div>
-
-      <!-- Milestone 3 -->
-      <div class="card" style="background:var(--paper); border:1px solid var(--rule); border-left:5px solid #285BAC; border-radius:8px; padding:24px 28px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-          <span style="font-size:12px; font-weight:700; color:#285BAC; text-transform:uppercase;">Milestone 03 · Regional Expansion</span>
-          <span style="font-size:11.5px; font-weight:700; color:#285BAC; background:rgba(40,91,172,0.1); padding:3px 8px; border-radius:4px;">MULTILINGUAL EXPANSION</span>
-        </div>
-        <h3 style="font-size:19px; margin-bottom:8px; color:var(--navy);">Expanding the Video Builder to Additional Indian Languages</h3>
-        <p style="font-size:14px; color:#4B5160; line-height:1.6; margin:0;">
-          While Engine 2 is currently built specifically for Hindi, funding will finance linguistic modeling, native typography engines, and regional voiceover synthesis for Marathi, Gujarati, Bengali, Tamil, and Telugu.
-        </p>
-      </div>
+    <!-- FUNDING MILESTONES TABLE -->
+    <div class="table-responsive">
+      <table class="roadmap-table">
+        <thead>
+          <tr>
+            <th style="width:170px;">Status</th>
+            <th style="width:200px;">Funding Milestone</th>
+            <th style="width:150px;">Focus Area</th>
+            <th>Planned Deliverable &amp; Strategic Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <span class="status-tag status-in-progress">
+                <input type="checkbox" checked disabled style="margin:0; width:14px; height:14px; accent-color:#2c7a4b;">
+                In Progress
+              </span>
+            </td>
+            <td><strong>Seed Round Preparation</strong></td>
+            <td>Capital Planning</td>
+            <td>Auditing retention curves, engine turnaround benchmarks, and compiling investor diligence materials.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-in-progress">
+                <input type="checkbox" checked disabled style="margin:0; width:14px; height:14px; accent-color:#2c7a4b;">
+                In Progress
+              </span>
+            </td>
+            <td><strong>Pilot Operations Funding</strong></td>
+            <td>Validation</td>
+            <td>Founder-backed cloud instances, daily Hindi content testing, and engagement data gathering.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-remaining">
+                <input type="checkbox" disabled style="margin:0; width:14px; height:14px;">
+                Remaining
+              </span>
+            </td>
+            <td><strong>Autonomous SaaS Platform</strong></td>
+            <td>Product Expansion</td>
+            <td>Full commercial web application development for journalists, newsrooms, and independent editorial desks.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-remaining">
+                <input type="checkbox" disabled style="margin:0; width:14px; height:14px;">
+                Remaining
+              </span>
+            </td>
+            <td><strong>Cloud GPU Cluster</strong></td>
+            <td>Infrastructure</td>
+            <td>Financing dedicated parallel cloud GPU capacity to process breaking news cycles simultaneously at scale.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-remaining">
+                <input type="checkbox" disabled style="margin:0; width:14px; height:14px;">
+                Remaining
+              </span>
+            </td>
+            <td><strong>Multilingual Expansion</strong></td>
+            <td>Language Models</td>
+            <td>Expanding typography engines and vernacular voice models to Marathi, Gujarati, Bengali, Tamil, and Telugu.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="status-tag status-remaining">
+                <input type="checkbox" disabled style="margin:0; width:14px; height:14px;">
+                Remaining
+              </span>
+            </td>
+            <td><strong>Primary Wire Licensing</strong></td>
+            <td>Editorial Trust</td>
+            <td>Enterprise wire integrations (PTI, ANI, legal databases) to strengthen automated primary-source fact verification.</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <!-- Capital Deployment Matrix -->
-    <div style="background:var(--paper); border:1px solid var(--rule); border-radius:8px; padding:26px 28px;">
-      <h4 style="font-size:16px; font-weight:700; color:var(--navy); margin-bottom:14px;">Planned Capital Deployment</h4>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px;">
-        <div style="border-left:3px solid #285BAC; padding-left:12px;">
-          <div style="font-size:22px; font-weight:700; color:#285BAC;">50%</div>
-          <div style="font-size:13.5px; font-weight:600; color:var(--navy); margin-top:2px;">Software Engineering &amp; AI Cloud</div>
-          <div style="font-size:12.5px; color:#4B5160; margin-top:4px;">App backend, GPU rendering pipelines, typography engines.</div>
-        </div>
-        <div style="border-left:3px solid var(--gold); padding-left:12px;">
-          <div style="font-size:22px; font-weight:700; color:var(--gold);">25%</div>
-          <div style="font-size:13.5px; font-weight:600; color:var(--navy); margin-top:2px;">Editorial Verification &amp; Data</div>
-          <div style="font-size:12.5px; color:#4B5160; margin-top:4px;">Primary wire licenses, legal databases, journalism oversight.</div>
-        </div>
-        <div style="border-left:3px solid #2c7a4b; padding-left:12px;">
-          <div style="font-size:22px; font-weight:700; color:#2c7a4b;">25%</div>
-          <div style="font-size:13.5px; font-weight:600; color:var(--navy); margin-top:2px;">Audience Growth &amp; Distribution</div>
-          <div style="font-size:12.5px; color:#4B5160; margin-top:4px;">Organic creator partnerships and multi-platform reach.</div>
-        </div>
-      </div>
+    <!-- CAPITAL DEPLOYMENT TABLE -->
+    <h3 style="font-size:18px; margin-bottom:14px; color:var(--navy);">Planned Capital Deployment</h3>
+    <div class="table-responsive">
+      <table class="roadmap-table">
+        <thead>
+          <tr>
+            <th style="width:120px;">Allocation</th>
+            <th style="width:220px;">Category</th>
+            <th>Primary Expenditure &amp; Deliverables</th>
+            <th style="width:150px;">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong style="color:#285BAC; font-size:18px;">50%</strong></td>
+            <td><strong>Software Engineering &amp; AI Cloud</strong></td>
+            <td>SaaS application backend, GPU rendering pipelines, typography engines, and cloud compute.</td>
+            <td>
+              <span class="status-tag status-remaining">
+                <input type="checkbox" disabled style="margin:0; width:14px; height:14px;">
+                Remaining
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--gold); font-size:18px;">25%</strong></td>
+            <td><strong>Editorial Verification &amp; Data</strong></td>
+            <td>Primary wire access, legal databases, journalism review protocols, and fact-auditing tools.</td>
+            <td>
+              <span class="status-tag status-remaining">
+                <input type="checkbox" disabled style="margin:0; width:14px; height:14px;">
+                Remaining
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td><strong style="color:#2c7a4b; font-size:18px;">25%</strong></td>
+            <td><strong>Audience Growth &amp; Distribution</strong></td>
+            <td>Multi-platform distribution infrastructure, creator partnerships, and regional community expansion.</td>
+            <td>
+              <span class="status-tag status-remaining">
+                <input type="checkbox" disabled style="margin:0; width:14px; height:14px;">
+                Remaining
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </div>
-</section>
-
-<!-- TRANSITION TO TEAM -->
-<section class="reveal" style="padding: 56px 0;">
-  <div class="wrap" style="text-align:center;">
-    <span class="kicker">Meet the Founders</span>
-    <h3 style="font-size:24px; margin-bottom:10px; color:var(--navy);">The Builders Behind Khabarwaani</h3>
-    <p style="font-size:15px; color:var(--ink-secondary); max-width:620px; margin:0 auto 22px; line-height:1.55;">
-      Learn more about the technical and editorial background of the co-founders building Khabarwaani.
-    </p>
-    <a class="btn primary" href="leadership.html">
-      Meet the Co-Founders &amp; Team →
-    </a>
   </div>
 </section>
 
