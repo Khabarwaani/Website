@@ -73,6 +73,9 @@
             '</li>' +
           '</ul>' +
         '</div>' +
+        '<a href="https://www.instagram.com/khabarwaani" target="_blank" rel="noopener noreferrer" class="nav-cta-btn">' +
+          'Watch Pilot ↗' +
+        '</a>' +
       '</div>' +
     '</nav>';
 

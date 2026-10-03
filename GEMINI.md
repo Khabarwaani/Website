@@ -7,7 +7,7 @@ To prevent repetitive narrative loops, every page in the website has a designate
 - **`thesis.html` (The Hub / The Why):** Master overview of the four catalysts. High-level thesis only; does not exhaustively duplicate spoke details.
 - **`media.html` (Spoke 01 - Media Crisis):** Deep dive into news avoidance statistics (39%), psychological drivers (outrage, verbosity, negativity), and emotional shift.
 - **`genz.html` (Spoke 02 - Gen Z Shift):** Youth consumption habits, attention dynamics, mobile-first information diets, and trust shifts away from legacy TV.
-- **`reels.html` (Spoke 03 - Reels Format):** Mechanical breakdown of 15s–60s vertical video, visual scripting, pacing, hooks, retention, and viral distribution.
+- **`reels.html` (Spoke 03 - Reels Format):** Mechanical breakdown of 10s–60s vertical video, visual scripting, pacing, hooks, retention, and viral distribution.
 - **`ai-newsroom.html` (Spoke 04 - Agentic AI Newsroom):** Technological engine, multi-agent editorial pipeline, verification layers, and automation.
 
 ---
@@ -69,4 +69,12 @@ Every change in **How to Do It** must specify:
 ### 1. Active Task Querying
 - When querying open/active work, **always use `gh issue list --state open`** (or `gh issue list`) directly in the shell instead of unnecessary manual fetching or guessing.
 - Keep task tracking centralized on GitHub issues as the single source of truth.
+
+### 2. Final Goal: File a GitHub Issue
+- **The ultimate deliverable and final goal of any audit, validation, task discovery, or bug identification is to make/file a GitHub issue.**
+- Never stop at reporting findings or maintaining notes only in conversation or local scratchpads. Any identified discrepancy, missing task, content redundancy, or required modification must culminate in creating a GitHub issue via the GitHub CLI:
+  ```bash
+  gh issue create --title "<Descriptive Title>" --body "..."
+  ```
+- The issue body must strictly follow the **Issue Structure for Content Modification & Redundancy** format above (`## Problem`, `## What to Do`, and `## How to Do It` with exact file paths, line ranges, and `From:` / `To:` code blocks).
 

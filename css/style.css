@@ -204,7 +204,8 @@
   .nav-track {
     display: flex;
     align-items: center;
-    width: 100%;
+    flex: 1;
+    min-width: 0;
     overflow: visible;
     white-space: nowrap;
     padding: 6px 0;
@@ -212,6 +213,33 @@
 
   .nav-track::-webkit-scrollbar {
     display: none;
+  }
+
+  .nav-cta-btn {
+    margin-left: 16px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: var(--gold);
+    color: #FFFFFF !important;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: opacity .15s ease, transform .15s ease;
+  }
+
+  .nav-cta-btn:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+  }
+
+  @media(max-width: 640px) {
+    .nav-cta-btn {
+      display: none;
+    }
   }
 
   .nav-list {
@@ -888,4 +916,89 @@
     font-weight: 700;
     opacity: 0.8;
   }
+
+  /* ==========================================================================
+     SPOKE CHAPTER PAGINATION BAR (BEST PRACTICE FOR HUB & SPOKE)
+     - Replaces redundant chapter banners with a sleek, responsive pagination bar
+     ========================================================================== */
+  .spoke-pagination {
+    padding: 36px 0;
+    background: var(--paper);
+    border-top: 1px solid var(--rule-lt);
+  }
+  .spoke-pagination-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .spoke-pagination-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--navy);
+    padding: 9px 18px;
+    border-radius: 6px;
+    border: 1px solid var(--rule);
+    background: #FFFFFF;
+    transition: all 0.15s ease;
+  }
+  .spoke-pagination-link:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(28, 23, 18, 0.05);
+  }
+  .spoke-pagination-link.primary {
+    background: var(--gold);
+    color: #FFFFFF;
+    border-color: var(--gold);
+  }
+  .spoke-pagination-link.primary:hover {
+    background: #C55216;
+    border-color: #C55216;
+    color: #FFFFFF;
+  }
+  .spoke-pagination-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .spoke-pagination-indicator {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-secondary);
+  }
+  .spoke-pagination-hub {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .spoke-pagination-hub:hover {
+    color: var(--gold);
+  }
+  @media (max-width: 640px) {
+    .spoke-pagination-inner {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+    }
+    .spoke-pagination-link {
+      justify-content: center;
+    }
+    .spoke-pagination-center {
+      order: -1;
+      margin-bottom: 4px;
+    }
+  }
+
 
