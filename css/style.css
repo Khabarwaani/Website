@@ -1,6 +1,8 @@
 :root{
     --paper:#FAF7F0; --ink:#1C1712; --ink-secondary:#5C5852; --navy:#1F1A14; --gold:#E0692A;
     --rule: rgba(21,24,29,0.12); --rule-lt: rgba(21,24,29,0.08);
+    --stat-good:#2c7a4b; --stat-bad:#9a3b2c; --tint-bg:#F1ECE1;
+    --hero-text:#FBF9F5; --hero-muted:#D5CEC2; --ink-muted:#7A808C;
     padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
   }
   *{box-sizing:border-box;}
@@ -286,6 +288,11 @@
   .nav-link:hover {
     color: #000000;
     background-color: rgba(28, 23, 18, 0.06);
+  }
+
+  .nav-link-investors:not(.active) {
+    color: #C55216;
+    box-shadow: inset 0 0 0 1.5px rgba(197, 82, 22, 0.45);
   }
 
   .nav-link.active,
@@ -666,6 +673,9 @@
     .footer-tagline {
       text-align: left;
       font-size: 12px;
+    }
+    .footer-lead-phrase {
+      display: block;
     }
     .footer-tagline-sep {
       display: none;
