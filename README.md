@@ -182,7 +182,7 @@ The site implements a **Modular Hub & Spoke Topology** across all chapters to en
 #### Chapter 4: ROADMAP, MISSION & LEADERSHIP
 - `roadmap.html` — **Master Roadmap Overview Hub**: 2-track hub routing to dedicated Execution and Funding deep dives.
 - `execution.html` — **Execution Roadmap**: Feature status table (active in-progress checkboxes vs remaining deliverables) and milestone checklists.
-- `investors.html` — **Investor Brief (3-Minute Pitch)**: One-liner, real pilot reels, product status, business model, competition, team, risks, the ask (₹1 Cr pre-seed, 50/25/25% use of funds), and 12-month targets. Linked as the highlighted **Investors** item in the main nav.
+- `investors.html` — **Investor Brief (3-Minute Pitch)**: One-liner, real pilot reels, product status, business model, competition, team, risks, and a one-to-one contact CTA. The funding ask (amount, use of funds, milestones) is deliberately NOT published; it is shared with investors one-to-one. Linked as the highlighted **Investors** item in the main nav.
 - `funding.html` — Redirects to `investors.html`.
 - `mission.html` — **The Story Climax ("Why Work On Khabarwaani")**: The grand finale pitch detailing the $10B attention vacuum, 10x unit economics, high-status democratic purpose, and co-founder/partner invitation.
 - `leadership.html` — **Team & Founders [STRICTLY LOCKED]**: Co-founder biographies and leadership credentials (Abhiraj Kumar, Parthkumar Panchal).  
