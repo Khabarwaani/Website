@@ -20,7 +20,7 @@
     var whyPages = ['thesis.html', 'media.html', 'genz.html', 'reels.html', 'ai-newsroom.html'];
     var howPages = ['how.html', 'architecture.html', 'pipeline.html', 'editorial.html', 'studio.html'];
     var whatPages = ['what.html', 'scripting-agent.html', 'video-builder.html'];
-    var roadmapPages = ['roadmap.html', 'execution.html', 'funding.html'];
+    var roadmapPages = ['roadmap.html', 'execution.html'];
 
     var isHome = (page === 'index.html');
     var isVision = (page === 'vision.html');
@@ -29,6 +29,7 @@
     var isWhat = whatPages.indexOf(page) !== -1;
     var isRoadmap = roadmapPages.indexOf(page) !== -1;
     var isTeam = (page === 'leadership.html');
+    var isInvestors = (page === 'investors.html' || page === 'funding.html');
 
     var headerHtml = '<header class="site-brand-header" role="banner">' +
       '<div class="brand-container">' +
@@ -70,6 +71,9 @@
             '</li>' +
             '<li class="nav-item">' +
               '<a href="leadership.html" class="nav-link' + (isTeam ? ' active" aria-current="page' : '') + '">Team</a>' +
+            '</li>' +
+            '<li class="nav-item">' +
+              '<a href="investors.html" class="nav-link nav-link-investors' + (isInvestors ? ' active" aria-current="page' : '') + '">Investors</a>' +
             '</li>' +
           '</ul>' +
         '</div>' +
@@ -139,21 +143,6 @@
             '</a>' +
             '<a href="video-builder.html" class="subnav-pill' + (page === 'video-builder.html' ? ' active" aria-current="page' : '') + '">' +
               'Video Builder' +
-            '</a>' +
-          '</div>' +
-        '</div>' +
-      '</nav>';
-    }
-
-    if (isRoadmap) {
-      headerHtml += '<nav class="subnav-section" aria-label="Roadmap Sub-Navigation">' +
-        '<div class="subnav-container">' +
-          '<div class="subnav-track">' +
-            '<a href="execution.html" class="subnav-pill' + (page === 'execution.html' || page === 'roadmap.html' ? ' active" aria-current="page' : '') + '">' +
-              'Execution' +
-            '</a>' +
-            '<a href="funding.html" class="subnav-pill' + (page === 'funding.html' ? ' active" aria-current="page' : '') + '">' +
-              'Funding' +
             '</a>' +
           '</div>' +
         '</div>' +
